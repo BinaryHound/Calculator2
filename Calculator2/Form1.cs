@@ -26,11 +26,16 @@ namespace Calculator2 {
         {
             try
             {
-                if (Output.Text.Trim().Equals("ERROR"))
+                //makes it so it replaces 0 with the number. -_- hate it when you add 8 and it displays as 80.
+                if (txtOutput.TextLength == 1 && txtOutput.Text == "0")
                 {
-                    Output.Clear();
+                    txtOutput.Clear();
                 }
-                Output.Text += ((Button)sender).Text.Trim();
+                if (txtOutput.Text.Trim().Equals("ERROR"))
+                {
+                    txtOutput.Clear();
+                }
+                txtOutput.Text += ((Button)sender).Text.Trim();
             } catch(Exception es)
             {
                 Console.WriteLine(es.StackTrace);
@@ -50,18 +55,18 @@ namespace Calculator2 {
 
         private void Clear_Click(object sender, EventArgs e)
         {
-            Output.Clear();
-            Output.Text = "0";
+            txtOutput.Clear();
+            txtOutput.Text = "0";
         }
 
         public void Equals_Click(object sender, EventArgs e)
         {
             try
             {
-                Output.Text = Evaluate(Output.Text.Trim()).ToString();
+                txtOutput.Text = Evaluate(txtOutput.Text.Trim()).ToString();
             } catch(Exception ex)
             {
-                Output.Text = "ERROR";
+                txtOutput.Text = "ERROR";
             }
         }
 
