@@ -12,12 +12,12 @@ using System.Windows.Forms;
 namespace Calculator2 {
     //ALL METHODS ARE PUBLIC FOR UNIT TESTING CURRENTLY!
 
-    public partial class Form1 : Form {
+    public partial class DeskShell: Form {
 
         /// <summary>
         /// Constructor for the form.
         /// </summary>
-        public Form1() {
+        public DeskShell() {
             InitializeComponent();
         }
 
@@ -68,11 +68,6 @@ namespace Calculator2 {
             {
                 txtOutput.Text = "ERROR";
             }
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void buttonHome_Click(object sender, EventArgs e)

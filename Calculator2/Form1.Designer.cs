@@ -1,5 +1,5 @@
 ﻿namespace Calculator2 {
-    partial class Form1 {
+    partial class DeskShell {
 
         /// <summary>
         /// Required designer variable.
@@ -25,7 +25,7 @@
         /// </summary>
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DeskShell));
             this.btnOne = new System.Windows.Forms.Button();
             this.btnTwo = new System.Windows.Forms.Button();
             this.btnThree = new System.Windows.Forms.Button();
@@ -488,7 +488,6 @@
             this.panelTop.Name = "panelTop";
             this.panelTop.Size = new System.Drawing.Size(444, 166);
             this.panelTop.TabIndex = 19;
-            this.panelTop.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // txtOutput
             // 
