@@ -526,7 +526,7 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // Form1
+            // DeskShell
             // 
             this.AcceptButton = this.btnEquals;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -552,7 +552,7 @@
             this.Controls.Add(this.btnTwo);
             this.Controls.Add(this.btnOne);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form1";
+            this.Name = "DeskShell";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.panelControl.ResumeLayout(false);

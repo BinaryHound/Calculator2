@@ -13,6 +13,9 @@ namespace Calculator2 {
     //ALL METHODS ARE PUBLIC FOR UNIT TESTING CURRENTLY!
 
     public partial class DeskShell: Form {
+        
+        //Make it so people can't enter 
+        private bool nonNumberEntered = false;
 
         /// <summary>
         /// Constructor for the form.
@@ -24,14 +27,10 @@ namespace Calculator2 {
         //Information handler for every button.
         public void EvaluaterBtn(object sender, EventArgs e)
         {
+            var input = txtOutput.Text.Trim();
             try
             {
-                //makes it so it replaces 0 with the number. -_- hate it when you add 8 and it displays as 80.
-                if (txtOutput.TextLength == 1 && txtOutput.Text == "0")
-                {
-                    txtOutput.Clear();
-                }
-                if (txtOutput.Text.Trim().Equals("ERROR"))
+                if (input.Equals("ERROR") || input.Equals("0"))
                 {
                     txtOutput.Clear();
                 }
@@ -52,7 +51,7 @@ namespace Calculator2 {
         }
 
         #region EventHandlers
-
+        
         private void Clear_Click(object sender, EventArgs e)
         {
             txtOutput.Clear();
@@ -64,7 +63,7 @@ namespace Calculator2 {
             try
             {
                 txtOutput.Text = Evaluate(txtOutput.Text.Trim()).ToString();
-            } catch(Exception ex)
+            } catch (Exception ex)
             {
                 txtOutput.Text = "ERROR";
             }
@@ -86,6 +85,9 @@ namespace Calculator2 {
         {
             panelLeft.Height = buttonCalculator.Height;
             panelLeft.Top = buttonCalculator.Top;
+
+            txtOutput.Focus();
+            txtOutput.Text = "";
         }
 
         private void buttonToDo_Click(object sender, EventArgs e)
@@ -106,6 +108,5 @@ namespace Calculator2 {
             Application.Exit();
         }
         #endregion
-
     }
 }
