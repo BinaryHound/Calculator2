@@ -13,6 +13,7 @@ namespace DeskShell {
     
     public partial class DeskShell: Form {
 
+        //Import for the Hiding of the caret for the calculator.
         [System.Runtime.InteropServices.DllImport("user32.dll")]
         static extern bool HideCaret(IntPtr hWnd);
 
@@ -59,7 +60,6 @@ namespace DeskShell {
                 {
                     txtOutput.Clear();
                 }
-
                 txtOutput.Text += ((Button)sender).Text.Trim();
                 txtOutput.SelectionStart = txtOutput.Text.Length;
                 txtOutput.SelectionLength = 0;
@@ -111,6 +111,7 @@ namespace DeskShell {
         {
             panelLeft.Height = buttonCalculator.Height;
             panelLeft.Top = buttonCalculator.Top;
+            //WindowLoad = WindowSelector.Calculator;
             txtOutput.Focus();
         }
 
