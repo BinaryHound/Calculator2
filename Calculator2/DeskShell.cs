@@ -35,6 +35,7 @@ namespace DeskShell {
             //Hides the Calculator for now.
             pnlMain.Enabled = false;
             txtOutput.Hide();
+            pnlMain.Hide();
             panelTop.Enabled = false;
         }
 
@@ -128,6 +129,7 @@ namespace DeskShell {
             pnlMain.Enabled = true;
             panelTop.Enabled = true;
             txtOutput.Show();
+            pnlMain.Show();
             //WindowLoad = WindowSelector.Calculator;
             txtOutput.Focus();
         }
