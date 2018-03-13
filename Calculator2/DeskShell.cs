@@ -12,7 +12,7 @@ using System.Windows.Forms;
 namespace Calculator2 {
     //ALL METHODS ARE PUBLIC FOR UNIT TESTING CURRENTLY!
 
-
+    
     public partial class DeskShell: Form {
         [System.Runtime.InteropServices.DllImport("user32.dll")]
         static extern bool HideCaret(IntPtr hWnd);
@@ -79,7 +79,8 @@ namespace Calculator2 {
                 //might throw an error.
                 txtOutput.SelectionStart = txtOutput.Text.Length;
                 txtOutput.SelectionLength = 0;
-                txtOutput.HideSelection = true;
+
+                //txtOutput.HideSelection = true; //An attempt to fix the problem.
                 SetTxtFocused();
             } catch (Exception ex)
             {
