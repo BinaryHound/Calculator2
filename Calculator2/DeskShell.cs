@@ -14,8 +14,6 @@ namespace Calculator2 {
 
 
     public partial class DeskShell: Form {
-
-
         [System.Runtime.InteropServices.DllImport("user32.dll")]
         static extern bool HideCaret(IntPtr hWnd);
 
@@ -27,8 +25,9 @@ namespace Calculator2 {
         }
 
         //Information handler for every button.
-        public void EvaluaterBtn(object sender, EventArgs e)
+        private void EvaluaterBtn(object sender, EventArgs e)
         {
+            
             var input = txtOutput.Text.Trim();
             try
             {
@@ -36,14 +35,16 @@ namespace Calculator2 {
                 {
                     txtOutput.Clear();
                 }
+                
                 txtOutput.Text += ((Button)sender).Text.Trim();
             } catch(Exception es)
             {
                 Console.WriteLine(es.StackTrace);
             }
+           SetTxtFocused();
         }
 
-        public static double Evaluate(string expression)
+        private static double Evaluate(string expression)
         {
             DataTable table = new DataTable();
             table.Columns.Add("expression", typeof(string), expression);
@@ -52,20 +53,34 @@ namespace Calculator2 {
             return double.Parse((string)row["expression"]);
         }
 
+        private void SetTxtFocused()
+        {
+            if (!txtOutput.Focused)
+            {
+                txtOutput.Focus();
+                HideCaret(txtOutput.Handle);
+            }
+        }
+
         #region EventHandlers
         
         private void Clear_Click(object sender, EventArgs e)
         {
             txtOutput.Clear();
             txtOutput.Text = "0";
+            SetTxtFocused();
         }
 
-        public void Equals_Click(object sender, EventArgs e)
+        private void Equals_Click(object sender, EventArgs e)
         {
             try
             {
                 txtOutput.Text = Evaluate(txtOutput.Text.Trim()).ToString();
-                txtOutput.SelectionStart = txtOutput.Text.Length - 1; 
+                //might throw an error.
+                txtOutput.SelectionStart = txtOutput.Text.Length;
+                txtOutput.SelectionLength = 0;
+                txtOutput.HideSelection = true;
+                SetTxtFocused();
             } catch (Exception ex)
             {
                 txtOutput.Text = "ERROR";
@@ -88,13 +103,7 @@ namespace Calculator2 {
         {
             panelLeft.Height = buttonCalculator.Height;
             panelLeft.Top = buttonCalculator.Top;
-            HideCaret(txtOutput.Handle);
-            if (!txtOutput.Focused)
-            {
-                txtOutput.Focus();
-                HideCaret(txtOutput.Handle);
-                txtOutput.Text = "";
-            }
+            txtOutput.Focus();
         }
 
         private void buttonToDo_Click(object sender, EventArgs e)
