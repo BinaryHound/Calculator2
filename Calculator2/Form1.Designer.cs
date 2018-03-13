@@ -52,9 +52,9 @@
             this.buttonCalendar = new System.Windows.Forms.Button();
             this.buttonHome = new System.Windows.Forms.Button();
             this.panelTop = new System.Windows.Forms.Panel();
+            this.Output = new System.Windows.Forms.TextBox();
             this.buttonExit = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.Output = new System.Windows.Forms.TextBox();
             this.panelControl.SuspendLayout();
             this.panelTop.SuspendLayout();
             this.SuspendLayout();
@@ -273,9 +273,7 @@
             this.Equals.TabIndex = 11;
             this.Equals.Text = "=";
             this.Equals.UseVisualStyleBackColor = true;
-            this.AcceptButton = this.Equals; //I think this is the way we accept the "ENTER" key push.
             this.Equals.Click += new System.EventHandler(this.Equals_Click);
-            
             // 
             // Zero
             // 
@@ -492,6 +490,17 @@
             this.panelTop.TabIndex = 19;
             this.panelTop.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
+            // Output
+            // 
+            this.Output.AcceptsReturn = true;
+            this.Output.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Output.Location = new System.Drawing.Point(11, 122);
+            this.Output.Name = "Output";
+            this.Output.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.Output.Size = new System.Drawing.Size(433, 53);
+            this.Output.TabIndex = 14;
+            this.Output.Text = "0";
+            // 
             // buttonExit
             // 
             this.buttonExit.BackColor = System.Drawing.Color.Red;
@@ -515,20 +524,9 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // Output
-            // 
-            this.Output.AcceptsReturn = true;
-            this.Output.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Output.Location = new System.Drawing.Point(11, 36);
-            this.Output.Multiline = true;
-            this.Output.Name = "Output";
-            this.Output.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Output.Size = new System.Drawing.Size(433, 131);
-            this.Output.TabIndex = 14;
-            this.Output.Text = "0";
-            // 
             // Form1
             // 
+            this.AcceptButton = this.Equals;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(645, 461);

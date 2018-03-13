@@ -29,8 +29,8 @@ namespace Calculator2 {
                 if (Output.Text.Trim().Equals("ERROR"))
                 {
                     Output.Clear();
-                    Output.Text += ((Button)sender).Text.Trim();
                 }
+                Output.Text += ((Button)sender).Text.Trim();
             } catch(Exception es)
             {
                 Console.WriteLine(es.StackTrace);
