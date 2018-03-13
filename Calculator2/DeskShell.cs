@@ -11,6 +11,15 @@ using System.Windows.Forms;
 
 namespace DeskShell {
     
+    enum WindowSelector
+    {
+        Home,
+        Calendar,
+        Calculator,
+        Todo,
+        Notepad
+    }
+
     public partial class DeskShell: Form {
 
         //Import for the Hiding of the caret for the calculator.
@@ -22,6 +31,11 @@ namespace DeskShell {
         /// </summary>
         public DeskShell() {
             InitializeComponent();
+            
+            //Hides the Calculator for now.
+            pnlMain.Enabled = false;
+            txtOutput.Hide();
+            panelTop.Enabled = false;
         }
 
         private static double Evaluate(string expression)
@@ -111,6 +125,9 @@ namespace DeskShell {
         {
             panelLeft.Height = buttonCalculator.Height;
             panelLeft.Top = buttonCalculator.Top;
+            pnlMain.Enabled = true;
+            panelTop.Enabled = true;
+            txtOutput.Show();
             //WindowLoad = WindowSelector.Calculator;
             txtOutput.Focus();
         }
