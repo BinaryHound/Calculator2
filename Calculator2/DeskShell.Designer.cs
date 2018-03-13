@@ -56,6 +56,7 @@
             this.buttonExit = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.pnlMain = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.panelControl.SuspendLayout();
             this.panelTop.SuspendLayout();
             this.pnlMain.SuspendLayout();
@@ -369,6 +370,7 @@
             // 
             // panelControl
             // 
+            this.panelControl.Controls.Add(this.button1);
             this.panelControl.Controls.Add(this.panelLeft);
             this.panelControl.Controls.Add(this.panel3);
             this.panelControl.Controls.Add(this.buttonNotepad);
@@ -404,7 +406,7 @@
             this.buttonNotepad.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonNotepad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(161)))), ((int)(((byte)(206)))));
             this.buttonNotepad.Image = ((System.Drawing.Image)(resources.GetObject("buttonNotepad.Image")));
-            this.buttonNotepad.Location = new System.Drawing.Point(0, 344);
+            this.buttonNotepad.Location = new System.Drawing.Point(0, 378);
             this.buttonNotepad.Name = "buttonNotepad";
             this.buttonNotepad.Size = new System.Drawing.Size(200, 80);
             this.buttonNotepad.TabIndex = 4;
@@ -421,7 +423,7 @@
             this.buttonToDo.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonToDo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(161)))), ((int)(((byte)(206)))));
             this.buttonToDo.Image = ((System.Drawing.Image)(resources.GetObject("buttonToDo.Image")));
-            this.buttonToDo.Location = new System.Drawing.Point(0, 258);
+            this.buttonToDo.Location = new System.Drawing.Point(0, 292);
             this.buttonToDo.Name = "buttonToDo";
             this.buttonToDo.Size = new System.Drawing.Size(200, 80);
             this.buttonToDo.TabIndex = 3;
@@ -438,7 +440,7 @@
             this.buttonCalculator.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCalculator.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(161)))), ((int)(((byte)(206)))));
             this.buttonCalculator.Image = ((System.Drawing.Image)(resources.GetObject("buttonCalculator.Image")));
-            this.buttonCalculator.Location = new System.Drawing.Point(0, 172);
+            this.buttonCalculator.Location = new System.Drawing.Point(0, 206);
             this.buttonCalculator.Name = "buttonCalculator";
             this.buttonCalculator.Size = new System.Drawing.Size(200, 80);
             this.buttonCalculator.TabIndex = 2;
@@ -455,7 +457,7 @@
             this.buttonCalendar.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCalendar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(161)))), ((int)(((byte)(206)))));
             this.buttonCalendar.Image = ((System.Drawing.Image)(resources.GetObject("buttonCalendar.Image")));
-            this.buttonCalendar.Location = new System.Drawing.Point(0, 86);
+            this.buttonCalendar.Location = new System.Drawing.Point(0, 120);
             this.buttonCalendar.Name = "buttonCalendar";
             this.buttonCalendar.Size = new System.Drawing.Size(200, 80);
             this.buttonCalendar.TabIndex = 1;
@@ -472,9 +474,9 @@
             this.buttonHome.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(161)))), ((int)(((byte)(206)))));
             this.buttonHome.Image = ((System.Drawing.Image)(resources.GetObject("buttonHome.Image")));
-            this.buttonHome.Location = new System.Drawing.Point(0, 0);
+            this.buttonHome.Location = new System.Drawing.Point(0, 36);
             this.buttonHome.Name = "buttonHome";
-            this.buttonHome.Size = new System.Drawing.Size(200, 80);
+            this.buttonHome.Size = new System.Drawing.Size(200, 78);
             this.buttonHome.TabIndex = 0;
             this.buttonHome.Text = "Home";
             this.buttonHome.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -551,6 +553,21 @@
             this.pnlMain.Size = new System.Drawing.Size(444, 289);
             this.pnlMain.TabIndex = 20;
             // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(161)))), ((int)(((byte)(206)))));
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(0, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(32, 32);
+            this.button1.TabIndex = 21;
+            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // DeskShell
             // 
             this.AcceptButton = this.btnEquals;
@@ -605,6 +622,7 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.TextBox txtOutput;
         private System.Windows.Forms.Panel pnlMain;
+        private System.Windows.Forms.Button button1;
     }
 }
 
