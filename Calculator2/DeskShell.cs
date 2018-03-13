@@ -24,6 +24,12 @@ namespace Calculator2 {
             InitializeComponent();
         }
 
+        private void TextSelection()
+        {
+            txtOutput.SelectionStart = txtOutput.Text.Length;
+            txtOutput.SelectionLength = 0;
+        }
+
         //Information handler for every button.
         private void EvaluaterBtn(object sender, EventArgs e)
         {
@@ -37,6 +43,7 @@ namespace Calculator2 {
                 }
                 
                 txtOutput.Text += ((Button)sender).Text.Trim();
+                TextSelection();
             } catch(Exception es)
             {
                 Console.WriteLine(es.StackTrace);
@@ -77,8 +84,7 @@ namespace Calculator2 {
             {
                 txtOutput.Text = Evaluate(txtOutput.Text.Trim()).ToString();
                 //might throw an error.
-                txtOutput.SelectionStart = txtOutput.Text.Length;
-                txtOutput.SelectionLength = 0;
+                TextSelection();
 
                 //txtOutput.HideSelection = true; //An attempt to fix the problem.
                 SetTxtFocused();
