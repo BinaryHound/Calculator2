@@ -12,10 +12,12 @@ using System.Windows.Forms;
 namespace Calculator2 {
     //ALL METHODS ARE PUBLIC FOR UNIT TESTING CURRENTLY!
 
+
     public partial class DeskShell: Form {
-        
-        //Make it so people can't enter 
-        private bool nonNumberEntered = false;
+
+
+        [System.Runtime.InteropServices.DllImport("user32.dll")]
+        static extern bool HideCaret(IntPtr hWnd);
 
         /// <summary>
         /// Constructor for the form.
@@ -63,6 +65,7 @@ namespace Calculator2 {
             try
             {
                 txtOutput.Text = Evaluate(txtOutput.Text.Trim()).ToString();
+                txtOutput.SelectionStart = txtOutput.Text.Length - 1; 
             } catch (Exception ex)
             {
                 txtOutput.Text = "ERROR";
@@ -85,9 +88,13 @@ namespace Calculator2 {
         {
             panelLeft.Height = buttonCalculator.Height;
             panelLeft.Top = buttonCalculator.Top;
-
-            txtOutput.Focus();
-            txtOutput.Text = "";
+            HideCaret(txtOutput.Handle);
+            if (!txtOutput.Focused)
+            {
+                txtOutput.Focus();
+                HideCaret(txtOutput.Handle);
+                txtOutput.Text = "";
+            }
         }
 
         private void buttonToDo_Click(object sender, EventArgs e)

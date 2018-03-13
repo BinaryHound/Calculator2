@@ -1,6 +1,7 @@
 ﻿namespace Calculator2 {
     partial class DeskShell {
 
+
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -24,6 +25,7 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DeskShell));
             this.btnOne = new System.Windows.Forms.Button();
@@ -502,6 +504,7 @@
             this.txtOutput.TabIndex = 14;
             this.txtOutput.Text = "0";
             this.txtOutput.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            
             // 
             // buttonExit
             // 
