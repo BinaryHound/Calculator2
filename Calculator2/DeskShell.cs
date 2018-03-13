@@ -10,9 +10,6 @@ using System.Windows.Forms;
 
 
 namespace Calculator2 {
-    //ALL METHODS ARE PUBLIC FOR UNIT TESTING CURRENTLY!
-
-    
     public partial class DeskShell: Form {
         [System.Runtime.InteropServices.DllImport("user32.dll")]
         static extern bool HideCaret(IntPtr hWnd);
