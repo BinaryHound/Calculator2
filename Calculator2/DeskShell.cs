@@ -37,6 +37,8 @@ namespace Calculator2 {
                 }
                 
                 txtOutput.Text += ((Button)sender).Text.Trim();
+                txtOutput.SelectionStart = txtOutput.Text.Length;
+                txtOutput.SelectionLength = 0;
             } catch(Exception es)
             {
                 Console.WriteLine(es.StackTrace);
