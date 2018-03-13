@@ -1,5 +1,6 @@
-﻿namespace CalculatorAttempt {
+﻿namespace Calculator2 {
     partial class Form1 {
+
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -23,6 +24,7 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.One = new System.Windows.Forms.Button();
             this.Two = new System.Windows.Forms.Button();
@@ -36,7 +38,6 @@
             this.Subtract = new System.Windows.Forms.Button();
             this.Add = new System.Windows.Forms.Button();
             this.Equals = new System.Windows.Forms.Button();
-            this.Output = new System.Windows.Forms.Label();
             this.Zero = new System.Windows.Forms.Button();
             this.Decimal = new System.Windows.Forms.Button();
             this.Multiply = new System.Windows.Forms.Button();
@@ -52,6 +53,8 @@
             this.buttonHome = new System.Windows.Forms.Button();
             this.panelTop = new System.Windows.Forms.Panel();
             this.buttonExit = new System.Windows.Forms.Button();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.Output = new System.Windows.Forms.TextBox();
             this.panelControl.SuspendLayout();
             this.panelTop.SuspendLayout();
             this.SuspendLayout();
@@ -72,7 +75,7 @@
             this.One.TabIndex = 0;
             this.One.Text = "1";
             this.One.UseVisualStyleBackColor = true;
-            this.One.Click += new System.EventHandler(this.One_Click);
+            this.One.Click += new System.EventHandler(this.EvaluaterBtn);
             // 
             // Two
             // 
@@ -90,7 +93,7 @@
             this.Two.TabIndex = 1;
             this.Two.Text = "2";
             this.Two.UseVisualStyleBackColor = true;
-            this.Two.Click += new System.EventHandler(this.Two_Click);
+            this.Two.Click += new System.EventHandler(this.EvaluaterBtn);
             // 
             // Three
             // 
@@ -108,7 +111,7 @@
             this.Three.TabIndex = 2;
             this.Three.Text = "3";
             this.Three.UseVisualStyleBackColor = true;
-            this.Three.Click += new System.EventHandler(this.Three_Click);
+            this.Three.Click += new System.EventHandler(this.EvaluaterBtn);
             // 
             // Four
             // 
@@ -126,7 +129,7 @@
             this.Four.TabIndex = 3;
             this.Four.Text = "4";
             this.Four.UseVisualStyleBackColor = true;
-            this.Four.Click += new System.EventHandler(this.Four_Click);
+            this.Four.Click += new System.EventHandler(this.EvaluaterBtn);
             // 
             // Five
             // 
@@ -144,7 +147,7 @@
             this.Five.TabIndex = 4;
             this.Five.Text = "5";
             this.Five.UseVisualStyleBackColor = true;
-            this.Five.Click += new System.EventHandler(this.Five_Click);
+            this.Five.Click += new System.EventHandler(this.EvaluaterBtn);
             // 
             // Six
             // 
@@ -162,7 +165,7 @@
             this.Six.TabIndex = 5;
             this.Six.Text = "6";
             this.Six.UseVisualStyleBackColor = true;
-            this.Six.Click += new System.EventHandler(this.Six_Click);
+            this.Six.Click += new System.EventHandler(this.EvaluaterBtn);
             // 
             // Seven
             // 
@@ -180,7 +183,7 @@
             this.Seven.TabIndex = 6;
             this.Seven.Text = "7";
             this.Seven.UseVisualStyleBackColor = true;
-            this.Seven.Click += new System.EventHandler(this.Seven_Click);
+            this.Seven.Click += new System.EventHandler(this.EvaluaterBtn);
             // 
             // Eight
             // 
@@ -198,7 +201,7 @@
             this.Eight.TabIndex = 7;
             this.Eight.Text = "8";
             this.Eight.UseVisualStyleBackColor = true;
-            this.Eight.Click += new System.EventHandler(this.Eight_Click);
+            this.Eight.Click += new System.EventHandler(this.EvaluaterBtn);
             // 
             // Nine
             // 
@@ -216,7 +219,7 @@
             this.Nine.TabIndex = 8;
             this.Nine.Text = "9";
             this.Nine.UseVisualStyleBackColor = true;
-            this.Nine.Click += new System.EventHandler(this.Nine_Click);
+            this.Nine.Click += new System.EventHandler(this.EvaluaterBtn);
             // 
             // Subtract
             // 
@@ -234,7 +237,7 @@
             this.Subtract.TabIndex = 9;
             this.Subtract.Text = "-";
             this.Subtract.UseVisualStyleBackColor = true;
-            this.Subtract.Click += new System.EventHandler(this.Subtract_Click);
+            this.Subtract.Click += new System.EventHandler(this.EvaluaterBtn);
             // 
             // Add
             // 
@@ -252,7 +255,7 @@
             this.Add.TabIndex = 10;
             this.Add.Text = "+";
             this.Add.UseVisualStyleBackColor = true;
-            this.Add.Click += new System.EventHandler(this.Add_Click);
+            this.Add.Click += new System.EventHandler(this.EvaluaterBtn);
             // 
             // Equals
             // 
@@ -270,21 +273,9 @@
             this.Equals.TabIndex = 11;
             this.Equals.Text = "=";
             this.Equals.UseVisualStyleBackColor = true;
+            this.AcceptButton = this.Equals; //I think this is the way we accept the "ENTER" key push.
             this.Equals.Click += new System.EventHandler(this.Equals_Click);
-            // 
-            // Output
-            // 
-            this.Output.BackColor = System.Drawing.Color.White;
-            this.Output.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Output.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Output.Location = new System.Drawing.Point(14, 38);
-            this.Output.Name = "Output";
-            this.Output.Padding = new System.Windows.Forms.Padding(0, 0, 25, 0);
-            this.Output.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Output.Size = new System.Drawing.Size(430, 128);
-            this.Output.TabIndex = 12;
-            this.Output.Text = "0";
-            this.Output.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            
             // 
             // Zero
             // 
@@ -302,7 +293,7 @@
             this.Zero.TabIndex = 13;
             this.Zero.Text = "0";
             this.Zero.UseVisualStyleBackColor = true;
-            this.Zero.Click += new System.EventHandler(this.Zero_Click);
+            this.Zero.Click += new System.EventHandler(this.EvaluaterBtn);
             // 
             // Decimal
             // 
@@ -320,7 +311,7 @@
             this.Decimal.TabIndex = 14;
             this.Decimal.Text = ".";
             this.Decimal.UseVisualStyleBackColor = true;
-            this.Decimal.Click += new System.EventHandler(this.Decimal_Click);
+            this.Decimal.Click += new System.EventHandler(this.EvaluaterBtn);
             // 
             // Multiply
             // 
@@ -338,7 +329,7 @@
             this.Multiply.TabIndex = 15;
             this.Multiply.Text = "*";
             this.Multiply.UseVisualStyleBackColor = true;
-            this.Multiply.Click += new System.EventHandler(this.Multiply_Click);
+            this.Multiply.Click += new System.EventHandler(this.EvaluaterBtn);
             // 
             // Division
             // 
@@ -356,7 +347,7 @@
             this.Division.TabIndex = 16;
             this.Division.Text = "/";
             this.Division.UseVisualStyleBackColor = true;
-            this.Division.Click += new System.EventHandler(this.Division_Click);
+            this.Division.Click += new System.EventHandler(this.EvaluaterBtn);
             // 
             // Clear
             // 
@@ -493,8 +484,8 @@
             // 
             // panelTop
             // 
-            this.panelTop.Controls.Add(this.buttonExit);
             this.panelTop.Controls.Add(this.Output);
+            this.panelTop.Controls.Add(this.buttonExit);
             this.panelTop.Location = new System.Drawing.Point(200, 0);
             this.panelTop.Name = "panelTop";
             this.panelTop.Size = new System.Drawing.Size(444, 166);
@@ -518,6 +509,23 @@
             this.buttonExit.Text = "X";
             this.buttonExit.UseVisualStyleBackColor = false;
             this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // Output
+            // 
+            this.Output.AcceptsReturn = true;
+            this.Output.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Output.Location = new System.Drawing.Point(11, 36);
+            this.Output.Multiline = true;
+            this.Output.Name = "Output";
+            this.Output.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.Output.Size = new System.Drawing.Size(433, 131);
+            this.Output.TabIndex = 14;
+            this.Output.Text = "0";
             // 
             // Form1
             // 
@@ -549,6 +557,7 @@
             this.Text = "Form1";
             this.panelControl.ResumeLayout(false);
             this.panelTop.ResumeLayout(false);
+            this.panelTop.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -567,7 +576,6 @@
         private System.Windows.Forms.Button Subtract;
         private System.Windows.Forms.Button Add;
         private System.Windows.Forms.Button Equals;
-        private System.Windows.Forms.Label Output;
         private System.Windows.Forms.Button Zero;
         private System.Windows.Forms.Button Decimal;
         private System.Windows.Forms.Button Multiply;
@@ -583,6 +591,8 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panelLeft;
         private System.Windows.Forms.Button buttonExit;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.TextBox Output;
     }
 }
 
