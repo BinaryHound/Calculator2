@@ -29,11 +29,10 @@ namespace API.Controllers
 
             try
             {
-                var encryptedPassword = Crypto.EncryptString(user.Password);
                 db.Users.Add(new User()
                 {
                     Username = user.Username,
-                    Password = encryptedPassword,
+                    Password = Crypto.EncryptString(user.Password),
                     Created = DateTime.UtcNow,
                     LastLogin = null
                 });
@@ -62,6 +61,9 @@ namespace API.Controllers
 
                 if (existingUser == null || !Crypto.CompareString(user.Password, existingUser.Password))
                     return BadRequest("Invalid Login");
+
+                existingUser.LastLogin = DateTime.UtcNow;
+                db.SaveChanges();
 
                 return Ok("Success!");
             }
