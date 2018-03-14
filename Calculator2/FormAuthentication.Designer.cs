@@ -48,6 +48,7 @@
             this.picLoginUser = new System.Windows.Forms.PictureBox();
             this.picLogoLogin = new System.Windows.Forms.PictureBox();
             this.picLoginGif = new System.Windows.Forms.PictureBox();
+            this.lblGuestLogin = new System.Windows.Forms.Label();
             this.pnlControlsResize.SuspendLayout();
             this.pnlLogin.SuspendLayout();
             this.pnlLoginLeftSide.SuspendLayout();
@@ -118,6 +119,7 @@
             // pnlLoginLeftSide
             // 
             this.pnlLoginLeftSide.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(0)))), ((int)(((byte)(10)))));
+            this.pnlLoginLeftSide.Controls.Add(this.lblGuestLogin);
             this.pnlLoginLeftSide.Controls.Add(this.btnSignUp);
             this.pnlLoginLeftSide.Controls.Add(this.lblSignUpSlogan);
             this.pnlLoginLeftSide.Controls.Add(this.lblSignUpHook);
@@ -294,6 +296,22 @@
             this.picLoginGif.TabIndex = 0;
             this.picLoginGif.TabStop = false;
             // 
+            // lblGuestLogin
+            // 
+            this.lblGuestLogin.AutoSize = true;
+            this.lblGuestLogin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblGuestLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblGuestLogin.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGuestLogin.ForeColor = System.Drawing.Color.White;
+            this.lblGuestLogin.Location = new System.Drawing.Point(51, 617);
+            this.lblGuestLogin.Name = "lblGuestLogin";
+            this.lblGuestLogin.Size = new System.Drawing.Size(109, 17);
+            this.lblGuestLogin.TabIndex = 15;
+            this.lblGuestLogin.Text = "LOGIN AS GUEST";
+            this.lblGuestLogin.Click += new System.EventHandler(this.lblGuestLogin_Click);
+            this.lblGuestLogin.MouseLeave += new System.EventHandler(this.lblGuestLogin_MouseLeave);
+            this.lblGuestLogin.MouseHover += new System.EventHandler(this.lblGuestLogin_MouseHover);
+            // 
             // FormAuthentication
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -337,5 +355,6 @@
         private System.Windows.Forms.Label lblSignUpSlogan;
         private System.Windows.Forms.Label lblSignUpHook;
         private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.Label lblGuestLogin;
     }
 }

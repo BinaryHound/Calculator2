@@ -401,7 +401,7 @@
             // 
             // pnlFeaturePicker
             // 
-            this.pnlFeaturePicker.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(253)))), ((int)(((byte)(254)))));
+            this.pnlFeaturePicker.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(55)))), ((int)(((byte)(67)))));
             this.pnlFeaturePicker.Controls.Add(this.pnlSelectionIdentifier);
             this.pnlFeaturePicker.Controls.Add(this.pnlSettings);
             this.pnlFeaturePicker.Controls.Add(this.btnNotepad);
@@ -460,7 +460,7 @@
             this.btnAddExtension.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddExtension.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(161)))), ((int)(((byte)(206)))));
             this.btnAddExtension.Image = ((System.Drawing.Image)(resources.GetObject("btnAddExtension.Image")));
-            this.btnAddExtension.Location = new System.Drawing.Point(158, 3);
+            this.btnAddExtension.Location = new System.Drawing.Point(167, 3);
             this.btnAddExtension.Margin = new System.Windows.Forms.Padding(0);
             this.btnAddExtension.Name = "btnAddExtension";
             this.btnAddExtension.Size = new System.Drawing.Size(33, 33);

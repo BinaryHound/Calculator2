@@ -21,6 +21,12 @@ namespace DeskShell
             InitializeComponent();
         }
 
+        private void LaunchMainApplication()
+        {
+            DeskShell mainProgram = new DeskShell();
+            mainProgram.Show();
+        }
+
         private void KillApplication()
         {
             this.Close();
@@ -34,8 +40,7 @@ namespace DeskShell
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            DeskShell mainProgram = new DeskShell();
-            mainProgram.Show();
+            LaunchMainApplication();
         }
 
         private void pnlControlsResize_MouseDown(object sender, MouseEventArgs e)
@@ -56,6 +61,21 @@ namespace DeskShell
             {
                 this.SetDesktopLocation(MousePosition.X - MValX, MousePosition.Y - MValY);
             }
+        }
+
+        private void lblGuestLogin_Click(object sender, EventArgs e)
+        {
+            LaunchMainApplication();
+        }
+
+        private void lblGuestLogin_MouseHover(object sender, EventArgs e)
+        {
+            lblGuestLogin.ForeColor = Color.LightGray;
+        }
+
+        private void lblGuestLogin_MouseLeave(object sender, EventArgs e)
+        {
+            lblGuestLogin.ForeColor = Color.White;
         }
     }
 }
