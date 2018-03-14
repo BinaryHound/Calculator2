@@ -11,14 +11,6 @@ using System.Windows.Forms;
 
 namespace DeskShell {
     
-    enum WindowSelector
-    {
-        Home,
-        Calendar,
-        Calculator,
-        Todo,
-        Notepad
-    }
 
     public partial class DeskShell: Form {
 

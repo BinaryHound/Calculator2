@@ -23,13 +23,16 @@ namespace DeskShell
 
         private void LaunchMainApplication()
         {
+            this.Hide();
             DeskShell mainProgram = new DeskShell();
             mainProgram.Show();
+
         }
 
         private void KillApplication()
         {
             this.Close();
+            
             Application.Exit();
         }
 
