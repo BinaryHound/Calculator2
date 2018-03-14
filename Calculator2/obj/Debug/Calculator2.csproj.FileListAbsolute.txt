@@ -17,3 +17,4 @@ C:\Users\Cashe\Source\Repos\Calculator2\Calculator2\obj\Debug\Calculator2.csproj
 C:\Users\Cashe\Source\Repos\Calculator2\Calculator2\obj\Debug\Calculator2.exe
 C:\Users\Cashe\Source\Repos\Calculator2\Calculator2\obj\Debug\Calculator2.pdb
 C:\Users\The Genius\Documents\Visual Studio 2015\Projects\Calculator2\Calculator2\obj\Debug\DeskShell.DeskShell.resources
+C:\Users\The Genius\documents\visual studio 2015\Projects\Calculator2\Calculator2\obj\Debug\Calculator2.FormAuthentication.resources

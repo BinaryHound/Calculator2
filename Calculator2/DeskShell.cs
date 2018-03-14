@@ -192,16 +192,6 @@ namespace DeskShell {
             pnlAuthentication.SendToBack();
         }
 
-        private void txtLogin_Click(object sender, EventArgs e)
-        {
-            txtLogin.Text = "";
-        }
-
-        private void txtPassword_Click(object sender, EventArgs e)
-        {
-            txtPassword.Text = "";
-        }
-
         private void btnSignUp_Click(object sender, EventArgs e)
         {
             pnlLogin.Enabled = false;
