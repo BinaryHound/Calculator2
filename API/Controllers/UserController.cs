@@ -29,7 +29,7 @@ namespace API.Controllers
 
             try
             {
-                var encryptedPassword = Crypto.EncryptStringAES(user.Username, ConfigurationManager.AppSettings["SharedKey"]);
+                var encryptedPassword = Crypto.EncryptString(user.Password);
                 db.Users.Add(new User()
                 {
                     Username = user.Username,
@@ -57,11 +57,10 @@ namespace API.Controllers
                 return BadRequest("Invalid Login");
 
             try
-            {
-                var decryptedPassword = Crypto.DecryptStringAES(user.Username, ConfigurationManager.AppSettings["SharedKey"]);
-                var existingUser = db.Users.Where(x => x.Username.ToLower().Equals(user.Username.ToLower()) && x.Password.Equals(decryptedPassword)).FirstOrDefault();
+            {                               
+                var existingUser = db.Users.Where(x => x.Username.ToLower().Equals(user.Username.ToLower())).FirstOrDefault();
 
-                if (existingUser == null)
+                if (existingUser == null || !Crypto.CompareString(user.Password, existingUser.Password))
                     return BadRequest("Invalid Login");
 
                 return Ok("Success!");
