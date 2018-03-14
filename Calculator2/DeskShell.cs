@@ -34,8 +34,10 @@ namespace DeskShell {
             
             //Hides the Calculator for now.
             pnlMain.Enabled = true;
-            panelTop.Enabled = true;
+            pnlTop.Enabled = true;
 
+            pnlLogin.Enabled = false;
+            pnlLogin.Hide();
             txtOutput.Hide();
             pnlMain.Hide();
             
@@ -166,5 +168,17 @@ namespace DeskShell {
             KillApplication();
         }
         #endregion
+
+        private void btnLoginScreen_Click(object sender, EventArgs e)
+        {
+            pnlLogin.Enabled = true;
+            pnlLogin.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            pnlLogin.Enabled = false;
+            pnlLogin.Hide();
+        }
     }
 }
