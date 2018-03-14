@@ -67,6 +67,9 @@
             this.pnlControlsResize.Name = "pnlControlsResize";
             this.pnlControlsResize.Size = new System.Drawing.Size(1280, 36);
             this.pnlControlsResize.TabIndex = 22;
+            this.pnlControlsResize.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlControlsResize_MouseDown);
+            this.pnlControlsResize.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlControlsResize_MouseMove);
+            this.pnlControlsResize.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pnlControlsResize_MouseUp);
             // 
             // buttonExit
             // 

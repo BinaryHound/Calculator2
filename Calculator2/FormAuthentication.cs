@@ -12,6 +12,10 @@ namespace DeskShell
 {
     public partial class FormAuthentication : Form
     {
+        bool TogMove;
+        int MValX;
+        int MValY;
+
         public FormAuthentication()
         {
             InitializeComponent();
@@ -32,6 +36,26 @@ namespace DeskShell
         {
             DeskShell mainProgram = new DeskShell();
             mainProgram.Show();
+        }
+
+        private void pnlControlsResize_MouseDown(object sender, MouseEventArgs e)
+        {
+            TogMove = true;
+            MValX = e.X;
+            MValY = e.Y;
+        }
+
+        private void pnlControlsResize_MouseUp(object sender, MouseEventArgs e)
+        {
+            TogMove = false;
+        }
+
+        private void pnlControlsResize_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (TogMove)
+            {
+                this.SetDesktopLocation(MousePosition.X - MValX, MousePosition.Y - MValY);
+            }
         }
     }
 }
