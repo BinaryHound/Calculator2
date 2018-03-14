@@ -33,7 +33,21 @@
             this.buttonExit = new System.Windows.Forms.Button();
             this.btnMinimize = new System.Windows.Forms.Button();
             this.pnlLogin = new System.Windows.Forms.Panel();
+            this.pnlSignUp = new System.Windows.Forms.Panel();
+            this.txtSignUpPassword = new System.Windows.Forms.TextBox();
+            this.lblSignUpPassword = new System.Windows.Forms.Label();
+            this.pnlSignUpEmailUnderline = new System.Windows.Forms.Panel();
+            this.txtSignUpEmail = new System.Windows.Forms.TextBox();
+            this.lblSignUpEmail = new System.Windows.Forms.Label();
+            this.pnlSignUpLastNameUnderline = new System.Windows.Forms.Panel();
+            this.lblSignUpLastName = new System.Windows.Forms.Label();
+            this.lblSignUpFirstName = new System.Windows.Forms.Label();
+            this.txtSignUpLastName = new System.Windows.Forms.TextBox();
+            this.pnlSignUpFirstNameUnderline = new System.Windows.Forms.Panel();
+            this.txtSignUpFirstName = new System.Windows.Forms.TextBox();
+            this.picSignUpLogo = new System.Windows.Forms.PictureBox();
             this.pnlLoginLeftSide = new System.Windows.Forms.Panel();
+            this.lblGuestLogin = new System.Windows.Forms.Label();
             this.btnSignUp = new System.Windows.Forms.Button();
             this.lblSignUpSlogan = new System.Windows.Forms.Label();
             this.lblSignUpHook = new System.Windows.Forms.Label();
@@ -48,9 +62,16 @@
             this.picLoginUser = new System.Windows.Forms.PictureBox();
             this.picLogoLogin = new System.Windows.Forms.PictureBox();
             this.picLoginGif = new System.Windows.Forms.PictureBox();
-            this.lblGuestLogin = new System.Windows.Forms.Label();
+            this.pnlUnderlinePass = new System.Windows.Forms.Panel();
+            this.pnlConfirmPasswordUnderline = new System.Windows.Forms.Panel();
+            this.txtConfirmPassword = new System.Windows.Forms.TextBox();
+            this.lblConfirmPassword = new System.Windows.Forms.Label();
+            this.btnSubmit = new System.Windows.Forms.Button();
+            this.btnBackToLogin = new System.Windows.Forms.Button();
             this.pnlControlsResize.SuspendLayout();
             this.pnlLogin.SuspendLayout();
+            this.pnlSignUp.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picSignUpLogo)).BeginInit();
             this.pnlLoginLeftSide.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLoginPassword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLoginUser)).BeginInit();
@@ -110,11 +131,156 @@
             // pnlLogin
             // 
             this.pnlLogin.Controls.Add(this.pnlLoginLeftSide);
+            this.pnlLogin.Controls.Add(this.pnlSignUp);
             this.pnlLogin.Controls.Add(this.picLoginGif);
             this.pnlLogin.Location = new System.Drawing.Point(0, 35);
             this.pnlLogin.Name = "pnlLogin";
             this.pnlLogin.Size = new System.Drawing.Size(1280, 687);
             this.pnlLogin.TabIndex = 23;
+            // 
+            // pnlSignUp
+            // 
+            this.pnlSignUp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(0)))), ((int)(((byte)(10)))));
+            this.pnlSignUp.Controls.Add(this.btnBackToLogin);
+            this.pnlSignUp.Controls.Add(this.btnSubmit);
+            this.pnlSignUp.Controls.Add(this.pnlConfirmPasswordUnderline);
+            this.pnlSignUp.Controls.Add(this.txtConfirmPassword);
+            this.pnlSignUp.Controls.Add(this.lblConfirmPassword);
+            this.pnlSignUp.Controls.Add(this.pnlUnderlinePass);
+            this.pnlSignUp.Controls.Add(this.txtSignUpPassword);
+            this.pnlSignUp.Controls.Add(this.lblSignUpPassword);
+            this.pnlSignUp.Controls.Add(this.pnlSignUpEmailUnderline);
+            this.pnlSignUp.Controls.Add(this.txtSignUpEmail);
+            this.pnlSignUp.Controls.Add(this.lblSignUpEmail);
+            this.pnlSignUp.Controls.Add(this.pnlSignUpLastNameUnderline);
+            this.pnlSignUp.Controls.Add(this.lblSignUpLastName);
+            this.pnlSignUp.Controls.Add(this.lblSignUpFirstName);
+            this.pnlSignUp.Controls.Add(this.txtSignUpLastName);
+            this.pnlSignUp.Controls.Add(this.pnlSignUpFirstNameUnderline);
+            this.pnlSignUp.Controls.Add(this.txtSignUpFirstName);
+            this.pnlSignUp.Controls.Add(this.picSignUpLogo);
+            this.pnlSignUp.Location = new System.Drawing.Point(0, 0);
+            this.pnlSignUp.Name = "pnlSignUp";
+            this.pnlSignUp.Size = new System.Drawing.Size(573, 687);
+            this.pnlSignUp.TabIndex = 2;
+            // 
+            // txtSignUpPassword
+            // 
+            this.txtSignUpPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(0)))), ((int)(((byte)(10)))));
+            this.txtSignUpPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSignUpPassword.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSignUpPassword.Location = new System.Drawing.Point(54, 401);
+            this.txtSignUpPassword.Name = "txtSignUpPassword";
+            this.txtSignUpPassword.Size = new System.Drawing.Size(423, 30);
+            this.txtSignUpPassword.TabIndex = 18;
+            // 
+            // lblSignUpPassword
+            // 
+            this.lblSignUpPassword.AutoSize = true;
+            this.lblSignUpPassword.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSignUpPassword.ForeColor = System.Drawing.Color.White;
+            this.lblSignUpPassword.Location = new System.Drawing.Point(50, 377);
+            this.lblSignUpPassword.Name = "lblSignUpPassword";
+            this.lblSignUpPassword.Size = new System.Drawing.Size(99, 21);
+            this.lblSignUpPassword.TabIndex = 17;
+            this.lblSignUpPassword.Text = "PASSWORD";
+            // 
+            // pnlSignUpEmailUnderline
+            // 
+            this.pnlSignUpEmailUnderline.BackColor = System.Drawing.Color.White;
+            this.pnlSignUpEmailUnderline.Location = new System.Drawing.Point(54, 338);
+            this.pnlSignUpEmailUnderline.Name = "pnlSignUpEmailUnderline";
+            this.pnlSignUpEmailUnderline.Size = new System.Drawing.Size(423, 2);
+            this.pnlSignUpEmailUnderline.TabIndex = 13;
+            // 
+            // txtSignUpEmail
+            // 
+            this.txtSignUpEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(0)))), ((int)(((byte)(10)))));
+            this.txtSignUpEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSignUpEmail.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSignUpEmail.Location = new System.Drawing.Point(54, 302);
+            this.txtSignUpEmail.Name = "txtSignUpEmail";
+            this.txtSignUpEmail.Size = new System.Drawing.Size(423, 30);
+            this.txtSignUpEmail.TabIndex = 16;
+            // 
+            // lblSignUpEmail
+            // 
+            this.lblSignUpEmail.AutoSize = true;
+            this.lblSignUpEmail.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSignUpEmail.ForeColor = System.Drawing.Color.White;
+            this.lblSignUpEmail.Location = new System.Drawing.Point(50, 278);
+            this.lblSignUpEmail.Name = "lblSignUpEmail";
+            this.lblSignUpEmail.Size = new System.Drawing.Size(59, 21);
+            this.lblSignUpEmail.TabIndex = 15;
+            this.lblSignUpEmail.Text = "EMAIL";
+            // 
+            // pnlSignUpLastNameUnderline
+            // 
+            this.pnlSignUpLastNameUnderline.BackColor = System.Drawing.Color.White;
+            this.pnlSignUpLastNameUnderline.Location = new System.Drawing.Point(277, 250);
+            this.pnlSignUpLastNameUnderline.Name = "pnlSignUpLastNameUnderline";
+            this.pnlSignUpLastNameUnderline.Size = new System.Drawing.Size(201, 2);
+            this.pnlSignUpLastNameUnderline.TabIndex = 12;
+            // 
+            // lblSignUpLastName
+            // 
+            this.lblSignUpLastName.AutoSize = true;
+            this.lblSignUpLastName.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSignUpLastName.ForeColor = System.Drawing.Color.White;
+            this.lblSignUpLastName.Location = new System.Drawing.Point(273, 190);
+            this.lblSignUpLastName.Name = "lblSignUpLastName";
+            this.lblSignUpLastName.Size = new System.Drawing.Size(99, 21);
+            this.lblSignUpLastName.TabIndex = 14;
+            this.lblSignUpLastName.Text = "LAST NAME";
+            // 
+            // lblSignUpFirstName
+            // 
+            this.lblSignUpFirstName.AutoSize = true;
+            this.lblSignUpFirstName.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSignUpFirstName.ForeColor = System.Drawing.Color.White;
+            this.lblSignUpFirstName.Location = new System.Drawing.Point(50, 190);
+            this.lblSignUpFirstName.Name = "lblSignUpFirstName";
+            this.lblSignUpFirstName.Size = new System.Drawing.Size(102, 21);
+            this.lblSignUpFirstName.TabIndex = 13;
+            this.lblSignUpFirstName.Text = "FIRST NAME";
+            // 
+            // txtSignUpLastName
+            // 
+            this.txtSignUpLastName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(0)))), ((int)(((byte)(10)))));
+            this.txtSignUpLastName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSignUpLastName.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSignUpLastName.Location = new System.Drawing.Point(276, 214);
+            this.txtSignUpLastName.Name = "txtSignUpLastName";
+            this.txtSignUpLastName.Size = new System.Drawing.Size(201, 30);
+            this.txtSignUpLastName.TabIndex = 12;
+            // 
+            // pnlSignUpFirstNameUnderline
+            // 
+            this.pnlSignUpFirstNameUnderline.BackColor = System.Drawing.Color.White;
+            this.pnlSignUpFirstNameUnderline.Location = new System.Drawing.Point(54, 250);
+            this.pnlSignUpFirstNameUnderline.Name = "pnlSignUpFirstNameUnderline";
+            this.pnlSignUpFirstNameUnderline.Size = new System.Drawing.Size(201, 2);
+            this.pnlSignUpFirstNameUnderline.TabIndex = 11;
+            // 
+            // txtSignUpFirstName
+            // 
+            this.txtSignUpFirstName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(0)))), ((int)(((byte)(10)))));
+            this.txtSignUpFirstName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSignUpFirstName.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSignUpFirstName.Location = new System.Drawing.Point(54, 214);
+            this.txtSignUpFirstName.Name = "txtSignUpFirstName";
+            this.txtSignUpFirstName.Size = new System.Drawing.Size(201, 30);
+            this.txtSignUpFirstName.TabIndex = 10;
+            // 
+            // picSignUpLogo
+            // 
+            this.picSignUpLogo.Image = ((System.Drawing.Image)(resources.GetObject("picSignUpLogo.Image")));
+            this.picSignUpLogo.Location = new System.Drawing.Point(179, 7);
+            this.picSignUpLogo.Name = "picSignUpLogo";
+            this.picSignUpLogo.Size = new System.Drawing.Size(182, 154);
+            this.picSignUpLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picSignUpLogo.TabIndex = 1;
+            this.picSignUpLogo.TabStop = false;
             // 
             // pnlLoginLeftSide
             // 
@@ -138,6 +304,22 @@
             this.pnlLoginLeftSide.Size = new System.Drawing.Size(573, 685);
             this.pnlLoginLeftSide.TabIndex = 1;
             // 
+            // lblGuestLogin
+            // 
+            this.lblGuestLogin.AutoSize = true;
+            this.lblGuestLogin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblGuestLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblGuestLogin.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGuestLogin.ForeColor = System.Drawing.Color.White;
+            this.lblGuestLogin.Location = new System.Drawing.Point(51, 617);
+            this.lblGuestLogin.Name = "lblGuestLogin";
+            this.lblGuestLogin.Size = new System.Drawing.Size(109, 17);
+            this.lblGuestLogin.TabIndex = 15;
+            this.lblGuestLogin.Text = "LOGIN AS GUEST";
+            this.lblGuestLogin.Click += new System.EventHandler(this.lblGuestLogin_Click);
+            this.lblGuestLogin.MouseLeave += new System.EventHandler(this.lblGuestLogin_MouseLeave);
+            this.lblGuestLogin.MouseHover += new System.EventHandler(this.lblGuestLogin_MouseHover);
+            // 
             // btnSignUp
             // 
             this.btnSignUp.BackColor = System.Drawing.Color.Transparent;
@@ -153,6 +335,7 @@
             this.btnSignUp.TabIndex = 14;
             this.btnSignUp.Text = "SIGN UP";
             this.btnSignUp.UseVisualStyleBackColor = false;
+            this.btnSignUp.Click += new System.EventHandler(this.btnSignUp_Click);
             // 
             // lblSignUpSlogan
             // 
@@ -296,21 +479,71 @@
             this.picLoginGif.TabIndex = 0;
             this.picLoginGif.TabStop = false;
             // 
-            // lblGuestLogin
+            // pnlUnderlinePass
             // 
-            this.lblGuestLogin.AutoSize = true;
-            this.lblGuestLogin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblGuestLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblGuestLogin.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGuestLogin.ForeColor = System.Drawing.Color.White;
-            this.lblGuestLogin.Location = new System.Drawing.Point(51, 617);
-            this.lblGuestLogin.Name = "lblGuestLogin";
-            this.lblGuestLogin.Size = new System.Drawing.Size(109, 17);
-            this.lblGuestLogin.TabIndex = 15;
-            this.lblGuestLogin.Text = "LOGIN AS GUEST";
-            this.lblGuestLogin.Click += new System.EventHandler(this.lblGuestLogin_Click);
-            this.lblGuestLogin.MouseLeave += new System.EventHandler(this.lblGuestLogin_MouseLeave);
-            this.lblGuestLogin.MouseHover += new System.EventHandler(this.lblGuestLogin_MouseHover);
+            this.pnlUnderlinePass.BackColor = System.Drawing.Color.White;
+            this.pnlUnderlinePass.Location = new System.Drawing.Point(54, 437);
+            this.pnlUnderlinePass.Name = "pnlUnderlinePass";
+            this.pnlUnderlinePass.Size = new System.Drawing.Size(423, 2);
+            this.pnlUnderlinePass.TabIndex = 14;
+            // 
+            // pnlConfirmPasswordUnderline
+            // 
+            this.pnlConfirmPasswordUnderline.BackColor = System.Drawing.Color.White;
+            this.pnlConfirmPasswordUnderline.Location = new System.Drawing.Point(54, 522);
+            this.pnlConfirmPasswordUnderline.Name = "pnlConfirmPasswordUnderline";
+            this.pnlConfirmPasswordUnderline.Size = new System.Drawing.Size(423, 2);
+            this.pnlConfirmPasswordUnderline.TabIndex = 19;
+            // 
+            // txtConfirmPassword
+            // 
+            this.txtConfirmPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(0)))), ((int)(((byte)(10)))));
+            this.txtConfirmPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtConfirmPassword.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtConfirmPassword.Location = new System.Drawing.Point(54, 486);
+            this.txtConfirmPassword.Name = "txtConfirmPassword";
+            this.txtConfirmPassword.Size = new System.Drawing.Size(423, 30);
+            this.txtConfirmPassword.TabIndex = 21;
+            // 
+            // lblConfirmPassword
+            // 
+            this.lblConfirmPassword.AutoSize = true;
+            this.lblConfirmPassword.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConfirmPassword.ForeColor = System.Drawing.Color.White;
+            this.lblConfirmPassword.Location = new System.Drawing.Point(50, 465);
+            this.lblConfirmPassword.Name = "lblConfirmPassword";
+            this.lblConfirmPassword.Size = new System.Drawing.Size(180, 21);
+            this.lblConfirmPassword.TabIndex = 20;
+            this.lblConfirmPassword.Text = "CONFIRM PASSWORD";
+            // 
+            // btnSubmit
+            // 
+            this.btnSubmit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(250)))));
+            this.btnSubmit.FlatAppearance.BorderSize = 0;
+            this.btnSubmit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnSubmit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSubmit.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSubmit.Location = new System.Drawing.Point(54, 560);
+            this.btnSubmit.Name = "btnSubmit";
+            this.btnSubmit.Size = new System.Drawing.Size(424, 42);
+            this.btnSubmit.TabIndex = 22;
+            this.btnSubmit.Text = "SUBMIT";
+            this.btnSubmit.UseVisualStyleBackColor = false;
+            // 
+            // btnBackToLogin
+            // 
+            this.btnBackToLogin.FlatAppearance.BorderSize = 0;
+            this.btnBackToLogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnBackToLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnBackToLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBackToLogin.Image = ((System.Drawing.Image)(resources.GetObject("btnBackToLogin.Image")));
+            this.btnBackToLogin.Location = new System.Drawing.Point(12, 7);
+            this.btnBackToLogin.Name = "btnBackToLogin";
+            this.btnBackToLogin.Size = new System.Drawing.Size(47, 48);
+            this.btnBackToLogin.TabIndex = 23;
+            this.btnBackToLogin.UseVisualStyleBackColor = true;
+            this.btnBackToLogin.Click += new System.EventHandler(this.btnBackToLogin_Click);
             // 
             // FormAuthentication
             // 
@@ -324,6 +557,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.pnlControlsResize.ResumeLayout(false);
             this.pnlLogin.ResumeLayout(false);
+            this.pnlSignUp.ResumeLayout(false);
+            this.pnlSignUp.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picSignUpLogo)).EndInit();
             this.pnlLoginLeftSide.ResumeLayout(false);
             this.pnlLoginLeftSide.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLoginPassword)).EndInit();
@@ -356,5 +592,24 @@
         private System.Windows.Forms.Label lblSignUpHook;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Label lblGuestLogin;
+        private System.Windows.Forms.Panel pnlSignUp;
+        private System.Windows.Forms.PictureBox picSignUpLogo;
+        private System.Windows.Forms.Label lblSignUpFirstName;
+        private System.Windows.Forms.TextBox txtSignUpLastName;
+        private System.Windows.Forms.Panel pnlSignUpFirstNameUnderline;
+        private System.Windows.Forms.TextBox txtSignUpFirstName;
+        private System.Windows.Forms.Label lblSignUpEmail;
+        private System.Windows.Forms.Panel pnlSignUpLastNameUnderline;
+        private System.Windows.Forms.Label lblSignUpLastName;
+        private System.Windows.Forms.TextBox txtSignUpPassword;
+        private System.Windows.Forms.Label lblSignUpPassword;
+        private System.Windows.Forms.Panel pnlSignUpEmailUnderline;
+        private System.Windows.Forms.TextBox txtSignUpEmail;
+        private System.Windows.Forms.Panel pnlConfirmPasswordUnderline;
+        private System.Windows.Forms.TextBox txtConfirmPassword;
+        private System.Windows.Forms.Label lblConfirmPassword;
+        private System.Windows.Forms.Panel pnlUnderlinePass;
+        private System.Windows.Forms.Button btnSubmit;
+        private System.Windows.Forms.Button btnBackToLogin;
     }
 }

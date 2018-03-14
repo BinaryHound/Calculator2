@@ -80,5 +80,19 @@ namespace DeskShell
         {
             lblGuestLogin.ForeColor = Color.White;
         }
+
+        private void btnSignUp_Click(object sender, EventArgs e)
+        {
+            this.pnlSignUp.BringToFront();
+            this.pnlLoginLeftSide.Hide();
+            this.pnlSignUp.Show();
+        }
+
+        private void btnBackToLogin_Click(object sender, EventArgs e)
+        {
+            this.pnlLoginLeftSide.BringToFront();
+            this.pnlSignUp.Hide();
+            this.pnlLoginLeftSide.Show();
+        }
     }
 }
