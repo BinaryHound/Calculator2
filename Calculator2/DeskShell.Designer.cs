@@ -78,21 +78,21 @@
             this.lblGreeting = new System.Windows.Forms.Label();
             this.pnlAuthentication = new System.Windows.Forms.Panel();
             this.pnlSignUp = new System.Windows.Forms.Panel();
-            this.btnFacebook = new System.Windows.Forms.Button();
-            this.btnTwitter = new System.Windows.Forms.Button();
-            this.btnPinterest = new System.Windows.Forms.Button();
-            this.btnInstagram = new System.Windows.Forms.Button();
-            this.lblUsernameSignUp = new System.Windows.Forms.Label();
-            this.lblEmailSignUp = new System.Windows.Forms.Label();
-            this.lblPasswordSignUp = new System.Windows.Forms.Label();
-            this.lblConfirmPasswordSignUp = new System.Windows.Forms.Label();
-            this.btnConfirmSignUp = new System.Windows.Forms.Button();
-            this.txtUsernameSignUp = new System.Windows.Forms.TextBox();
-            this.txtEmailSignUp = new System.Windows.Forms.TextBox();
-            this.txtPasswordSignUp = new System.Windows.Forms.TextBox();
-            this.txtConfirmPasswordSignUp = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.btnBackSignUp = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtConfirmPasswordSignUp = new System.Windows.Forms.TextBox();
+            this.txtPasswordSignUp = new System.Windows.Forms.TextBox();
+            this.txtEmailSignUp = new System.Windows.Forms.TextBox();
+            this.txtUsernameSignUp = new System.Windows.Forms.TextBox();
+            this.btnConfirmSignUp = new System.Windows.Forms.Button();
+            this.lblConfirmPasswordSignUp = new System.Windows.Forms.Label();
+            this.lblPasswordSignUp = new System.Windows.Forms.Label();
+            this.lblEmailSignUp = new System.Windows.Forms.Label();
+            this.lblUsernameSignUp = new System.Windows.Forms.Label();
+            this.btnInstagram = new System.Windows.Forms.Button();
+            this.btnPinterest = new System.Windows.Forms.Button();
+            this.btnTwitter = new System.Windows.Forms.Button();
+            this.btnFacebook = new System.Windows.Forms.Button();
             this.pnlFeaturePicker.SuspendLayout();
             this.pnlSettings.SuspendLayout();
             this.pnlCalcTop.SuspendLayout();
@@ -690,7 +690,7 @@
             this.btnLoginBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLoginBack.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLoginBack.Image = ((System.Drawing.Image)(resources.GetObject("btnLoginBack.Image")));
-            this.btnLoginBack.Location = new System.Drawing.Point(8, 8);
+            this.btnLoginBack.Location = new System.Drawing.Point(12, 15);
             this.btnLoginBack.Name = "btnLoginBack";
             this.btnLoginBack.Size = new System.Drawing.Size(37, 36);
             this.btnLoginBack.TabIndex = 8;
@@ -894,8 +894,8 @@
             // 
             // pnlAuthentication
             // 
-            this.pnlAuthentication.Controls.Add(this.pnlSignUp);
             this.pnlAuthentication.Controls.Add(this.pnlLogin);
+            this.pnlAuthentication.Controls.Add(this.pnlSignUp);
             this.pnlAuthentication.Location = new System.Drawing.Point(0, 36);
             this.pnlAuthentication.Name = "pnlAuthentication";
             this.pnlAuthentication.Size = new System.Drawing.Size(644, 425);
@@ -924,89 +924,68 @@
             this.pnlSignUp.Size = new System.Drawing.Size(644, 425);
             this.pnlSignUp.TabIndex = 11;
             // 
-            // btnFacebook
+            // btnBackSignUp
             // 
-            this.btnFacebook.FlatAppearance.BorderSize = 0;
-            this.btnFacebook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFacebook.Image = ((System.Drawing.Image)(resources.GetObject("btnFacebook.Image")));
-            this.btnFacebook.Location = new System.Drawing.Point(469, 381);
-            this.btnFacebook.Name = "btnFacebook";
-            this.btnFacebook.Size = new System.Drawing.Size(32, 32);
-            this.btnFacebook.TabIndex = 0;
-            this.btnFacebook.UseVisualStyleBackColor = true;
+            this.btnBackSignUp.FlatAppearance.BorderSize = 0;
+            this.btnBackSignUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBackSignUp.Image = ((System.Drawing.Image)(resources.GetObject("btnBackSignUp.Image")));
+            this.btnBackSignUp.Location = new System.Drawing.Point(12, 15);
+            this.btnBackSignUp.Name = "btnBackSignUp";
+            this.btnBackSignUp.Size = new System.Drawing.Size(34, 34);
+            this.btnBackSignUp.TabIndex = 14;
+            this.btnBackSignUp.UseVisualStyleBackColor = true;
+            this.btnBackSignUp.Click += new System.EventHandler(this.btnBackSignUp_Click);
             // 
-            // btnTwitter
+            // label1
             // 
-            this.btnTwitter.FlatAppearance.BorderSize = 0;
-            this.btnTwitter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTwitter.Image = ((System.Drawing.Image)(resources.GetObject("btnTwitter.Image")));
-            this.btnTwitter.Location = new System.Drawing.Point(507, 381);
-            this.btnTwitter.Name = "btnTwitter";
-            this.btnTwitter.Size = new System.Drawing.Size(32, 32);
-            this.btnTwitter.TabIndex = 1;
-            this.btnTwitter.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(189)))), ((int)(((byte)(125)))));
+            this.label1.Location = new System.Drawing.Point(216, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(180, 49);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "SIGN UP";
             // 
-            // btnPinterest
+            // txtConfirmPasswordSignUp
             // 
-            this.btnPinterest.FlatAppearance.BorderSize = 0;
-            this.btnPinterest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPinterest.Image = ((System.Drawing.Image)(resources.GetObject("btnPinterest.Image")));
-            this.btnPinterest.Location = new System.Drawing.Point(545, 381);
-            this.btnPinterest.Name = "btnPinterest";
-            this.btnPinterest.Size = new System.Drawing.Size(32, 32);
-            this.btnPinterest.TabIndex = 2;
-            this.btnPinterest.UseVisualStyleBackColor = true;
+            this.txtConfirmPasswordSignUp.BackColor = System.Drawing.Color.LightGray;
+            this.txtConfirmPasswordSignUp.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtConfirmPasswordSignUp.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtConfirmPasswordSignUp.Location = new System.Drawing.Point(91, 305);
+            this.txtConfirmPasswordSignUp.Name = "txtConfirmPasswordSignUp";
+            this.txtConfirmPasswordSignUp.Size = new System.Drawing.Size(475, 24);
+            this.txtConfirmPasswordSignUp.TabIndex = 12;
             // 
-            // btnInstagram
+            // txtPasswordSignUp
             // 
-            this.btnInstagram.FlatAppearance.BorderSize = 0;
-            this.btnInstagram.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInstagram.Image = ((System.Drawing.Image)(resources.GetObject("btnInstagram.Image")));
-            this.btnInstagram.Location = new System.Drawing.Point(583, 381);
-            this.btnInstagram.Name = "btnInstagram";
-            this.btnInstagram.Size = new System.Drawing.Size(32, 32);
-            this.btnInstagram.TabIndex = 3;
-            this.btnInstagram.UseVisualStyleBackColor = true;
+            this.txtPasswordSignUp.BackColor = System.Drawing.Color.LightGray;
+            this.txtPasswordSignUp.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPasswordSignUp.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPasswordSignUp.Location = new System.Drawing.Point(91, 237);
+            this.txtPasswordSignUp.Name = "txtPasswordSignUp";
+            this.txtPasswordSignUp.Size = new System.Drawing.Size(475, 24);
+            this.txtPasswordSignUp.TabIndex = 11;
             // 
-            // lblUsernameSignUp
+            // txtEmailSignUp
             // 
-            this.lblUsernameSignUp.AutoSize = true;
-            this.lblUsernameSignUp.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsernameSignUp.Location = new System.Drawing.Point(46, 84);
-            this.lblUsernameSignUp.Name = "lblUsernameSignUp";
-            this.lblUsernameSignUp.Size = new System.Drawing.Size(101, 21);
-            this.lblUsernameSignUp.TabIndex = 4;
-            this.lblUsernameSignUp.Text = "USERNAME:";
+            this.txtEmailSignUp.BackColor = System.Drawing.Color.LightGray;
+            this.txtEmailSignUp.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtEmailSignUp.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmailSignUp.Location = new System.Drawing.Point(91, 171);
+            this.txtEmailSignUp.Name = "txtEmailSignUp";
+            this.txtEmailSignUp.Size = new System.Drawing.Size(475, 24);
+            this.txtEmailSignUp.TabIndex = 10;
             // 
-            // lblEmailSignUp
+            // txtUsernameSignUp
             // 
-            this.lblEmailSignUp.AutoSize = true;
-            this.lblEmailSignUp.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmailSignUp.Location = new System.Drawing.Point(46, 147);
-            this.lblEmailSignUp.Name = "lblEmailSignUp";
-            this.lblEmailSignUp.Size = new System.Drawing.Size(63, 21);
-            this.lblEmailSignUp.TabIndex = 5;
-            this.lblEmailSignUp.Text = "EMAIL:";
-            // 
-            // lblPasswordSignUp
-            // 
-            this.lblPasswordSignUp.AutoSize = true;
-            this.lblPasswordSignUp.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPasswordSignUp.Location = new System.Drawing.Point(46, 213);
-            this.lblPasswordSignUp.Name = "lblPasswordSignUp";
-            this.lblPasswordSignUp.Size = new System.Drawing.Size(103, 21);
-            this.lblPasswordSignUp.TabIndex = 6;
-            this.lblPasswordSignUp.Text = "PASSWORD:";
-            // 
-            // lblConfirmPasswordSignUp
-            // 
-            this.lblConfirmPasswordSignUp.AutoSize = true;
-            this.lblConfirmPasswordSignUp.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblConfirmPasswordSignUp.Location = new System.Drawing.Point(46, 281);
-            this.lblConfirmPasswordSignUp.Name = "lblConfirmPasswordSignUp";
-            this.lblConfirmPasswordSignUp.Size = new System.Drawing.Size(184, 21);
-            this.lblConfirmPasswordSignUp.TabIndex = 7;
-            this.lblConfirmPasswordSignUp.Text = "CONFIRM PASSWORD:";
+            this.txtUsernameSignUp.BackColor = System.Drawing.Color.LightGray;
+            this.txtUsernameSignUp.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtUsernameSignUp.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsernameSignUp.Location = new System.Drawing.Point(91, 108);
+            this.txtUsernameSignUp.Name = "txtUsernameSignUp";
+            this.txtUsernameSignUp.Size = new System.Drawing.Size(475, 24);
+            this.txtUsernameSignUp.TabIndex = 9;
             // 
             // btnConfirmSignUp
             // 
@@ -1021,68 +1000,89 @@
             this.btnConfirmSignUp.Text = "CONFIRM";
             this.btnConfirmSignUp.UseVisualStyleBackColor = false;
             // 
-            // txtUsernameSignUp
+            // lblConfirmPasswordSignUp
             // 
-            this.txtUsernameSignUp.BackColor = System.Drawing.Color.LightGray;
-            this.txtUsernameSignUp.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtUsernameSignUp.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsernameSignUp.Location = new System.Drawing.Point(91, 108);
-            this.txtUsernameSignUp.Name = "txtUsernameSignUp";
-            this.txtUsernameSignUp.Size = new System.Drawing.Size(475, 24);
-            this.txtUsernameSignUp.TabIndex = 9;
+            this.lblConfirmPasswordSignUp.AutoSize = true;
+            this.lblConfirmPasswordSignUp.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConfirmPasswordSignUp.Location = new System.Drawing.Point(46, 281);
+            this.lblConfirmPasswordSignUp.Name = "lblConfirmPasswordSignUp";
+            this.lblConfirmPasswordSignUp.Size = new System.Drawing.Size(184, 21);
+            this.lblConfirmPasswordSignUp.TabIndex = 7;
+            this.lblConfirmPasswordSignUp.Text = "CONFIRM PASSWORD:";
             // 
-            // txtEmailSignUp
+            // lblPasswordSignUp
             // 
-            this.txtEmailSignUp.BackColor = System.Drawing.Color.LightGray;
-            this.txtEmailSignUp.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtEmailSignUp.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmailSignUp.Location = new System.Drawing.Point(91, 171);
-            this.txtEmailSignUp.Name = "txtEmailSignUp";
-            this.txtEmailSignUp.Size = new System.Drawing.Size(475, 24);
-            this.txtEmailSignUp.TabIndex = 10;
+            this.lblPasswordSignUp.AutoSize = true;
+            this.lblPasswordSignUp.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPasswordSignUp.Location = new System.Drawing.Point(46, 213);
+            this.lblPasswordSignUp.Name = "lblPasswordSignUp";
+            this.lblPasswordSignUp.Size = new System.Drawing.Size(103, 21);
+            this.lblPasswordSignUp.TabIndex = 6;
+            this.lblPasswordSignUp.Text = "PASSWORD:";
             // 
-            // txtPasswordSignUp
+            // lblEmailSignUp
             // 
-            this.txtPasswordSignUp.BackColor = System.Drawing.Color.LightGray;
-            this.txtPasswordSignUp.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPasswordSignUp.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPasswordSignUp.Location = new System.Drawing.Point(91, 237);
-            this.txtPasswordSignUp.Name = "txtPasswordSignUp";
-            this.txtPasswordSignUp.Size = new System.Drawing.Size(475, 24);
-            this.txtPasswordSignUp.TabIndex = 11;
+            this.lblEmailSignUp.AutoSize = true;
+            this.lblEmailSignUp.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmailSignUp.Location = new System.Drawing.Point(46, 147);
+            this.lblEmailSignUp.Name = "lblEmailSignUp";
+            this.lblEmailSignUp.Size = new System.Drawing.Size(63, 21);
+            this.lblEmailSignUp.TabIndex = 5;
+            this.lblEmailSignUp.Text = "EMAIL:";
             // 
-            // txtConfirmPasswordSignUp
+            // lblUsernameSignUp
             // 
-            this.txtConfirmPasswordSignUp.BackColor = System.Drawing.Color.LightGray;
-            this.txtConfirmPasswordSignUp.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtConfirmPasswordSignUp.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtConfirmPasswordSignUp.Location = new System.Drawing.Point(91, 305);
-            this.txtConfirmPasswordSignUp.Name = "txtConfirmPasswordSignUp";
-            this.txtConfirmPasswordSignUp.Size = new System.Drawing.Size(475, 24);
-            this.txtConfirmPasswordSignUp.TabIndex = 12;
+            this.lblUsernameSignUp.AutoSize = true;
+            this.lblUsernameSignUp.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsernameSignUp.Location = new System.Drawing.Point(46, 84);
+            this.lblUsernameSignUp.Name = "lblUsernameSignUp";
+            this.lblUsernameSignUp.Size = new System.Drawing.Size(101, 21);
+            this.lblUsernameSignUp.TabIndex = 4;
+            this.lblUsernameSignUp.Text = "USERNAME:";
             // 
-            // label1
+            // btnInstagram
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(189)))), ((int)(((byte)(125)))));
-            this.label1.Location = new System.Drawing.Point(216, 15);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(180, 49);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "SIGN UP";
+            this.btnInstagram.FlatAppearance.BorderSize = 0;
+            this.btnInstagram.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInstagram.Image = ((System.Drawing.Image)(resources.GetObject("btnInstagram.Image")));
+            this.btnInstagram.Location = new System.Drawing.Point(583, 381);
+            this.btnInstagram.Name = "btnInstagram";
+            this.btnInstagram.Size = new System.Drawing.Size(32, 32);
+            this.btnInstagram.TabIndex = 3;
+            this.btnInstagram.UseVisualStyleBackColor = true;
             // 
-            // btnBackSignUp
+            // btnPinterest
             // 
-            this.btnBackSignUp.FlatAppearance.BorderSize = 0;
-            this.btnBackSignUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBackSignUp.Image = ((System.Drawing.Image)(resources.GetObject("btnBackSignUp.Image")));
-            this.btnBackSignUp.Location = new System.Drawing.Point(13, 30);
-            this.btnBackSignUp.Name = "btnBackSignUp";
-            this.btnBackSignUp.Size = new System.Drawing.Size(32, 32);
-            this.btnBackSignUp.TabIndex = 14;
-            this.btnBackSignUp.UseVisualStyleBackColor = true;
-            this.btnBackSignUp.Click += new System.EventHandler(this.btnBackSignUp_Click);
+            this.btnPinterest.FlatAppearance.BorderSize = 0;
+            this.btnPinterest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPinterest.Image = ((System.Drawing.Image)(resources.GetObject("btnPinterest.Image")));
+            this.btnPinterest.Location = new System.Drawing.Point(545, 381);
+            this.btnPinterest.Name = "btnPinterest";
+            this.btnPinterest.Size = new System.Drawing.Size(32, 32);
+            this.btnPinterest.TabIndex = 2;
+            this.btnPinterest.UseVisualStyleBackColor = true;
+            // 
+            // btnTwitter
+            // 
+            this.btnTwitter.FlatAppearance.BorderSize = 0;
+            this.btnTwitter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTwitter.Image = ((System.Drawing.Image)(resources.GetObject("btnTwitter.Image")));
+            this.btnTwitter.Location = new System.Drawing.Point(507, 381);
+            this.btnTwitter.Name = "btnTwitter";
+            this.btnTwitter.Size = new System.Drawing.Size(32, 32);
+            this.btnTwitter.TabIndex = 1;
+            this.btnTwitter.UseVisualStyleBackColor = true;
+            // 
+            // btnFacebook
+            // 
+            this.btnFacebook.FlatAppearance.BorderSize = 0;
+            this.btnFacebook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFacebook.Image = ((System.Drawing.Image)(resources.GetObject("btnFacebook.Image")));
+            this.btnFacebook.Location = new System.Drawing.Point(469, 381);
+            this.btnFacebook.Name = "btnFacebook";
+            this.btnFacebook.Size = new System.Drawing.Size(32, 32);
+            this.btnFacebook.TabIndex = 0;
+            this.btnFacebook.UseVisualStyleBackColor = true;
             // 
             // DeskShell
             // 
