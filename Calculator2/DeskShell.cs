@@ -185,10 +185,11 @@ namespace DeskShell {
             pnlAuthentication.BringToFront();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnBackLogin_Click(object sender, EventArgs e)
         {
             pnlLogin.Enabled = false;
             pnlLogin.Hide();
+            pnlAuthentication.SendToBack();
         }
 
         private void txtLogin_Click(object sender, EventArgs e)
@@ -201,10 +202,22 @@ namespace DeskShell {
             txtPassword.Text = "";
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btnSignUp_Click(object sender, EventArgs e)
         {
             pnlLogin.Enabled = false;
             pnlLogin.Hide();
+
+            pnlSignUp.Enabled = true;
+            pnlSignUp.Show();
+        }
+
+        private void btnBackSignUp_Click(object sender, EventArgs e)
+        {
+            pnlSignUp.Hide();
+            pnlSignUp.Enabled = false;
+
+            pnlLogin.Enabled = true;
+            pnlLogin.Show();
         }
     }
 }
