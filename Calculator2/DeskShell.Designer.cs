@@ -387,7 +387,7 @@
             // panelLeft
             // 
             this.panelLeft.BackColor = System.Drawing.Color.LightCoral;
-            this.panelLeft.Location = new System.Drawing.Point(195, 0);
+            this.panelLeft.Location = new System.Drawing.Point(197, 36);
             this.panelLeft.Name = "panelLeft";
             this.panelLeft.Size = new System.Drawing.Size(3, 80);
             this.panelLeft.TabIndex = 13;

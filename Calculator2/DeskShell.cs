@@ -33,10 +33,12 @@ namespace DeskShell {
             InitializeComponent();
             
             //Hides the Calculator for now.
-            pnlMain.Enabled = false;
+            pnlMain.Enabled = true;
+            panelTop.Enabled = true;
+
             txtOutput.Hide();
             pnlMain.Hide();
-            panelTop.Enabled = false;
+            
         }
 
         private static double Evaluate(string expression)
@@ -114,23 +116,30 @@ namespace DeskShell {
         {
             panelLeft.Height = buttonHome.Height;
             panelLeft.Top = buttonHome.Top;
+
+            txtOutput.Hide();
+            pnlMain.Hide();
         }
 
         private void buttonCalendar_Click(object sender, EventArgs e)
         {
             panelLeft.Height = buttonCalendar.Height;
             panelLeft.Top = buttonCalendar.Top;
+
+            txtOutput.Hide();
+            pnlMain.Hide();
         }
 
         private void buttonCalculator_Click(object sender, EventArgs e)
         {
             panelLeft.Height = buttonCalculator.Height;
             panelLeft.Top = buttonCalculator.Top;
-            pnlMain.Enabled = true;
-            panelTop.Enabled = true;
+
+            //Setting panels to true or false.
             txtOutput.Show();
             pnlMain.Show();
-            //WindowLoad = WindowSelector.Calculator;
+
+            //Have to set the focus on the text-box
             txtOutput.Focus();
         }
 
@@ -138,12 +147,18 @@ namespace DeskShell {
         {
             panelLeft.Height = buttonToDo.Height;
             panelLeft.Top = buttonToDo.Top;
+
+            txtOutput.Hide();
+            pnlMain.Hide();
         }
 
         private void buttonNotepad_Click(object sender, EventArgs e)
         {
             panelLeft.Height = buttonNotepad.Height;
             panelLeft.Top = buttonNotepad.Top;
+
+            txtOutput.Hide();
+            pnlMain.Hide();
         }
 
         private void buttonExit_Click(object sender, EventArgs e)
