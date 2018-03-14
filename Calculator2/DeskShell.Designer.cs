@@ -56,10 +56,6 @@
             this.btnHome = new System.Windows.Forms.Button();
             this.pnlCalcTop = new System.Windows.Forms.Panel();
             this.txtOutput = new System.Windows.Forms.TextBox();
-            this.pnlLogin = new System.Windows.Forms.Panel();
-            this.picLoginHolder = new System.Windows.Forms.PictureBox();
-            this.picLoginGif = new System.Windows.Forms.PictureBox();
-            this.btnLoginBack = new System.Windows.Forms.Button();
             this.buttonExit = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.pnlCalcPad = new System.Windows.Forms.Panel();
@@ -70,36 +66,14 @@
             this.pnlHome = new System.Windows.Forms.Panel();
             this.lblUserGreeting = new System.Windows.Forms.Label();
             this.lblGreeting = new System.Windows.Forms.Label();
-            this.pnlAuthentication = new System.Windows.Forms.Panel();
-            this.pnlSignUp = new System.Windows.Forms.Panel();
-            this.btnBackSignUp = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtConfirmPasswordSignUp = new System.Windows.Forms.TextBox();
-            this.txtPasswordSignUp = new System.Windows.Forms.TextBox();
-            this.txtEmailSignUp = new System.Windows.Forms.TextBox();
-            this.txtUsernameSignUp = new System.Windows.Forms.TextBox();
-            this.btnConfirmSignUp = new System.Windows.Forms.Button();
-            this.lblConfirmPasswordSignUp = new System.Windows.Forms.Label();
-            this.lblPasswordSignUp = new System.Windows.Forms.Label();
-            this.lblEmailSignUp = new System.Windows.Forms.Label();
-            this.lblUsernameSignUp = new System.Windows.Forms.Label();
-            this.btnInstagram = new System.Windows.Forms.Button();
-            this.btnPinterest = new System.Windows.Forms.Button();
-            this.btnTwitter = new System.Windows.Forms.Button();
-            this.btnFacebook = new System.Windows.Forms.Button();
             this.pnlFeaturePicker.SuspendLayout();
             this.pnlSettings.SuspendLayout();
             this.pnlCalcTop.SuspendLayout();
-            this.pnlLogin.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picLoginHolder)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picLoginGif)).BeginInit();
             this.pnlCalcPad.SuspendLayout();
             this.pnlInner.SuspendLayout();
             this.pnlControlsResize.SuspendLayout();
             this.pnlCentralHolder.SuspendLayout();
             this.pnlHome.SuspendLayout();
-            this.pnlAuthentication.SuspendLayout();
-            this.pnlSignUp.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnOne
@@ -612,9 +586,9 @@
             // pnlCalcTop
             // 
             this.pnlCalcTop.Controls.Add(this.txtOutput);
-            this.pnlCalcTop.Location = new System.Drawing.Point(6, 0);
+            this.pnlCalcTop.Location = new System.Drawing.Point(0, 0);
             this.pnlCalcTop.Name = "pnlCalcTop";
-            this.pnlCalcTop.Size = new System.Drawing.Size(438, 129);
+            this.pnlCalcTop.Size = new System.Drawing.Size(1077, 129);
             this.pnlCalcTop.TabIndex = 19;
             // 
             // txtOutput
@@ -630,50 +604,6 @@
             this.txtOutput.TabIndex = 14;
             this.txtOutput.Text = "0";
             this.txtOutput.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // pnlLogin
-            // 
-            this.pnlLogin.Controls.Add(this.picLoginHolder);
-            this.pnlLogin.Controls.Add(this.picLoginGif);
-            this.pnlLogin.Controls.Add(this.btnLoginBack);
-            this.pnlLogin.Location = new System.Drawing.Point(0, 0);
-            this.pnlLogin.Name = "pnlLogin";
-            this.pnlLogin.Size = new System.Drawing.Size(1277, 720);
-            this.pnlLogin.TabIndex = 15;
-            // 
-            // picLoginHolder
-            // 
-            this.picLoginHolder.BackColor = System.Drawing.Color.Transparent;
-            this.picLoginHolder.Image = ((System.Drawing.Image)(resources.GetObject("picLoginHolder.Image")));
-            this.picLoginHolder.Location = new System.Drawing.Point(402, 39);
-            this.picLoginHolder.Name = "picLoginHolder";
-            this.picLoginHolder.Size = new System.Drawing.Size(500, 600);
-            this.picLoginHolder.TabIndex = 10;
-            this.picLoginHolder.TabStop = false;
-            // 
-            // picLoginGif
-            // 
-            this.picLoginGif.Image = ((System.Drawing.Image)(resources.GetObject("picLoginGif.Image")));
-            this.picLoginGif.Location = new System.Drawing.Point(0, 0);
-            this.picLoginGif.Name = "picLoginGif";
-            this.picLoginGif.Size = new System.Drawing.Size(1280, 684);
-            this.picLoginGif.TabIndex = 9;
-            this.picLoginGif.TabStop = false;
-            // 
-            // btnLoginBack
-            // 
-            this.btnLoginBack.FlatAppearance.BorderSize = 0;
-            this.btnLoginBack.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.btnLoginBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.btnLoginBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLoginBack.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLoginBack.Image = ((System.Drawing.Image)(resources.GetObject("btnLoginBack.Image")));
-            this.btnLoginBack.Location = new System.Drawing.Point(12, 15);
-            this.btnLoginBack.Name = "btnLoginBack";
-            this.btnLoginBack.Size = new System.Drawing.Size(37, 36);
-            this.btnLoginBack.TabIndex = 8;
-            this.btnLoginBack.UseVisualStyleBackColor = true;
-            this.btnLoginBack.Click += new System.EventHandler(this.btnBackLogin_Click);
             // 
             // buttonExit
             // 
@@ -765,18 +695,18 @@
             this.pnlCentralHolder.Controls.Add(this.pnlHome);
             this.pnlCentralHolder.Controls.Add(this.pnlCalcTop);
             this.pnlCentralHolder.Controls.Add(this.pnlCalcPad);
-            this.pnlCentralHolder.Location = new System.Drawing.Point(200, 70);
+            this.pnlCentralHolder.Location = new System.Drawing.Point(200, 36);
             this.pnlCentralHolder.Name = "pnlCentralHolder";
-            this.pnlCentralHolder.Size = new System.Drawing.Size(1077, 650);
+            this.pnlCentralHolder.Size = new System.Drawing.Size(1077, 684);
             this.pnlCentralHolder.TabIndex = 15;
             // 
             // pnlHome
             // 
             this.pnlHome.Controls.Add(this.lblUserGreeting);
             this.pnlHome.Controls.Add(this.lblGreeting);
-            this.pnlHome.Location = new System.Drawing.Point(0, 34);
+            this.pnlHome.Location = new System.Drawing.Point(0, 0);
             this.pnlHome.Name = "pnlHome";
-            this.pnlHome.Size = new System.Drawing.Size(1077, 650);
+            this.pnlHome.Size = new System.Drawing.Size(1077, 684);
             this.pnlHome.TabIndex = 15;
             // 
             // lblUserGreeting
@@ -802,199 +732,6 @@
             this.lblGreeting.TabIndex = 0;
             this.lblGreeting.Text = "Welcome,";
             // 
-            // pnlAuthentication
-            // 
-            this.pnlAuthentication.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(253)))), ((int)(((byte)(254)))));
-            this.pnlAuthentication.Controls.Add(this.pnlLogin);
-            this.pnlAuthentication.Controls.Add(this.pnlSignUp);
-            this.pnlAuthentication.Location = new System.Drawing.Point(0, 36);
-            this.pnlAuthentication.Name = "pnlAuthentication";
-            this.pnlAuthentication.Size = new System.Drawing.Size(1277, 684);
-            this.pnlAuthentication.TabIndex = 0;
-            // 
-            // pnlSignUp
-            // 
-            this.pnlSignUp.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pnlSignUp.Controls.Add(this.btnBackSignUp);
-            this.pnlSignUp.Controls.Add(this.label1);
-            this.pnlSignUp.Controls.Add(this.txtConfirmPasswordSignUp);
-            this.pnlSignUp.Controls.Add(this.txtPasswordSignUp);
-            this.pnlSignUp.Controls.Add(this.txtEmailSignUp);
-            this.pnlSignUp.Controls.Add(this.txtUsernameSignUp);
-            this.pnlSignUp.Controls.Add(this.btnConfirmSignUp);
-            this.pnlSignUp.Controls.Add(this.lblConfirmPasswordSignUp);
-            this.pnlSignUp.Controls.Add(this.lblPasswordSignUp);
-            this.pnlSignUp.Controls.Add(this.lblEmailSignUp);
-            this.pnlSignUp.Controls.Add(this.lblUsernameSignUp);
-            this.pnlSignUp.Controls.Add(this.btnInstagram);
-            this.pnlSignUp.Controls.Add(this.btnPinterest);
-            this.pnlSignUp.Controls.Add(this.btnTwitter);
-            this.pnlSignUp.Controls.Add(this.btnFacebook);
-            this.pnlSignUp.Location = new System.Drawing.Point(0, 0);
-            this.pnlSignUp.Name = "pnlSignUp";
-            this.pnlSignUp.Size = new System.Drawing.Size(644, 425);
-            this.pnlSignUp.TabIndex = 11;
-            // 
-            // btnBackSignUp
-            // 
-            this.btnBackSignUp.FlatAppearance.BorderSize = 0;
-            this.btnBackSignUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBackSignUp.Image = ((System.Drawing.Image)(resources.GetObject("btnBackSignUp.Image")));
-            this.btnBackSignUp.Location = new System.Drawing.Point(12, 15);
-            this.btnBackSignUp.Name = "btnBackSignUp";
-            this.btnBackSignUp.Size = new System.Drawing.Size(34, 34);
-            this.btnBackSignUp.TabIndex = 14;
-            this.btnBackSignUp.UseVisualStyleBackColor = true;
-            this.btnBackSignUp.Click += new System.EventHandler(this.btnBackSignUp_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(189)))), ((int)(((byte)(125)))));
-            this.label1.Location = new System.Drawing.Point(216, 15);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(180, 49);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "SIGN UP";
-            // 
-            // txtConfirmPasswordSignUp
-            // 
-            this.txtConfirmPasswordSignUp.BackColor = System.Drawing.Color.LightGray;
-            this.txtConfirmPasswordSignUp.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtConfirmPasswordSignUp.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtConfirmPasswordSignUp.Location = new System.Drawing.Point(91, 305);
-            this.txtConfirmPasswordSignUp.Name = "txtConfirmPasswordSignUp";
-            this.txtConfirmPasswordSignUp.Size = new System.Drawing.Size(475, 24);
-            this.txtConfirmPasswordSignUp.TabIndex = 12;
-            // 
-            // txtPasswordSignUp
-            // 
-            this.txtPasswordSignUp.BackColor = System.Drawing.Color.LightGray;
-            this.txtPasswordSignUp.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPasswordSignUp.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPasswordSignUp.Location = new System.Drawing.Point(91, 237);
-            this.txtPasswordSignUp.Name = "txtPasswordSignUp";
-            this.txtPasswordSignUp.Size = new System.Drawing.Size(475, 24);
-            this.txtPasswordSignUp.TabIndex = 11;
-            // 
-            // txtEmailSignUp
-            // 
-            this.txtEmailSignUp.BackColor = System.Drawing.Color.LightGray;
-            this.txtEmailSignUp.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtEmailSignUp.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmailSignUp.Location = new System.Drawing.Point(91, 171);
-            this.txtEmailSignUp.Name = "txtEmailSignUp";
-            this.txtEmailSignUp.Size = new System.Drawing.Size(475, 24);
-            this.txtEmailSignUp.TabIndex = 10;
-            // 
-            // txtUsernameSignUp
-            // 
-            this.txtUsernameSignUp.BackColor = System.Drawing.Color.LightGray;
-            this.txtUsernameSignUp.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtUsernameSignUp.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsernameSignUp.Location = new System.Drawing.Point(91, 108);
-            this.txtUsernameSignUp.Name = "txtUsernameSignUp";
-            this.txtUsernameSignUp.Size = new System.Drawing.Size(475, 24);
-            this.txtUsernameSignUp.TabIndex = 9;
-            // 
-            // btnConfirmSignUp
-            // 
-            this.btnConfirmSignUp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(150)))), ((int)(((byte)(169)))));
-            this.btnConfirmSignUp.FlatAppearance.BorderSize = 0;
-            this.btnConfirmSignUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConfirmSignUp.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfirmSignUp.Location = new System.Drawing.Point(225, 342);
-            this.btnConfirmSignUp.Name = "btnConfirmSignUp";
-            this.btnConfirmSignUp.Size = new System.Drawing.Size(155, 31);
-            this.btnConfirmSignUp.TabIndex = 8;
-            this.btnConfirmSignUp.Text = "CONFIRM";
-            this.btnConfirmSignUp.UseVisualStyleBackColor = false;
-            // 
-            // lblConfirmPasswordSignUp
-            // 
-            this.lblConfirmPasswordSignUp.AutoSize = true;
-            this.lblConfirmPasswordSignUp.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblConfirmPasswordSignUp.Location = new System.Drawing.Point(46, 281);
-            this.lblConfirmPasswordSignUp.Name = "lblConfirmPasswordSignUp";
-            this.lblConfirmPasswordSignUp.Size = new System.Drawing.Size(184, 21);
-            this.lblConfirmPasswordSignUp.TabIndex = 7;
-            this.lblConfirmPasswordSignUp.Text = "CONFIRM PASSWORD:";
-            // 
-            // lblPasswordSignUp
-            // 
-            this.lblPasswordSignUp.AutoSize = true;
-            this.lblPasswordSignUp.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPasswordSignUp.Location = new System.Drawing.Point(46, 213);
-            this.lblPasswordSignUp.Name = "lblPasswordSignUp";
-            this.lblPasswordSignUp.Size = new System.Drawing.Size(103, 21);
-            this.lblPasswordSignUp.TabIndex = 6;
-            this.lblPasswordSignUp.Text = "PASSWORD:";
-            // 
-            // lblEmailSignUp
-            // 
-            this.lblEmailSignUp.AutoSize = true;
-            this.lblEmailSignUp.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmailSignUp.Location = new System.Drawing.Point(46, 147);
-            this.lblEmailSignUp.Name = "lblEmailSignUp";
-            this.lblEmailSignUp.Size = new System.Drawing.Size(63, 21);
-            this.lblEmailSignUp.TabIndex = 5;
-            this.lblEmailSignUp.Text = "EMAIL:";
-            // 
-            // lblUsernameSignUp
-            // 
-            this.lblUsernameSignUp.AutoSize = true;
-            this.lblUsernameSignUp.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsernameSignUp.Location = new System.Drawing.Point(46, 84);
-            this.lblUsernameSignUp.Name = "lblUsernameSignUp";
-            this.lblUsernameSignUp.Size = new System.Drawing.Size(101, 21);
-            this.lblUsernameSignUp.TabIndex = 4;
-            this.lblUsernameSignUp.Text = "USERNAME:";
-            // 
-            // btnInstagram
-            // 
-            this.btnInstagram.FlatAppearance.BorderSize = 0;
-            this.btnInstagram.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInstagram.Image = ((System.Drawing.Image)(resources.GetObject("btnInstagram.Image")));
-            this.btnInstagram.Location = new System.Drawing.Point(583, 381);
-            this.btnInstagram.Name = "btnInstagram";
-            this.btnInstagram.Size = new System.Drawing.Size(32, 32);
-            this.btnInstagram.TabIndex = 3;
-            this.btnInstagram.UseVisualStyleBackColor = true;
-            // 
-            // btnPinterest
-            // 
-            this.btnPinterest.FlatAppearance.BorderSize = 0;
-            this.btnPinterest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPinterest.Image = ((System.Drawing.Image)(resources.GetObject("btnPinterest.Image")));
-            this.btnPinterest.Location = new System.Drawing.Point(545, 381);
-            this.btnPinterest.Name = "btnPinterest";
-            this.btnPinterest.Size = new System.Drawing.Size(32, 32);
-            this.btnPinterest.TabIndex = 2;
-            this.btnPinterest.UseVisualStyleBackColor = true;
-            // 
-            // btnTwitter
-            // 
-            this.btnTwitter.FlatAppearance.BorderSize = 0;
-            this.btnTwitter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTwitter.Image = ((System.Drawing.Image)(resources.GetObject("btnTwitter.Image")));
-            this.btnTwitter.Location = new System.Drawing.Point(507, 381);
-            this.btnTwitter.Name = "btnTwitter";
-            this.btnTwitter.Size = new System.Drawing.Size(32, 32);
-            this.btnTwitter.TabIndex = 1;
-            this.btnTwitter.UseVisualStyleBackColor = true;
-            // 
-            // btnFacebook
-            // 
-            this.btnFacebook.FlatAppearance.BorderSize = 0;
-            this.btnFacebook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFacebook.Image = ((System.Drawing.Image)(resources.GetObject("btnFacebook.Image")));
-            this.btnFacebook.Location = new System.Drawing.Point(469, 381);
-            this.btnFacebook.Name = "btnFacebook";
-            this.btnFacebook.Size = new System.Drawing.Size(32, 32);
-            this.btnFacebook.TabIndex = 0;
-            this.btnFacebook.UseVisualStyleBackColor = true;
-            // 
             // DeskShell
             // 
             this.AcceptButton = this.btnEquals;
@@ -1004,7 +741,6 @@
             this.Controls.Add(this.pnlFeaturePicker);
             this.Controls.Add(this.pnlControlsResize);
             this.Controls.Add(this.pnlCentralHolder);
-            this.Controls.Add(this.pnlAuthentication);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DeskShell";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -1013,18 +749,12 @@
             this.pnlSettings.ResumeLayout(false);
             this.pnlCalcTop.ResumeLayout(false);
             this.pnlCalcTop.PerformLayout();
-            this.pnlLogin.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picLoginHolder)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picLoginGif)).EndInit();
             this.pnlCalcPad.ResumeLayout(false);
             this.pnlInner.ResumeLayout(false);
             this.pnlControlsResize.ResumeLayout(false);
             this.pnlCentralHolder.ResumeLayout(false);
             this.pnlHome.ResumeLayout(false);
             this.pnlHome.PerformLayout();
-            this.pnlAuthentication.ResumeLayout(false);
-            this.pnlSignUp.ResumeLayout(false);
-            this.pnlSignUp.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1063,35 +793,14 @@
         private System.Windows.Forms.Button btnLoginScreen;
         private System.Windows.Forms.Panel pnlControlsResize;
         private System.Windows.Forms.Button btnMinimize;
-        private System.Windows.Forms.Panel pnlLogin;
-        private System.Windows.Forms.Button btnLoginBack;
         private System.Windows.Forms.Panel pnlSettings;
         private System.Windows.Forms.Button btnAddExtension;
         private System.Windows.Forms.Panel pnlInner;
         private System.Windows.Forms.Button btnSettings;
         private System.Windows.Forms.Panel pnlCentralHolder;
         private System.Windows.Forms.Panel pnlHome;
-        private System.Windows.Forms.Panel pnlAuthentication;
         private System.Windows.Forms.Label lblUserGreeting;
         private System.Windows.Forms.Label lblGreeting;
-        private System.Windows.Forms.Panel pnlSignUp;
-        private System.Windows.Forms.Button btnConfirmSignUp;
-        private System.Windows.Forms.Label lblConfirmPasswordSignUp;
-        private System.Windows.Forms.Label lblPasswordSignUp;
-        private System.Windows.Forms.Label lblEmailSignUp;
-        private System.Windows.Forms.Label lblUsernameSignUp;
-        private System.Windows.Forms.Button btnInstagram;
-        private System.Windows.Forms.Button btnPinterest;
-        private System.Windows.Forms.Button btnTwitter;
-        private System.Windows.Forms.Button btnFacebook;
-        private System.Windows.Forms.TextBox txtConfirmPasswordSignUp;
-        private System.Windows.Forms.TextBox txtPasswordSignUp;
-        private System.Windows.Forms.TextBox txtEmailSignUp;
-        private System.Windows.Forms.TextBox txtUsernameSignUp;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnBackSignUp;
-        private System.Windows.Forms.PictureBox picLoginGif;
-        private System.Windows.Forms.PictureBox picLoginHolder;
     }
 }
 

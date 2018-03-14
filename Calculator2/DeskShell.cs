@@ -38,8 +38,6 @@ namespace DeskShell {
             //Central is the parent container
             pnlCentralHolder.Show();
             pnlCentralHolder.Enabled = true;
-            pnlLogin.Enabled = false;
-            pnlLogin.Hide();
             txtOutput.Hide();
             pnlCalcPad.Hide();
             
@@ -179,35 +177,22 @@ namespace DeskShell {
 
         private void btnLoginScreen_Click(object sender, EventArgs e)
         {
-            pnlLogin.Enabled = true;
-            pnlLogin.Show();
 
-            pnlAuthentication.BringToFront();
         }
 
         private void btnBackLogin_Click(object sender, EventArgs e)
         {
-            pnlLogin.Enabled = false;
-            pnlLogin.Hide();
-            pnlAuthentication.SendToBack();
+
         }
 
         private void btnSignUp_Click(object sender, EventArgs e)
         {
-            pnlLogin.Enabled = false;
-            pnlLogin.Hide();
 
-            pnlSignUp.Enabled = true;
-            pnlSignUp.Show();
         }
 
         private void btnBackSignUp_Click(object sender, EventArgs e)
         {
-            pnlSignUp.Hide();
-            pnlSignUp.Enabled = false;
 
-            pnlLogin.Enabled = true;
-            pnlLogin.Show();
         }
     }
 }

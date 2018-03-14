@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Calculator2
+namespace DeskShell
 {
     public partial class FormAuthentication : Form
     {
@@ -17,9 +17,21 @@ namespace Calculator2
             InitializeComponent();
         }
 
+        private void KillApplication()
+        {
+            this.Close();
+            Application.Exit();
+        }
+
         private void buttonExit_Click(object sender, EventArgs e)
         {
+            KillApplication();
+        }
 
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            DeskShell mainProgram = new DeskShell();
+            mainProgram.Show();
         }
     }
 }
