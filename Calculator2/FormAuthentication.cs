@@ -107,14 +107,13 @@ namespace DeskShell
                 return;
             }
 
-            var result = DeskShellAPI.Register(new UserRegistration
-            {
-                Username = StringMethods.Encode(txtSignUpEmail.Text.Trim()),
-                Password = StringMethods.Encode(txtSignUpPassword.Text),
-                FirstName = StringMethods.Encode(txtSignUpFirstName.Text.Trim()),
-                LastName = StringMethods.Encode(txtSignUpLastName.Text.Trim())
-            });
-            ;
+            var result = new UIController().Register(txtSignUpEmail.Text.Trim(), txtSignUpPassword.Text, txtSignUpFirstName.Text.Trim(), txtSignUpLastName.Text.Trim());
+
+            if (!result.Equals(string.Empty))
+                MessageBox.Show(result);
+
+            // TODO: go to login screen
+            btnBackToLogin.PerformClick();
         }
 
         // Returns string.empty if valid
