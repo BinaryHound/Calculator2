@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormAuthentication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAuthentication.Designer.cs">
+      <DependentUpon>FormAuthentication.cs</DependentUpon>
+    </Compile>
     <Compile Include="DeskShell.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +60,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormAuthentication.resx">
+      <DependentUpon>FormAuthentication.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DeskShell.resx">
       <DependentUpon>DeskShell.cs</DependentUpon>
     </EmbeddedResource>
