@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.Http;
 using System.Web.Http.Description;
 using System.Configuration;
+using System.Reflection;
 
 namespace API.Controllers
 {
@@ -14,24 +15,26 @@ namespace API.Controllers
     /// </summary>
     public class UserController : ApiController
     {
-        DeskShellEntities db = DatabaseEntityCreator.CreateDB();
+        DeskShell db = new DeskShell();
 
         [HttpPost]
         [AllowAnonymous]
         [Route("api/register", Name = "Register")]
         [ResponseType(typeof(IHttpActionResult))]
-        public IHttpActionResult Register(UserAuthentication user)
+        public IHttpActionResult Register(UserRegistration user)
         {
-            if (user == null || string.IsNullOrWhiteSpace(user.Username) || string.IsNullOrWhiteSpace(user.Password))
-                return BadRequest("Invalid User!");
-            else if (db.Users.Where(x => x.Username.ToLower().Equals(user.Username)).FirstOrDefault() != null)
-                return BadRequest("Username already exists!");
-
             try
             {
+                if (user == null || !ValidateObjectProperties(user))
+                    return BadRequest("Invalid User!");
+                else if (db.Users.Where(x => x.Username.ToLower().Equals(user.Username)).FirstOrDefault() != null)
+                    return BadRequest("Username already exists!");
+                
                 db.Users.Add(new User()
                 {
                     Username = user.Username,
+                    FirstName = user.FirstName,
+                    LastName = user.LastName,
                     Password = Crypto.EncryptString(user.Password),
                     Created = DateTime.UtcNow,
                     LastLogin = null
@@ -40,10 +43,36 @@ namespace API.Controllers
 
                 return Ok($"Succesfully Created New User {user.Username}.");
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 return BadRequest("Failed to create new user account!");
             }
+        }
+
+        /// <summary>
+        /// Validates all properites of object that they aren't null or whitespace
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
+        private bool ValidateObjectProperties(object obj)
+        {
+            foreach (PropertyInfo property in obj.GetType().GetProperties())
+            {
+                if (property == null)
+                {
+                    return false;
+                }
+
+                if (property.PropertyType == typeof(string))
+                {
+                    string value = (string)property.GetValue(obj);
+                    if (string.IsNullOrWhiteSpace(value))
+                    {
+                        return false;
+                    }
+                }
+            }
+            return true;
         }
 
         [HttpPost]
@@ -67,7 +96,7 @@ namespace API.Controllers
 
                 return Ok("Success!");
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 return BadRequest("Failed to Login");
             }
