@@ -18,6 +18,13 @@ namespace DeskShell {
         [System.Runtime.InteropServices.DllImport("user32.dll")]
         static extern bool HideCaret(IntPtr hWnd);
 
+        private const int ButtonSelectionPnlOffset = 36;
+
+        //To have form be drag-able.
+        bool TogMove;
+        int MValX;
+        int MValY;
+
         /// <summary>
         /// Constructor for the form.
         /// </summary>
@@ -108,7 +115,7 @@ namespace DeskShell {
 
         private void buttonHome_Click(object sender, EventArgs e)
         {
-            pnlSelectionIdentifier.Height = btnHome.Height;
+            pnlSelectionIdentifier.Height = btnHome.Height + ButtonSelectionPnlOffset;
             pnlSelectionIdentifier.Top = btnHome.Top;
 
             txtOutput.Hide();
@@ -119,7 +126,7 @@ namespace DeskShell {
 
         private void buttonCalendar_Click(object sender, EventArgs e)
         {
-            pnlSelectionIdentifier.Height = btnCalendar.Height;
+            pnlSelectionIdentifier.Height = btnCalendar.Height + ButtonSelectionPnlOffset;
             pnlSelectionIdentifier.Top = btnCalendar.Top;
 
             txtOutput.Hide();
@@ -130,7 +137,7 @@ namespace DeskShell {
 
         private void buttonCalculator_Click(object sender, EventArgs e)
         {
-            pnlSelectionIdentifier.Height = btnCalculator.Height;
+            pnlSelectionIdentifier.Height = btnCalculator.Height + ButtonSelectionPnlOffset;
             pnlSelectionIdentifier.Top = btnCalculator.Top;
             
             pnlHome.Hide();
@@ -145,7 +152,7 @@ namespace DeskShell {
 
         private void buttonToDo_Click(object sender, EventArgs e)
         {
-            pnlSelectionIdentifier.Height = btnToDo.Height;
+            pnlSelectionIdentifier.Height = btnToDo.Height + ButtonSelectionPnlOffset;
             pnlSelectionIdentifier.Top = btnToDo.Top;
 
             txtOutput.Hide();
@@ -154,7 +161,7 @@ namespace DeskShell {
 
         private void buttonNotepad_Click(object sender, EventArgs e)
         {
-            pnlSelectionIdentifier.Height = btnNotepad.Height;
+            pnlSelectionIdentifier.Height = btnNotepad.Height + ButtonSelectionPnlOffset;
             pnlSelectionIdentifier.Top = btnNotepad.Top;
 
             txtOutput.Hide();
@@ -185,6 +192,26 @@ namespace DeskShell {
         private void btnBackSignUp_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void pnlControlsResize_MouseDown(object sender, MouseEventArgs e)
+        {
+            TogMove = true;
+            MValX = e.X;
+            MValY = e.Y;
+        }
+
+        private void pnlControlsResize_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (TogMove)
+            {
+                this.SetDesktopLocation(MousePosition.X - MValX, MousePosition.Y - MValY);
+            }
+        }
+
+        private void pnlControlsResize_MouseUp(object sender, MouseEventArgs e)
+        {
+            TogMove = false;
         }
     }
 }

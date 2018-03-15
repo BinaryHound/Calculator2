@@ -402,7 +402,7 @@
             // pnlSelectionIdentifier
             // 
             this.pnlSelectionIdentifier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
-            this.pnlSelectionIdentifier.Location = new System.Drawing.Point(3, 3);
+            this.pnlSelectionIdentifier.Location = new System.Drawing.Point(200, 35);
             this.pnlSelectionIdentifier.Name = "pnlSelectionIdentifier";
             this.pnlSelectionIdentifier.Size = new System.Drawing.Size(3, 75);
             this.pnlSelectionIdentifier.TabIndex = 13;
@@ -481,7 +481,7 @@
             this.btnNotepad.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNotepad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(189)))), ((int)(((byte)(125)))));
             this.btnNotepad.Image = ((System.Drawing.Image)(resources.GetObject("btnNotepad.Image")));
-            this.btnNotepad.Location = new System.Drawing.Point(3, 165);
+            this.btnNotepad.Location = new System.Drawing.Point(3, 84);
             this.btnNotepad.Name = "btnNotepad";
             this.btnNotepad.Size = new System.Drawing.Size(197, 80);
             this.btnNotepad.TabIndex = 4;
@@ -500,7 +500,7 @@
             this.btnToDo.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnToDo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(189)))), ((int)(((byte)(125)))));
             this.btnToDo.Image = ((System.Drawing.Image)(resources.GetObject("btnToDo.Image")));
-            this.btnToDo.Location = new System.Drawing.Point(3, 337);
+            this.btnToDo.Location = new System.Drawing.Point(3, 256);
             this.btnToDo.Name = "btnToDo";
             this.btnToDo.Size = new System.Drawing.Size(197, 80);
             this.btnToDo.TabIndex = 3;
@@ -519,7 +519,7 @@
             this.btnCalculator.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCalculator.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(189)))), ((int)(((byte)(125)))));
             this.btnCalculator.Image = ((System.Drawing.Image)(resources.GetObject("btnCalculator.Image")));
-            this.btnCalculator.Location = new System.Drawing.Point(3, 251);
+            this.btnCalculator.Location = new System.Drawing.Point(3, 170);
             this.btnCalculator.Name = "btnCalculator";
             this.btnCalculator.Size = new System.Drawing.Size(197, 80);
             this.btnCalculator.TabIndex = 2;
@@ -538,7 +538,7 @@
             this.btnCalendar.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCalendar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(189)))), ((int)(((byte)(125)))));
             this.btnCalendar.Image = ((System.Drawing.Image)(resources.GetObject("btnCalendar.Image")));
-            this.btnCalendar.Location = new System.Drawing.Point(3, 423);
+            this.btnCalendar.Location = new System.Drawing.Point(3, 342);
             this.btnCalendar.Name = "btnCalendar";
             this.btnCalendar.Size = new System.Drawing.Size(197, 80);
             this.btnCalendar.TabIndex = 1;
@@ -557,7 +557,7 @@
             this.btnHome.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(189)))), ((int)(((byte)(125)))));
             this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
-            this.btnHome.Location = new System.Drawing.Point(3, 84);
+            this.btnHome.Location = new System.Drawing.Point(3, 3);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(197, 75);
             this.btnHome.TabIndex = 0;
@@ -656,6 +656,9 @@
             this.pnlControlsResize.Name = "pnlControlsResize";
             this.pnlControlsResize.Size = new System.Drawing.Size(1280, 36);
             this.pnlControlsResize.TabIndex = 21;
+            this.pnlControlsResize.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlControlsResize_MouseDown);
+            this.pnlControlsResize.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlControlsResize_MouseMove);
+            this.pnlControlsResize.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pnlControlsResize_MouseUp);
             // 
             // btnMinimize
             // 
@@ -720,7 +723,6 @@
             // pnlFlowFeaturePicker
             // 
             this.pnlFlowFeaturePicker.AutoScroll = true;
-            this.pnlFlowFeaturePicker.Controls.Add(this.pnlSelectionIdentifier);
             this.pnlFlowFeaturePicker.Controls.Add(this.btnHome);
             this.pnlFlowFeaturePicker.Controls.Add(this.btnNotepad);
             this.pnlFlowFeaturePicker.Controls.Add(this.btnCalculator);
@@ -738,6 +740,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.pnlSelectionIdentifier);
             this.Controls.Add(this.pnlFlowFeaturePicker);
             this.Controls.Add(this.pnlControlsResize);
             this.Controls.Add(this.pnlCentralHolder);
