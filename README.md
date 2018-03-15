@@ -16,8 +16,13 @@ Upcoming Changes 0.0.3:
 - Optimizations once code is a bit further along.
 - Look for new functions like sqrt(), log(), sin(), tan(), and cos().
 - and many more!  
-![1](https://user-images.githubusercontent.com/20911133/37312162-9489383a-260f-11e8-8929-4279a1a5f34f.PNG) 
-![2](https://user-images.githubusercontent.com/20911133/37312194-ae200fee-260f-11e8-8501-fe5ba3955ca1.PNG)
-![3](https://user-images.githubusercontent.com/20911133/37312205-b5c891bc-260f-11e8-8faa-12fbafac0be7.PNG) 
+### Login Page
+![updated-login](https://user-images.githubusercontent.com/20911133/37488055-109d3a66-2859-11e8-8d15-6757158df409.PNG) 
+
+### Updated Main-Application
+![updated-mainapp](https://user-images.githubusercontent.com/20911133/37488079-24cc3096-2859-11e8-83cc-2d1cf101b57f.PNG)
+
+### Calulator Function
+![updated-calcmainapp](https://user-images.githubusercontent.com/20911133/37488123-3d957aa6-2859-11e8-8d79-42f1fe39e42b.PNG)
 
 Thank you!
