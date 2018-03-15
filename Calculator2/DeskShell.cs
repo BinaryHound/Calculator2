@@ -12,7 +12,7 @@ using System.Windows.Forms;
 namespace DeskShell {
     
 
-    public partial class DeskShell: Form {
+    public partial class MainApplication: Form {
 
         //Holds fields, imports, etc.
         #region
@@ -32,7 +32,7 @@ namespace DeskShell {
         /// <summary>
         /// Constructor for the form.
         /// </summary>
-        public DeskShell() {
+        public MainApplication() {
             InitializeComponent();
             
             //Hides the Calculator for now.

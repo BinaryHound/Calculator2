@@ -1,4 +1,4 @@
-﻿namespace DeskShell
+﻿namespace AuthenticationForm
 {
     partial class FormAuthentication
     {

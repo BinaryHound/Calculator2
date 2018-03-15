@@ -7,8 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DeskShell;
 
-namespace DeskShell
+namespace AuthenticationForm
 {
     public partial class FormAuthentication : Form
     {
@@ -24,9 +25,9 @@ namespace DeskShell
         private void LaunchMainApplication()
         {
             this.Hide();
-            DeskShell mainProgram = new DeskShell();
-            mainProgram.Show();
-
+            var form2 = new MainApplication();
+            form2.Closed += (s, args) => this.Close();
+            form2.Show();
         }
 
         private void KillApplication()
