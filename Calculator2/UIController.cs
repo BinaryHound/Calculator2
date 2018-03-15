@@ -38,7 +38,7 @@ namespace Calculator2
                 Password = StringMethods.Encode(password)
             });
 
-            if (result.Success == APIResponseStatus.Success)
+            if (result.Success)
             {
                 // TODO: Set application settings with user info
                 return string.Empty;

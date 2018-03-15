@@ -17,7 +17,10 @@ namespace Calculator2
         {
             try
             {
-                var client = new RestClient(ConfigurationManager.AppSettings["LocalURL"] ?? "");
+                // this keeps bugging out :( 
+                //var client = new RestClient(ConfigurationManager.AppSettings["LocalURL"]);
+
+                var client = new RestClient("http://localhost:60629/api");
                 var request = new RestRequest(path, Method.POST);
 
                 request.Parameters.Clear();
@@ -25,7 +28,7 @@ namespace Calculator2
                 request.AddParameter("application/json", JsonConvert.SerializeObject(data), ParameterType.RequestBody);
 
                 var result = client.Execute(request).Content;
-                return (APIResult)JsonConvert.DeserializeObject(result);
+                return JsonConvert.DeserializeObject<APIResult>(result);
             }
             catch (Exception ex)
             {                
