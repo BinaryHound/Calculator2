@@ -28,7 +28,9 @@ namespace API.Controllers
             {
                 if (!ValidateObject(user))
                     return BadRequest("Invalid User!");
-                else if (db.Users.Where(x => x.Username.ToLower().Equals(StringMethods.Decode(user.Username))).FirstOrDefault() != null)
+
+                var decodedUserName = StringMethods.Decode(user.Username);
+                if (db.Users.Where(x => x.Username.ToLower().Equals(decodedUserName)).FirstOrDefault() != null)
                     return BadRequest("Username already exists!");
                 
                 db.Users.Add(new User()
@@ -81,12 +83,13 @@ namespace API.Controllers
         [ResponseType(typeof(string))]
         public IHttpActionResult Login(UserAuthentication user)
         {
-            if (!ValidateObject(user))
-                return BadRequest("Invalid Login");
-
             try
-            {                               
-                var existingUser = db.Users.Where(x => x.Username.ToLower().Equals(StringMethods.Decode(user.Username.ToLower()))).FirstOrDefault();
+            {
+                if (!ValidateObject(user))
+                    return BadRequest("Invalid Login");
+
+                var decodedUserName = StringMethods.Decode(user.Username);
+                var existingUser = db.Users.Where(x => x.Username.ToLower().Equals(decodedUserName.ToLower())).FirstOrDefault();
 
                 if (existingUser == null || !Crypto.CompareString(StringMethods.Decode(user.Password), existingUser.Password))
                     return BadRequest("Invalid Login");
