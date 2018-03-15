@@ -4,12 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Calculator2.API_Models
+namespace Common.Data
 {
-    public class User
+    /// <summary>
+    /// This user class contains any user-specific information the client needs to know
+    /// </summary>
+    public class UserClient
     {
-        public string Username { get; set; }
-        public string Password { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
     }

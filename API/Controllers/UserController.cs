@@ -1,5 +1,4 @@
-﻿using API.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,6 +7,7 @@ using System.Web.Http.Description;
 using System.Configuration;
 using System.Reflection;
 using Common;
+using Common.Data;
 
 namespace API.Controllers
 {
@@ -21,7 +21,7 @@ namespace API.Controllers
         [HttpPost]
         [AllowAnonymous]
         [Route("api/register", Name = "Register")]
-        [ResponseType(typeof(IHttpActionResult))]
+        [ResponseType(typeof(APIResult))]
         public IHttpActionResult Register(UserRegistration user)
         {
             try
@@ -44,7 +44,11 @@ namespace API.Controllers
                 });
                 db.SaveChanges();
 
-                return Ok($"Succesfully Created New User.");
+                return Ok(new APIResult
+                {
+                    Message = "Successfully created new user",
+                    Data = null
+                });
             }
             catch (Exception ex)
             {
@@ -80,7 +84,7 @@ namespace API.Controllers
         [HttpPost]
         [AllowAnonymous]
         [Route("api/login", Name = "Login")]
-        [ResponseType(typeof(string))]
+        [ResponseType(typeof(APIResult))]
         public IHttpActionResult Login(UserAuthentication user)
         {
             try
@@ -97,7 +101,15 @@ namespace API.Controllers
                 existingUser.LastLogin = DateTime.UtcNow;
                 db.SaveChanges();
 
-                return Ok("Success!");
+                return Ok(new APIResult
+                {
+                    Message = "Login Success",
+                    Data = new UserClient
+                    {
+                        FirstName = existingUser.FirstName,
+                        LastName = existingUser.LastName
+                    }
+                });
             }
             catch (Exception ex)
             {

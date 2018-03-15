@@ -1,6 +1,6 @@
 ﻿using Calculator2;
-using Calculator2.API_Models;
 using Common;
+using Common.Data;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -107,19 +107,20 @@ namespace DeskShell
                 return;
             }
 
-            var result = DeskShellAPI.Register(new User
+            var result = DeskShellAPI.Register(new UserRegistration
             {
                 Username = StringMethods.Encode(txtSignUpEmail.Text.Trim()),
                 Password = StringMethods.Encode(txtSignUpPassword.Text),
                 FirstName = StringMethods.Encode(txtSignUpFirstName.Text.Trim()),
                 LastName = StringMethods.Encode(txtSignUpLastName.Text.Trim())
             });
+            ;
         }
 
         // Returns string.empty if valid
         private string ValidateUserRegistration()
         {
-            // VERY basic validation for now. Need to validate email, lengths (min and max), pw validation, etc
+            // TODO: VERY basic validation for now. Need to validate email, lengths (min and max), pw validation, etc
             if (string.IsNullOrWhiteSpace(txtSignUpFirstName.Text))
                 return "Invalid First Name";
             if (string.IsNullOrWhiteSpace(txtSignUpLastName.Text))
