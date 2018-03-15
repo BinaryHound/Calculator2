@@ -32,7 +32,6 @@ namespace DeskShell
         private void KillApplication()
         {
             this.Close();
-            
             Application.Exit();
         }
 
