@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="APIResult.cs" />
+    <Compile Include="Data\APIStatus.cs" />
     <Compile Include="Data\UserClient.cs" />
     <Compile Include="Data\UserAuthentication.cs" />
     <Compile Include="Data\UserRegistration.cs" />

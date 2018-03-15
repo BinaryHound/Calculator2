@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Common.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,6 +10,7 @@ namespace Common
     public class APIResult
     {
         public string Message { get; set; }
+        public APIResponseStatus Status { get; set; }
         public dynamic Data { get; set; }
     }
 }
