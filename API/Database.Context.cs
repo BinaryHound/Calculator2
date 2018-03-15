@@ -13,18 +13,16 @@ namespace API
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class DeskShellEntities : DbContext
+    public partial class DeskShell : DbContext
     {
-        public DeskShellEntities()
-            : base("name=DeskShellEntities")
+        public DeskShell()
+            : base("name=DeskShell")
         {
-            
         }
-
-        public DeskShellEntities(string connectionString) 
-            : base(connectionString)
+    
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-
+            throw new UnintentionalCodeFirstException();
         }
     
         public virtual DbSet<User> Users { get; set; }

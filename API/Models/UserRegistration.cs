@@ -1,15 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Security;
 using System.Web;
 
 namespace API.Models
 {
-    public class User
+    public class UserRegistration
     {
         public string Username { get; set; }
-        public string AuthKey { get; set; }
-        public DateTime LastLogin { get; set; }
+        public string Password { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
     }
 }
