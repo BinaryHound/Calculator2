@@ -25,4 +25,7 @@ Upcoming Changes 0.0.3:
 ### Calulator Function
 ![updated-calcmainapp](https://user-images.githubusercontent.com/20911133/37488123-3d957aa6-2859-11e8-8d79-42f1fe39e42b.PNG)
 
+### Our Color Sheet
+![colorsheet](https://user-images.githubusercontent.com/20911133/37488156-597b2e96-2859-11e8-9a81-040da068e785.PNG)
+
 Thank you!
