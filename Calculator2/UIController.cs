@@ -20,7 +20,7 @@ namespace Calculator2
                 LastName = StringMethods.Encode(lastName)
             });
 
-            if (result.Status == APIResponseStatus.Success)
+            if (result.Success)
             {
                 return string.Empty;
             }
@@ -38,7 +38,7 @@ namespace Calculator2
                 Password = StringMethods.Encode(password)
             });
 
-            if (result.Status == APIResponseStatus.Success)
+            if (result.Success == APIResponseStatus.Success)
             {
                 // TODO: Set application settings with user info
                 return string.Empty;

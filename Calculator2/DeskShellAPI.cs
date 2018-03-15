@@ -24,7 +24,8 @@ namespace Calculator2
                 request.AddHeader("Content-Type", "application/json");
                 request.AddParameter("application/json", JsonConvert.SerializeObject(data), ParameterType.RequestBody);
 
-                return (APIResult)JsonConvert.DeserializeObject(client.Execute(request).Content);
+                var result = client.Execute(request).Content;
+                return (APIResult)JsonConvert.DeserializeObject(result);
             }
             catch (Exception ex)
             {                

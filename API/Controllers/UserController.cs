@@ -30,7 +30,7 @@ namespace API.Controllers
                 {
                     return Ok(new APIResult
                     {
-                        Status = APIResponseStatus.Error,
+                        Success = false,
                         Message = "Invalid User",
                         Data = null
                     });
@@ -41,7 +41,7 @@ namespace API.Controllers
                 {
                     return Ok(new APIResult
                     {
-                        Status = APIResponseStatus.Error,
+                        Success = false,
                         Message = "User Already Exists",
                         Data = null
                     });
@@ -60,7 +60,7 @@ namespace API.Controllers
 
                 return Ok(new APIResult
                 {
-                    Status = APIResponseStatus.Success,
+                    Success = true,
                     Message = "Successfully created new user",
                     Data = new UserClient
                     {
@@ -73,7 +73,7 @@ namespace API.Controllers
             {
                 return Ok(new APIResult
                 {
-                    Status = APIResponseStatus.Error,
+                    Success = false,
                     Message = "Failed to Create User Account",
                     Data = null
                 });                
@@ -92,7 +92,7 @@ namespace API.Controllers
                 {
                     return Ok(new APIResult
                     {
-                        Status = APIResponseStatus.Error,
+                        Success = false,
                         Message = "Invalid Login",
                         Data = null
                     });
@@ -105,7 +105,7 @@ namespace API.Controllers
                 {
                     return Ok(new APIResult
                     {
-                        Status = APIResponseStatus.Error,
+                        Success = false,
                         Message = "Invalid Login",
                         Data = null
                     });
@@ -116,7 +116,7 @@ namespace API.Controllers
 
                 return Ok(new APIResult
                 {
-                    Status = APIResponseStatus.Success,
+                    Success = true,
                     Message = "Login Success",
                     Data = new UserClient
                     {
@@ -129,7 +129,7 @@ namespace API.Controllers
             {
                 return Ok(new APIResult
                 {
-                    Status = APIResponseStatus.Error,
+                    Success = false,
                     Message = "Failed to Login",
                     Data = null
                 });
