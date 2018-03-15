@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Calculator2;
+using Calculator2.API_Models;
+using Common;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -93,6 +96,42 @@ namespace DeskShell
             this.pnlLoginLeftSide.BringToFront();
             this.pnlSignUp.Hide();
             this.pnlLoginLeftSide.Show();
+        }
+
+        private void btnSubmit_Register_Click(object sender, EventArgs e)
+        {
+            var validationMessage = ValidateUserRegistration();
+            if (!validationMessage.Equals(string.Empty))
+            {
+                MessageBox.Show(validationMessage);
+                return;
+            }
+
+            var result = DeskShellAPI.Register(new User
+            {
+                Username = StringMethods.Encode(txtSignUpEmail.Text.Trim()),
+                Password = StringMethods.Encode(txtSignUpPassword.Text),
+                FirstName = StringMethods.Encode(txtSignUpFirstName.Text.Trim()),
+                LastName = StringMethods.Encode(txtSignUpLastName.Text.Trim())
+            });
+        }
+
+        // Returns string.empty if valid
+        private string ValidateUserRegistration()
+        {
+            // VERY basic validation for now. Need to validate email, lengths (min and max), pw validation, etc
+            if (string.IsNullOrWhiteSpace(txtSignUpFirstName.Text))
+                return "Invalid First Name";
+            if (string.IsNullOrWhiteSpace(txtSignUpLastName.Text))
+                return "Invalid Last Name";
+            if (string.IsNullOrWhiteSpace(txtSignUpEmail.Text))
+                return "Invalid Email";
+            if (string.IsNullOrWhiteSpace(txtSignUpPassword.Text))
+                return "Invalid Password";
+            if (!txtSignUpPassword.Text.Equals(txtSignUpConfirmPassword.Text))
+                return "Passwords do not Match";
+
+            return string.Empty;
         }
     }
 }

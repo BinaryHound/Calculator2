@@ -34,6 +34,12 @@
             this.btnMinimize = new System.Windows.Forms.Button();
             this.pnlLogin = new System.Windows.Forms.Panel();
             this.pnlSignUp = new System.Windows.Forms.Panel();
+            this.btnBackToLogin = new System.Windows.Forms.Button();
+            this.btnSignUpSubmit = new System.Windows.Forms.Button();
+            this.pnlConfirmPasswordUnderline = new System.Windows.Forms.Panel();
+            this.txtSignUpConfirmPassword = new System.Windows.Forms.TextBox();
+            this.lblConfirmPassword = new System.Windows.Forms.Label();
+            this.pnlUnderlinePass = new System.Windows.Forms.Panel();
             this.txtSignUpPassword = new System.Windows.Forms.TextBox();
             this.lblSignUpPassword = new System.Windows.Forms.Label();
             this.pnlSignUpEmailUnderline = new System.Windows.Forms.Panel();
@@ -46,6 +52,7 @@
             this.pnlSignUpFirstNameUnderline = new System.Windows.Forms.Panel();
             this.txtSignUpFirstName = new System.Windows.Forms.TextBox();
             this.picSignUpLogo = new System.Windows.Forms.PictureBox();
+            this.picLoginGif = new System.Windows.Forms.PictureBox();
             this.pnlLoginLeftSide = new System.Windows.Forms.Panel();
             this.lblGuestLogin = new System.Windows.Forms.Label();
             this.btnSignUp = new System.Windows.Forms.Button();
@@ -61,22 +68,15 @@
             this.txtLogin = new System.Windows.Forms.TextBox();
             this.picLoginUser = new System.Windows.Forms.PictureBox();
             this.picLogoLogin = new System.Windows.Forms.PictureBox();
-            this.picLoginGif = new System.Windows.Forms.PictureBox();
-            this.pnlUnderlinePass = new System.Windows.Forms.Panel();
-            this.pnlConfirmPasswordUnderline = new System.Windows.Forms.Panel();
-            this.txtConfirmPassword = new System.Windows.Forms.TextBox();
-            this.lblConfirmPassword = new System.Windows.Forms.Label();
-            this.btnSubmit = new System.Windows.Forms.Button();
-            this.btnBackToLogin = new System.Windows.Forms.Button();
             this.pnlControlsResize.SuspendLayout();
             this.pnlLogin.SuspendLayout();
             this.pnlSignUp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picSignUpLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLoginGif)).BeginInit();
             this.pnlLoginLeftSide.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLoginPassword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLoginUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogoLogin)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picLoginGif)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlControlsResize
@@ -130,9 +130,9 @@
             // 
             // pnlLogin
             // 
-            this.pnlLogin.Controls.Add(this.pnlLoginLeftSide);
             this.pnlLogin.Controls.Add(this.pnlSignUp);
             this.pnlLogin.Controls.Add(this.picLoginGif);
+            this.pnlLogin.Controls.Add(this.pnlLoginLeftSide);
             this.pnlLogin.Location = new System.Drawing.Point(0, 35);
             this.pnlLogin.Name = "pnlLogin";
             this.pnlLogin.Size = new System.Drawing.Size(1280, 687);
@@ -142,9 +142,9 @@
             // 
             this.pnlSignUp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(0)))), ((int)(((byte)(10)))));
             this.pnlSignUp.Controls.Add(this.btnBackToLogin);
-            this.pnlSignUp.Controls.Add(this.btnSubmit);
+            this.pnlSignUp.Controls.Add(this.btnSignUpSubmit);
             this.pnlSignUp.Controls.Add(this.pnlConfirmPasswordUnderline);
-            this.pnlSignUp.Controls.Add(this.txtConfirmPassword);
+            this.pnlSignUp.Controls.Add(this.txtSignUpConfirmPassword);
             this.pnlSignUp.Controls.Add(this.lblConfirmPassword);
             this.pnlSignUp.Controls.Add(this.pnlUnderlinePass);
             this.pnlSignUp.Controls.Add(this.txtSignUpPassword);
@@ -163,6 +163,73 @@
             this.pnlSignUp.Name = "pnlSignUp";
             this.pnlSignUp.Size = new System.Drawing.Size(573, 687);
             this.pnlSignUp.TabIndex = 2;
+            // 
+            // btnBackToLogin
+            // 
+            this.btnBackToLogin.FlatAppearance.BorderSize = 0;
+            this.btnBackToLogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnBackToLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnBackToLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBackToLogin.Image = ((System.Drawing.Image)(resources.GetObject("btnBackToLogin.Image")));
+            this.btnBackToLogin.Location = new System.Drawing.Point(12, 7);
+            this.btnBackToLogin.Name = "btnBackToLogin";
+            this.btnBackToLogin.Size = new System.Drawing.Size(47, 48);
+            this.btnBackToLogin.TabIndex = 23;
+            this.btnBackToLogin.UseVisualStyleBackColor = true;
+            this.btnBackToLogin.Click += new System.EventHandler(this.btnBackToLogin_Click);
+            // 
+            // btnSignUpSubmit
+            // 
+            this.btnSignUpSubmit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(250)))));
+            this.btnSignUpSubmit.FlatAppearance.BorderSize = 0;
+            this.btnSignUpSubmit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnSignUpSubmit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.btnSignUpSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSignUpSubmit.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSignUpSubmit.Location = new System.Drawing.Point(54, 560);
+            this.btnSignUpSubmit.Name = "btnSignUpSubmit";
+            this.btnSignUpSubmit.Size = new System.Drawing.Size(424, 42);
+            this.btnSignUpSubmit.TabIndex = 22;
+            this.btnSignUpSubmit.Text = "SUBMIT";
+            this.btnSignUpSubmit.UseVisualStyleBackColor = false;
+            this.btnSignUpSubmit.Click += new System.EventHandler(this.btnSubmit_Register_Click);
+            // 
+            // pnlConfirmPasswordUnderline
+            // 
+            this.pnlConfirmPasswordUnderline.BackColor = System.Drawing.Color.White;
+            this.pnlConfirmPasswordUnderline.Location = new System.Drawing.Point(54, 522);
+            this.pnlConfirmPasswordUnderline.Name = "pnlConfirmPasswordUnderline";
+            this.pnlConfirmPasswordUnderline.Size = new System.Drawing.Size(423, 2);
+            this.pnlConfirmPasswordUnderline.TabIndex = 19;
+            // 
+            // txtSignUpConfirmPassword
+            // 
+            this.txtSignUpConfirmPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(0)))), ((int)(((byte)(10)))));
+            this.txtSignUpConfirmPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSignUpConfirmPassword.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSignUpConfirmPassword.Location = new System.Drawing.Point(54, 486);
+            this.txtSignUpConfirmPassword.Name = "txtSignUpConfirmPassword";
+            this.txtSignUpConfirmPassword.Size = new System.Drawing.Size(423, 30);
+            this.txtSignUpConfirmPassword.TabIndex = 21;
+            // 
+            // lblConfirmPassword
+            // 
+            this.lblConfirmPassword.AutoSize = true;
+            this.lblConfirmPassword.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConfirmPassword.ForeColor = System.Drawing.Color.White;
+            this.lblConfirmPassword.Location = new System.Drawing.Point(50, 465);
+            this.lblConfirmPassword.Name = "lblConfirmPassword";
+            this.lblConfirmPassword.Size = new System.Drawing.Size(180, 21);
+            this.lblConfirmPassword.TabIndex = 20;
+            this.lblConfirmPassword.Text = "CONFIRM PASSWORD";
+            // 
+            // pnlUnderlinePass
+            // 
+            this.pnlUnderlinePass.BackColor = System.Drawing.Color.White;
+            this.pnlUnderlinePass.Location = new System.Drawing.Point(54, 437);
+            this.pnlUnderlinePass.Name = "pnlUnderlinePass";
+            this.pnlUnderlinePass.Size = new System.Drawing.Size(423, 2);
+            this.pnlUnderlinePass.TabIndex = 14;
             // 
             // txtSignUpPassword
             // 
@@ -281,6 +348,16 @@
             this.picSignUpLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picSignUpLogo.TabIndex = 1;
             this.picSignUpLogo.TabStop = false;
+            // 
+            // picLoginGif
+            // 
+            this.picLoginGif.Image = ((System.Drawing.Image)(resources.GetObject("picLoginGif.Image")));
+            this.picLoginGif.Location = new System.Drawing.Point(571, 0);
+            this.picLoginGif.Name = "picLoginGif";
+            this.picLoginGif.Size = new System.Drawing.Size(709, 686);
+            this.picLoginGif.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.picLoginGif.TabIndex = 0;
+            this.picLoginGif.TabStop = false;
             // 
             // pnlLoginLeftSide
             // 
@@ -469,82 +546,6 @@
             this.picLogoLogin.TabIndex = 0;
             this.picLogoLogin.TabStop = false;
             // 
-            // picLoginGif
-            // 
-            this.picLoginGif.Image = ((System.Drawing.Image)(resources.GetObject("picLoginGif.Image")));
-            this.picLoginGif.Location = new System.Drawing.Point(571, 0);
-            this.picLoginGif.Name = "picLoginGif";
-            this.picLoginGif.Size = new System.Drawing.Size(709, 686);
-            this.picLoginGif.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.picLoginGif.TabIndex = 0;
-            this.picLoginGif.TabStop = false;
-            // 
-            // pnlUnderlinePass
-            // 
-            this.pnlUnderlinePass.BackColor = System.Drawing.Color.White;
-            this.pnlUnderlinePass.Location = new System.Drawing.Point(54, 437);
-            this.pnlUnderlinePass.Name = "pnlUnderlinePass";
-            this.pnlUnderlinePass.Size = new System.Drawing.Size(423, 2);
-            this.pnlUnderlinePass.TabIndex = 14;
-            // 
-            // pnlConfirmPasswordUnderline
-            // 
-            this.pnlConfirmPasswordUnderline.BackColor = System.Drawing.Color.White;
-            this.pnlConfirmPasswordUnderline.Location = new System.Drawing.Point(54, 522);
-            this.pnlConfirmPasswordUnderline.Name = "pnlConfirmPasswordUnderline";
-            this.pnlConfirmPasswordUnderline.Size = new System.Drawing.Size(423, 2);
-            this.pnlConfirmPasswordUnderline.TabIndex = 19;
-            // 
-            // txtConfirmPassword
-            // 
-            this.txtConfirmPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(0)))), ((int)(((byte)(10)))));
-            this.txtConfirmPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtConfirmPassword.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtConfirmPassword.Location = new System.Drawing.Point(54, 486);
-            this.txtConfirmPassword.Name = "txtConfirmPassword";
-            this.txtConfirmPassword.Size = new System.Drawing.Size(423, 30);
-            this.txtConfirmPassword.TabIndex = 21;
-            // 
-            // lblConfirmPassword
-            // 
-            this.lblConfirmPassword.AutoSize = true;
-            this.lblConfirmPassword.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblConfirmPassword.ForeColor = System.Drawing.Color.White;
-            this.lblConfirmPassword.Location = new System.Drawing.Point(50, 465);
-            this.lblConfirmPassword.Name = "lblConfirmPassword";
-            this.lblConfirmPassword.Size = new System.Drawing.Size(180, 21);
-            this.lblConfirmPassword.TabIndex = 20;
-            this.lblConfirmPassword.Text = "CONFIRM PASSWORD";
-            // 
-            // btnSubmit
-            // 
-            this.btnSubmit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(250)))));
-            this.btnSubmit.FlatAppearance.BorderSize = 0;
-            this.btnSubmit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.btnSubmit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
-            this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSubmit.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSubmit.Location = new System.Drawing.Point(54, 560);
-            this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(424, 42);
-            this.btnSubmit.TabIndex = 22;
-            this.btnSubmit.Text = "SUBMIT";
-            this.btnSubmit.UseVisualStyleBackColor = false;
-            // 
-            // btnBackToLogin
-            // 
-            this.btnBackToLogin.FlatAppearance.BorderSize = 0;
-            this.btnBackToLogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.btnBackToLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnBackToLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBackToLogin.Image = ((System.Drawing.Image)(resources.GetObject("btnBackToLogin.Image")));
-            this.btnBackToLogin.Location = new System.Drawing.Point(12, 7);
-            this.btnBackToLogin.Name = "btnBackToLogin";
-            this.btnBackToLogin.Size = new System.Drawing.Size(47, 48);
-            this.btnBackToLogin.TabIndex = 23;
-            this.btnBackToLogin.UseVisualStyleBackColor = true;
-            this.btnBackToLogin.Click += new System.EventHandler(this.btnBackToLogin_Click);
-            // 
             // FormAuthentication
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -560,12 +561,12 @@
             this.pnlSignUp.ResumeLayout(false);
             this.pnlSignUp.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picSignUpLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLoginGif)).EndInit();
             this.pnlLoginLeftSide.ResumeLayout(false);
             this.pnlLoginLeftSide.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLoginPassword)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLoginUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogoLogin)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picLoginGif)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -606,10 +607,10 @@
         private System.Windows.Forms.Panel pnlSignUpEmailUnderline;
         private System.Windows.Forms.TextBox txtSignUpEmail;
         private System.Windows.Forms.Panel pnlConfirmPasswordUnderline;
-        private System.Windows.Forms.TextBox txtConfirmPassword;
+        private System.Windows.Forms.TextBox txtSignUpConfirmPassword;
         private System.Windows.Forms.Label lblConfirmPassword;
         private System.Windows.Forms.Panel pnlUnderlinePass;
-        private System.Windows.Forms.Button btnSubmit;
+        private System.Windows.Forms.Button btnSignUpSubmit;
         private System.Windows.Forms.Button btnBackToLogin;
     }
 }

@@ -7,6 +7,7 @@ using System.Web.Http;
 using System.Web.Http.Description;
 using System.Configuration;
 using System.Reflection;
+using Common;
 
 namespace API.Controllers
 {
@@ -27,21 +28,21 @@ namespace API.Controllers
             {
                 if (!ValidateObject(user))
                     return BadRequest("Invalid User!");
-                else if (db.Users.Where(x => x.Username.ToLower().Equals(user.Username)).FirstOrDefault() != null)
+                else if (db.Users.Where(x => x.Username.ToLower().Equals(StringMethods.Decode(user.Username))).FirstOrDefault() != null)
                     return BadRequest("Username already exists!");
                 
                 db.Users.Add(new User()
                 {
-                    Username = user.Username,
-                    FirstName = user.FirstName,
-                    LastName = user.LastName,
-                    Password = Crypto.EncryptString(user.Password),
+                    Username = StringMethods.Decode(user.Username),
+                    FirstName = StringMethods.Decode(user.FirstName),
+                    LastName = StringMethods.Decode(user.LastName),
+                    Password = Crypto.EncryptString(StringMethods.Decode(user.Password)),
                     Created = DateTime.UtcNow,
                     LastLogin = null
                 });
                 db.SaveChanges();
 
-                return Ok($"Succesfully Created New User {user.Username}.");
+                return Ok($"Succesfully Created New User.");
             }
             catch (Exception ex)
             {
@@ -85,9 +86,9 @@ namespace API.Controllers
 
             try
             {                               
-                var existingUser = db.Users.Where(x => x.Username.ToLower().Equals(user.Username.ToLower())).FirstOrDefault();
+                var existingUser = db.Users.Where(x => x.Username.ToLower().Equals(StringMethods.Decode(user.Username.ToLower()))).FirstOrDefault();
 
-                if (existingUser == null || !Crypto.CompareString(user.Password, existingUser.Password))
+                if (existingUser == null || !Crypto.CompareString(StringMethods.Decode(user.Password), existingUser.Password))
                     return BadRequest("Invalid Login");
 
                 existingUser.LastLogin = DateTime.UtcNow;
