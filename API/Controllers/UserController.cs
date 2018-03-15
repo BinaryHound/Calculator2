@@ -27,12 +27,24 @@ namespace API.Controllers
             try
             {
                 if (!ValidateObject(user))
-                    return BadRequest("Invalid User!");
+                {
+                    return Ok(new APIResult
+                    {
+                        Message = "Invalid User",
+                        Data = null
+                    });
+                }
 
                 var decodedUserName = StringMethods.Decode(user.Username);
                 if (db.Users.Where(x => x.Username.ToLower().Equals(decodedUserName)).FirstOrDefault() != null)
-                    return BadRequest("Username already exists!");
-                
+                {
+                    return Ok(new APIResult
+                    {
+                        Message = "User Already Exists",
+                        Data = null
+                    });
+                }
+
                 db.Users.Add(new User()
                 {
                     Username = StringMethods.Decode(user.Username),
@@ -47,12 +59,72 @@ namespace API.Controllers
                 return Ok(new APIResult
                 {
                     Message = "Successfully created new user",
-                    Data = null
+                    Data = new UserClient
+                    {
+                        FirstName = StringMethods.Decode(user.FirstName),
+                        LastName = StringMethods.Decode(user.LastName)
+                    }
                 });
             }
             catch (Exception ex)
             {
-                return BadRequest("Failed to create new user account!");
+                return Ok(new APIResult
+                {
+                    Message = "Failed to Create User Account",
+                    Data = null
+                });                
+            }
+        }        
+
+        [HttpPost]
+        [AllowAnonymous]
+        [Route("api/login", Name = "Login")]
+        [ResponseType(typeof(APIResult))]
+        public IHttpActionResult Login(UserAuthentication user)
+        {
+            try
+            {
+                if (!ValidateObject(user))
+                {
+                    return Ok(new APIResult
+                    {
+                        Message = "Invalid Login",
+                        Data = null
+                    });
+                }
+
+                var decodedUserName = StringMethods.Decode(user.Username);
+                var existingUser = db.Users.Where(x => x.Username.ToLower().Equals(decodedUserName.ToLower())).FirstOrDefault();
+
+                if (existingUser == null || !Crypto.CompareString(StringMethods.Decode(user.Password), existingUser.Password))
+                {
+                    return Ok(new APIResult
+                    {
+                        Message = "Invalid Login",
+                        Data = null
+                    });
+                }
+
+                existingUser.LastLogin = DateTime.UtcNow;
+                db.SaveChanges();
+
+                return Ok(new APIResult
+                {
+                    Message = "Login Success",
+                    Data = new UserClient
+                    {
+                        FirstName = existingUser.FirstName,
+                        LastName = existingUser.LastName
+                    }
+                });
+            }
+            catch (Exception ex)
+            {
+                return Ok(new APIResult
+                {
+                    Message = "Failed to Login",
+                    Data = null
+                });
             }
         }
 
@@ -79,42 +151,6 @@ namespace API.Controllers
                 }
             }
             return true;
-        }
-
-        [HttpPost]
-        [AllowAnonymous]
-        [Route("api/login", Name = "Login")]
-        [ResponseType(typeof(APIResult))]
-        public IHttpActionResult Login(UserAuthentication user)
-        {
-            try
-            {
-                if (!ValidateObject(user))
-                    return BadRequest("Invalid Login");
-
-                var decodedUserName = StringMethods.Decode(user.Username);
-                var existingUser = db.Users.Where(x => x.Username.ToLower().Equals(decodedUserName.ToLower())).FirstOrDefault();
-
-                if (existingUser == null || !Crypto.CompareString(StringMethods.Decode(user.Password), existingUser.Password))
-                    return BadRequest("Invalid Login");
-
-                existingUser.LastLogin = DateTime.UtcNow;
-                db.SaveChanges();
-
-                return Ok(new APIResult
-                {
-                    Message = "Login Success",
-                    Data = new UserClient
-                    {
-                        FirstName = existingUser.FirstName,
-                        LastName = existingUser.LastName
-                    }
-                });
-            }
-            catch (Exception ex)
-            {
-                return BadRequest("Failed to Login");
-            }
         }
     }
 }
