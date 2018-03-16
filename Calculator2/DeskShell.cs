@@ -20,6 +20,10 @@ namespace DeskShell {
         [System.Runtime.InteropServices.DllImport("user32.dll")]
         static extern bool HideCaret(IntPtr hWnd);
 
+        //For updating the UI with time.
+        Timer timerNow = new Timer { Interval = 998 };
+        
+
         private const int ButtonSelectionPnlOffset = 36;
 
         //To have form be drag-able.
@@ -231,16 +235,17 @@ namespace DeskShell {
         }
         #endregion
 
+        private void timerTickHandler(object sender, EventArgs e)
+        {
+            lblTimeMainForm.Text = DateTime.Now.ToLongTimeString();
+        }
+        
         private void MainApplication_Load(object sender, EventArgs e)
         {
             // To update the first time.
             lblTimeMainForm.Text = DateTime.Now.ToLongTimeString();
-            var t = new Timer { Interval = 998 };
-            t.Tick += (o, args) =>
-            {
-                lblTimeMainForm.Text = DateTime.Now.ToLongTimeString();
-            };
-            t.Start();
+            timerNow.Tick += timerTickHandler;
+            timerNow.Start();
         }
 
         private void btnMainFormApplicationProfile_Click(object sender, EventArgs e)

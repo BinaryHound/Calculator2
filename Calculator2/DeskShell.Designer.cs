@@ -672,9 +672,8 @@
             this.lblTimeMainForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTimeMainForm.Location = new System.Drawing.Point(42, 9);
             this.lblTimeMainForm.Name = "lblTimeMainForm";
-            this.lblTimeMainForm.Size = new System.Drawing.Size(51, 20);
+            this.lblTimeMainForm.Size = new System.Drawing.Size(0, 20);
             this.lblTimeMainForm.TabIndex = 24;
-            this.lblTimeMainForm.Text = "Time: ";
             // 
             // btnMainFormProfile
             // 
