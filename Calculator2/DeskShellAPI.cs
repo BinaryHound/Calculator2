@@ -26,13 +26,17 @@ namespace Calculator2
                 request.Parameters.Clear();
                 request.AddHeader("Content-Type", "application/json");
                 request.AddParameter("application/json", JsonConvert.SerializeObject(data), ParameterType.RequestBody);
-
-                var result = client.Execute(request).Content;
-                return JsonConvert.DeserializeObject<APIResult>(result);
+                
+                return JsonConvert.DeserializeObject<APIResult>(client.Execute(request).Content);
             }
             catch (Exception ex)
             {                
-                return null;
+                return new APIResult
+                {
+                    Success = false,
+                    Message = "ERROR: Exception Thrown",
+                    Data = data
+                };
             }
         }
 
