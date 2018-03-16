@@ -1,7 +1,4 @@
-﻿using Calculator2;
-using Common;
-using Common.Data;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,8 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DeskShell;
 
-namespace DeskShell
+namespace AuthenticationForm
 {
     public partial class FormAuthentication : Form
     {
@@ -27,15 +25,14 @@ namespace DeskShell
         private void LaunchMainApplication()
         {
             this.Hide();
-            DeskShell mainProgram = new DeskShell();
-            mainProgram.Show();
-
+            var form2 = new MainApplication();
+            form2.Closed += (s, args) => this.Close();
+            form2.Show();
         }
 
         private void KillApplication()
         {
             this.Close();
-            
             Application.Exit();
         }
 
@@ -46,23 +43,7 @@ namespace DeskShell
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            var validationMessage = ValidateLogin();
-            if (!validationMessage.Equals(string.Empty))
-            {
-                MessageBox.Show(validationMessage);
-                return;
-            }
-
-            var result = new UIController().Login(txtLogin.Text.Trim(), txtPassword.Text);
-
-            if (result.Equals(string.Empty))
-            {
-                LaunchMainApplication();
-            }
-            else
-            {
-                MessageBox.Show(result);
-            }      
+            LaunchMainApplication();
         }
 
         private void pnlControlsResize_MouseDown(object sender, MouseEventArgs e)
@@ -114,56 +95,9 @@ namespace DeskShell
             this.pnlLoginLeftSide.Show();
         }
 
-        private void btnSubmit_Register_Click(object sender, EventArgs e)
+        private void btnMinimize_Click(object sender, EventArgs e)
         {
-            var validationMessage = ValidateUserRegistration();
-            if (!validationMessage.Equals(string.Empty))
-            {
-                MessageBox.Show(validationMessage);
-                return;
-            }
-
-            var result = new UIController().Register(txtSignUpEmail.Text.Trim(), txtSignUpPassword.Text, txtSignUpFirstName.Text.Trim(), txtSignUpLastName.Text.Trim());
-
-            if (result.Equals(string.Empty))
-            {
-                MessageBox.Show("Succesfully Created New User");
-                btnBackToLogin.PerformClick();
-            }
-            else
-            {
-                MessageBox.Show(result);
-                return;
-            }
-        }
-
-        // Returns string.empty if valid
-        private string ValidateUserRegistration()
-        {
-            // TODO: VERY basic validation for now. Need to validate email, lengths (min and max), pw validation, etc
-            if (string.IsNullOrWhiteSpace(txtSignUpFirstName.Text))
-                return "Invalid First Name";
-            if (string.IsNullOrWhiteSpace(txtSignUpLastName.Text))
-                return "Invalid Last Name";
-            if (string.IsNullOrWhiteSpace(txtSignUpEmail.Text))
-                return "Invalid Email";
-            if (string.IsNullOrWhiteSpace(txtSignUpPassword.Text))
-                return "Invalid Password";
-            if (!txtSignUpPassword.Text.Equals(txtSignUpConfirmPassword.Text))
-                return "Passwords do not Match";
-
-            return string.Empty;
-        }
-
-        private string ValidateLogin()
-        {
-            // TODO: VERY basic validation for now
-            if (string.IsNullOrWhiteSpace(txtLogin.Text))
-                return "Invalid Login";
-            if (string.IsNullOrWhiteSpace(txtPassword.Text))
-                return "Invalid Password";
-
-            return string.Empty;
+            WindowState = FormWindowState.Minimized;
         }
     }
 }

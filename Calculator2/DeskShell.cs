@@ -12,45 +12,32 @@ using System.Windows.Forms;
 namespace DeskShell {
     
 
-    public partial class DeskShell: Form {
+    public partial class MainApplication: Form {
 
-        //Import for the Hiding of the caret for the calculator.
-        [System.Runtime.InteropServices.DllImport("user32.dll")]
-        static extern bool HideCaret(IntPtr hWnd);
+        //Holds fields, imports, etc.
+        #region
+
+        //For updating the UI with time.
+        Timer timerNow = new Timer { Interval = 998 };
+        
+        private const int ButtonSelectionPnlOffset = 36;
+
+        //To have form be drag-able.
+        bool TogMove;
+        int MValX;
+        int MValY;
+        #endregion
 
         /// <summary>
         /// Constructor for the form.
         /// </summary>
-        public DeskShell() {
+        public MainApplication() {
             InitializeComponent();
-            
-            //Hides the Calculator for now.
-            pnlCalcPad.Enabled = true;
-            pnlCalcTop.Enabled = true;
+
             //Central is the parent container
             pnlCentralHolder.Show();
             pnlCentralHolder.Enabled = true;
-            txtOutput.Hide();
-            pnlCalcPad.Hide();
             
-        }
-
-        private static double Evaluate(string expression)
-        {
-            DataTable table = new DataTable();
-            table.Columns.Add("expression", typeof(string), expression);
-            DataRow row = table.NewRow();
-            table.Rows.Add(row);
-            return double.Parse((string)row["expression"]);
-        }
-
-        private void SetTxtFocused()
-        {
-            if (!txtOutput.Focused)
-            {
-                txtOutput.Focus();
-                HideCaret(txtOutput.Handle);
-            }
         }
 
         private void KillApplication()
@@ -61,130 +48,122 @@ namespace DeskShell {
 
         #region EventHandlers
 
-        //Information handler for every button.
-        private void EvaluaterBtn(object sender, EventArgs e)
-        {
-            var input = txtOutput.Text.Trim();
-            try
-            {
-                if (input.Equals("ERROR") || input.Equals("0"))
-                {
-                    txtOutput.Clear();
-                }
-                txtOutput.Text += ((Button)sender).Text.Trim();
-                txtOutput.SelectionStart = txtOutput.Text.Length;
-                txtOutput.SelectionLength = 0;
-            }
-            catch (Exception es)
-            {
-                Console.WriteLine(es.StackTrace);
-            }
-            SetTxtFocused();
-        }
-
-        private void Clear_Click(object sender, EventArgs e)
-        {
-            txtOutput.Clear();
-            txtOutput.Text = "0";
-            SetTxtFocused();
-        }
-
-        private void Equals_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                txtOutput.Text = Evaluate(txtOutput.Text.Trim()).ToString();
-                //might throw an error.
-                txtOutput.SelectionStart = txtOutput.Text.Length;
-                txtOutput.SelectionLength = 0;
-
-                //txtOutput.HideSelection = true; //An attempt to fix the problem.
-                SetTxtFocused();
-            } catch (Exception ex)
-            {
-                txtOutput.Text = "ERROR";
-            }
-        }
-
         private void buttonHome_Click(object sender, EventArgs e)
         {
-            pnlSelectionIdentifier.Height = btnHome.Height;
-            pnlSelectionIdentifier.Top = btnHome.Top;
 
-            txtOutput.Hide();
-            pnlCalcPad.Hide();
-            
-            pnlHome.Show();
+            calculator1.Hide();
+
         }
 
         private void buttonCalendar_Click(object sender, EventArgs e)
         {
-            pnlSelectionIdentifier.Height = btnCalendar.Height;
-            pnlSelectionIdentifier.Top = btnCalendar.Top;
 
-            txtOutput.Hide();
-            pnlCalcPad.Hide();
+            calculator1.Hide();
 
-            pnlHome.Hide();
         }
 
         private void buttonCalculator_Click(object sender, EventArgs e)
         {
-            pnlSelectionIdentifier.Height = btnCalculator.Height;
-            pnlSelectionIdentifier.Top = btnCalculator.Top;
-            
-            pnlHome.Hide();
+            //Instead of doing the above, let's just set the color of the button to be a bit grayer. :)
 
-            //Setting panels to true or false.
-            txtOutput.Show();
-            pnlCalcPad.Show();
-
-            //Have to set the focus on the text-box
-            txtOutput.Focus();
+            calculator1.BringToFront();
+            calculator1.Show();
         }
 
         private void buttonToDo_Click(object sender, EventArgs e)
         {
-            pnlSelectionIdentifier.Height = btnToDo.Height;
-            pnlSelectionIdentifier.Top = btnToDo.Top;
 
-            txtOutput.Hide();
-            pnlCalcPad.Hide();
+            calculator1.Hide();
         }
 
         private void buttonNotepad_Click(object sender, EventArgs e)
         {
-            pnlSelectionIdentifier.Height = btnNotepad.Height;
-            pnlSelectionIdentifier.Top = btnNotepad.Top;
-
-            txtOutput.Hide();
-            pnlCalcPad.Hide();
+            calculator1.Hide();
         }
+
 
         private void buttonExit_Click(object sender, EventArgs e)
         {
             KillApplication();
         }
         #endregion
-
-        private void btnLoginScreen_Click(object sender, EventArgs e)
+        
+        //Helper method Region AND Dragability Region.
+        #region WindowMovement
+        private int HelperSelectionPnlOffset(Button btn)
         {
-
+            return btn.Top + ButtonSelectionPnlOffset;
         }
 
-        private void btnBackLogin_Click(object sender, EventArgs e)
+        private void pnlControlsResize_MouseDown(object sender, MouseEventArgs e)
         {
-
+            TogMove = true;
+            MValX = e.X;
+            MValY = e.Y;
         }
 
-        private void btnSignUp_Click(object sender, EventArgs e)
+        private void pnlControlsResize_MouseMove(object sender, MouseEventArgs e)
         {
-
+            if (TogMove)
+            {
+                this.SetDesktopLocation(MousePosition.X - MValX, MousePosition.Y - MValY);
+            }
         }
 
-        private void btnBackSignUp_Click(object sender, EventArgs e)
+        private void pnlControlsResize_MouseUp(object sender, MouseEventArgs e)
         {
+            TogMove = false;
+        }
+        #endregion
 
+        private void timerTickHandler(object sender, EventArgs e)
+        {
+            lblTimeMainForm.Text = DateTime.Now.ToLongTimeString();
+        }
+        
+        private void MainApplication_Load(object sender, EventArgs e)
+        {
+            //Make sure to do all of the loading stuff in here.
+            calculator1.Hide();
+
+            // To update the first time.
+            lblTimeMainForm.Text = DateTime.Now.ToLongTimeString();
+            timerNow.Tick += timerTickHandler;
+            timerNow.Start();
+        }
+
+        private void btnMainFormApplicationProfile_Click(object sender, EventArgs e)
+        {
+            ContextMenu cm = new ContextMenu();
+            cm.MenuItems.Add("View Profile", new EventHandler(onContextMenuProfile_Click));
+            cm.MenuItems.Add("Add Extensions", new EventHandler(onContextMenuAddExtensions_Click));
+            cm.MenuItems.Add("More...", new EventHandler(onContextMenuMore_Click));
+            cm.Show(btnMainFormProfile, new Point(0, btnMainFormProfile.Height));
+        }
+
+        private void onContextMenuMore_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine("More button was pressed.");
+        }
+
+        private void onContextMenuProfile_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine("View profile clicked.");
+        }
+
+        private void onContextMenuAddExtensions_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine("Add extensions clicked.");
+        }
+
+        private void btnMinimize_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnMoveFeatureOver_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine("The move feature over was clicked.");
         }
     }
 }
