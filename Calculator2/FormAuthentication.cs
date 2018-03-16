@@ -94,5 +94,10 @@ namespace AuthenticationForm
             this.pnlSignUp.Hide();
             this.pnlLoginLeftSide.Show();
         }
+
+        private void btnMinimize_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
     }
 }
