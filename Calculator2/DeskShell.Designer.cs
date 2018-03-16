@@ -43,6 +43,7 @@
             this.pnlFeatureTop = new System.Windows.Forms.Panel();
             this.lblNameHolder = new System.Windows.Forms.Label();
             this.picLogoMainApp = new System.Windows.Forms.PictureBox();
+            this.btnMoveFeatureOver = new System.Windows.Forms.Button();
             this.calculator1 = new DeskShell.Calculator();
             this.pnlControlsResize.SuspendLayout();
             this.pnlCentralHolder.SuspendLayout();
@@ -55,11 +56,11 @@
             // btnNotepad
             // 
             this.btnNotepad.FlatAppearance.BorderSize = 0;
-            this.btnNotepad.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(107)))), ((int)(((byte)(173)))));
-            this.btnNotepad.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(119)))), ((int)(((byte)(173)))));
+            this.btnNotepad.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(176)))), ((int)(((byte)(147)))));
+            this.btnNotepad.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(196)))), ((int)(((byte)(153)))));
             this.btnNotepad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNotepad.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNotepad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(189)))), ((int)(((byte)(125)))));
+            this.btnNotepad.ForeColor = System.Drawing.Color.Black;
             this.btnNotepad.Image = ((System.Drawing.Image)(resources.GetObject("btnNotepad.Image")));
             this.btnNotepad.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnNotepad.Location = new System.Drawing.Point(3, 89);
@@ -74,11 +75,11 @@
             // btnToDo
             // 
             this.btnToDo.FlatAppearance.BorderSize = 0;
-            this.btnToDo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(107)))), ((int)(((byte)(173)))));
-            this.btnToDo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(119)))), ((int)(((byte)(173)))));
+            this.btnToDo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(176)))), ((int)(((byte)(147)))));
+            this.btnToDo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(196)))), ((int)(((byte)(153)))));
             this.btnToDo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnToDo.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnToDo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(189)))), ((int)(((byte)(125)))));
+            this.btnToDo.ForeColor = System.Drawing.Color.Black;
             this.btnToDo.Image = ((System.Drawing.Image)(resources.GetObject("btnToDo.Image")));
             this.btnToDo.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnToDo.Location = new System.Drawing.Point(3, 261);
@@ -93,11 +94,11 @@
             // btnCalculator
             // 
             this.btnCalculator.FlatAppearance.BorderSize = 0;
-            this.btnCalculator.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(107)))), ((int)(((byte)(173)))));
-            this.btnCalculator.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(119)))), ((int)(((byte)(173)))));
+            this.btnCalculator.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(176)))), ((int)(((byte)(147)))));
+            this.btnCalculator.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(196)))), ((int)(((byte)(153)))));
             this.btnCalculator.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCalculator.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCalculator.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(189)))), ((int)(((byte)(125)))));
+            this.btnCalculator.ForeColor = System.Drawing.Color.Black;
             this.btnCalculator.Image = ((System.Drawing.Image)(resources.GetObject("btnCalculator.Image")));
             this.btnCalculator.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCalculator.Location = new System.Drawing.Point(3, 175);
@@ -112,30 +113,30 @@
             // btnCalendar
             // 
             this.btnCalendar.FlatAppearance.BorderSize = 0;
-            this.btnCalendar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(107)))), ((int)(((byte)(173)))));
-            this.btnCalendar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(119)))), ((int)(((byte)(173)))));
+            this.btnCalendar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(176)))), ((int)(((byte)(147)))));
+            this.btnCalendar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(196)))), ((int)(((byte)(153)))));
             this.btnCalendar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCalendar.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCalendar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(189)))), ((int)(((byte)(125)))));
+            this.btnCalendar.ForeColor = System.Drawing.Color.Black;
             this.btnCalendar.Image = ((System.Drawing.Image)(resources.GetObject("btnCalendar.Image")));
             this.btnCalendar.Location = new System.Drawing.Point(3, 347);
             this.btnCalendar.Name = "btnCalendar";
             this.btnCalendar.Size = new System.Drawing.Size(314, 80);
             this.btnCalendar.TabIndex = 1;
             this.btnCalendar.Text = "Calendar";
-            this.btnCalendar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnCalendar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnCalendar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCalendar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCalendar.UseVisualStyleBackColor = true;
             this.btnCalendar.Click += new System.EventHandler(this.buttonCalendar_Click);
             // 
             // btnHome
             // 
             this.btnHome.FlatAppearance.BorderSize = 0;
-            this.btnHome.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(107)))), ((int)(((byte)(173)))));
-            this.btnHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(119)))), ((int)(((byte)(173)))));
+            this.btnHome.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(176)))), ((int)(((byte)(147)))));
+            this.btnHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(196)))), ((int)(((byte)(153)))));
             this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHome.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(189)))), ((int)(((byte)(125)))));
+            this.btnHome.ForeColor = System.Drawing.Color.Black;
             this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
             this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnHome.Location = new System.Drawing.Point(3, 3);
@@ -268,6 +269,7 @@
             // pnlFeatureTop
             // 
             this.pnlFeatureTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(0)))), ((int)(((byte)(10)))));
+            this.pnlFeatureTop.Controls.Add(this.btnMoveFeatureOver);
             this.pnlFeatureTop.Controls.Add(this.lblNameHolder);
             this.pnlFeatureTop.Controls.Add(this.picLogoMainApp);
             this.pnlFeatureTop.Dock = System.Windows.Forms.DockStyle.Top;
@@ -296,6 +298,24 @@
             this.picLogoMainApp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picLogoMainApp.TabIndex = 0;
             this.picLogoMainApp.TabStop = false;
+            // 
+            // btnMoveFeatureOver
+            // 
+            this.btnMoveFeatureOver.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(0)))), ((int)(((byte)(10)))));
+            this.btnMoveFeatureOver.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnMoveFeatureOver.FlatAppearance.BorderSize = 0;
+            this.btnMoveFeatureOver.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
+            this.btnMoveFeatureOver.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.btnMoveFeatureOver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMoveFeatureOver.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMoveFeatureOver.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnMoveFeatureOver.Image = ((System.Drawing.Image)(resources.GetObject("btnMoveFeatureOver.Image")));
+            this.btnMoveFeatureOver.Location = new System.Drawing.Point(3, 6);
+            this.btnMoveFeatureOver.Name = "btnMoveFeatureOver";
+            this.btnMoveFeatureOver.Size = new System.Drawing.Size(45, 41);
+            this.btnMoveFeatureOver.TabIndex = 25;
+            this.btnMoveFeatureOver.UseVisualStyleBackColor = false;
+            this.btnMoveFeatureOver.Click += new System.EventHandler(this.btnMoveFeatureOver_Click);
             // 
             // calculator1
             // 
@@ -350,6 +370,7 @@
         private System.Windows.Forms.Panel pnlFeatureTop;
         private System.Windows.Forms.Label lblNameHolder;
         private System.Windows.Forms.PictureBox picLogoMainApp;
+        private System.Windows.Forms.Button btnMoveFeatureOver;
     }
 }
 

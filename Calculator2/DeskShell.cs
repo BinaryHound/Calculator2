@@ -64,14 +64,10 @@ namespace DeskShell {
 
         private void buttonCalculator_Click(object sender, EventArgs e)
         {
-
-
             //Instead of doing the above, let's just set the color of the button to be a bit grayer. :)
 
             calculator1.BringToFront();
             calculator1.Show();
-            
-
         }
 
         private void buttonToDo_Click(object sender, EventArgs e)
@@ -93,7 +89,7 @@ namespace DeskShell {
         #endregion
         
         //Helper method Region AND Dragability Region.
-        #region
+        #region WindowMovement
         private int HelperSelectionPnlOffset(Button btn)
         {
             return btn.Top + ButtonSelectionPnlOffset;
@@ -138,17 +134,6 @@ namespace DeskShell {
 
         private void btnMainFormApplicationProfile_Click(object sender, EventArgs e)
         {
-            //if (pnlfeaturecontainer.width >= 320)
-            //{
-            //    piclogomainapp.location = new point(89, 6);
-            //    piclogomainapp.size = new size(38, 36);
-            //    pnlfeaturecontainer.width = 67;
-            //} else
-            //{
-            //    piclogomainapp.location = new point(80, 48);
-            //    piclogomainapp.size = new size(107, 63);
-            //    pnlfeaturecontainer.width = 320;
-            //}
             ContextMenu cm = new ContextMenu();
             cm.MenuItems.Add("View Profile", new EventHandler(onContextMenuProfile_Click));
             cm.MenuItems.Add("Add Extensions", new EventHandler(onContextMenuAddExtensions_Click));
@@ -174,6 +159,11 @@ namespace DeskShell {
         private void btnMinimize_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnMoveFeatureOver_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine("The move feature over was clicked.");
         }
     }
 }
