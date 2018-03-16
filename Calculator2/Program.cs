@@ -13,7 +13,7 @@ namespace DeskShell{
         static void Main() {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new DeskShell());
+            Application.Run(new FormAuthentication());
         }
     }
 }

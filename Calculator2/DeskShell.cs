@@ -11,14 +11,6 @@ using System.Windows.Forms;
 
 namespace DeskShell {
     
-    enum WindowSelector
-    {
-        Home,
-        Calendar,
-        Calculator,
-        Todo,
-        Notepad
-    }
 
     public partial class DeskShell: Form {
 
@@ -38,8 +30,6 @@ namespace DeskShell {
             //Central is the parent container
             pnlCentralHolder.Show();
             pnlCentralHolder.Enabled = true;
-            pnlLogin.Enabled = false;
-            pnlLogin.Hide();
             txtOutput.Hide();
             pnlCalcPad.Hide();
             
@@ -179,45 +169,22 @@ namespace DeskShell {
 
         private void btnLoginScreen_Click(object sender, EventArgs e)
         {
-            pnlLogin.Enabled = true;
-            pnlLogin.Show();
 
-            pnlAuthentication.BringToFront();
         }
 
         private void btnBackLogin_Click(object sender, EventArgs e)
         {
-            pnlLogin.Enabled = false;
-            pnlLogin.Hide();
-            pnlAuthentication.SendToBack();
-        }
 
-        private void txtLogin_Click(object sender, EventArgs e)
-        {
-            txtLogin.Text = "";
-        }
-
-        private void txtPassword_Click(object sender, EventArgs e)
-        {
-            txtPassword.Text = "";
         }
 
         private void btnSignUp_Click(object sender, EventArgs e)
         {
-            pnlLogin.Enabled = false;
-            pnlLogin.Hide();
 
-            pnlSignUp.Enabled = true;
-            pnlSignUp.Show();
         }
 
         private void btnBackSignUp_Click(object sender, EventArgs e)
         {
-            pnlSignUp.Hide();
-            pnlSignUp.Enabled = false;
 
-            pnlLogin.Enabled = true;
-            pnlLogin.Show();
         }
     }
 }
