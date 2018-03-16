@@ -20,7 +20,8 @@ namespace Calculator2
                 // this keeps bugging out :( 
                 //var client = new RestClient(ConfigurationManager.AppSettings["LocalURL"]);
 
-                var client = new RestClient("http://localhost:60629/api");
+                //var client = new RestClient("http://localhost:60629/api");
+                var client = new RestClient("http://deskshell.us-west-2.elasticbeanstalk.com/api");
                 var request = new RestRequest(path, Method.POST);
 
                 request.Parameters.Clear();
