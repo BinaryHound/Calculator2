@@ -383,7 +383,7 @@
             this.txtOutput.MinimumSize = new System.Drawing.Size(400, 40);
             this.txtOutput.Name = "txtOutput";
             this.txtOutput.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtOutput.Size = new System.Drawing.Size(842, 40);
+            this.txtOutput.Size = new System.Drawing.Size(842, 34);
             this.txtOutput.TabIndex = 35;
             this.txtOutput.Text = "0";
             this.txtOutput.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;

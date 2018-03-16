@@ -92,6 +92,6 @@ namespace DeskShell
                 txtOutput.Text = "ERROR";
             }
         }
-        
+
     }
 }

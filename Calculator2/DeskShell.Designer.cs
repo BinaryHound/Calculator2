@@ -41,8 +41,8 @@
             this.pnlFlowFeaturePicker = new System.Windows.Forms.FlowLayoutPanel();
             this.pnlFeatureContainer = new System.Windows.Forms.Panel();
             this.pnlFeatureTop = new System.Windows.Forms.Panel();
-            this.picLogoMainApp = new System.Windows.Forms.PictureBox();
             this.lblNameHolder = new System.Windows.Forms.Label();
+            this.picLogoMainApp = new System.Windows.Forms.PictureBox();
             this.calculator1 = new DeskShell.Calculator();
             this.pnlControlsResize.SuspendLayout();
             this.pnlCentralHolder.SuspendLayout();
@@ -157,9 +157,9 @@
             this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonExit.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonExit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonExit.Location = new System.Drawing.Point(1245, 0);
+            this.buttonExit.Location = new System.Drawing.Point(1235, 0);
             this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new System.Drawing.Size(35, 36);
+            this.buttonExit.Size = new System.Drawing.Size(45, 47);
             this.buttonExit.TabIndex = 13;
             this.buttonExit.Text = "X";
             this.buttonExit.UseVisualStyleBackColor = false;
@@ -224,9 +224,9 @@
             this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMinimize.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMinimize.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnMinimize.Location = new System.Drawing.Point(1201, 0);
+            this.btnMinimize.Location = new System.Drawing.Point(1190, 0);
             this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Size = new System.Drawing.Size(35, 36);
+            this.btnMinimize.Size = new System.Drawing.Size(45, 47);
             this.btnMinimize.TabIndex = 22;
             this.btnMinimize.Text = "-";
             this.btnMinimize.UseVisualStyleBackColor = false;
@@ -236,9 +236,9 @@
             // 
             this.pnlCentralHolder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(253)))), ((int)(((byte)(254)))));
             this.pnlCentralHolder.Controls.Add(this.calculator1);
-            this.pnlCentralHolder.Location = new System.Drawing.Point(326, 36);
+            this.pnlCentralHolder.Location = new System.Drawing.Point(323, 47);
             this.pnlCentralHolder.Name = "pnlCentralHolder";
-            this.pnlCentralHolder.Size = new System.Drawing.Size(954, 684);
+            this.pnlCentralHolder.Size = new System.Drawing.Size(957, 673);
             this.pnlCentralHolder.TabIndex = 15;
             // 
             // pnlFlowFeaturePicker
@@ -276,16 +276,6 @@
             this.pnlFeatureTop.Size = new System.Drawing.Size(320, 213);
             this.pnlFeatureTop.TabIndex = 24;
             // 
-            // picLogoMainApp
-            // 
-            this.picLogoMainApp.Image = ((System.Drawing.Image)(resources.GetObject("picLogoMainApp.Image")));
-            this.picLogoMainApp.Location = new System.Drawing.Point(89, 6);
-            this.picLogoMainApp.Name = "picLogoMainApp";
-            this.picLogoMainApp.Size = new System.Drawing.Size(130, 119);
-            this.picLogoMainApp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picLogoMainApp.TabIndex = 0;
-            this.picLogoMainApp.TabStop = false;
-            // 
             // lblNameHolder
             // 
             this.lblNameHolder.AutoSize = true;
@@ -297,13 +287,23 @@
             this.lblNameHolder.TabIndex = 1;
             this.lblNameHolder.Text = "First Last Name";
             // 
+            // picLogoMainApp
+            // 
+            this.picLogoMainApp.Image = ((System.Drawing.Image)(resources.GetObject("picLogoMainApp.Image")));
+            this.picLogoMainApp.Location = new System.Drawing.Point(89, 6);
+            this.picLogoMainApp.Name = "picLogoMainApp";
+            this.picLogoMainApp.Size = new System.Drawing.Size(130, 119);
+            this.picLogoMainApp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picLogoMainApp.TabIndex = 0;
+            this.picLogoMainApp.TabStop = false;
+            // 
             // calculator1
             // 
             this.calculator1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
             this.calculator1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.calculator1.Location = new System.Drawing.Point(0, 0);
             this.calculator1.Name = "calculator1";
-            this.calculator1.Size = new System.Drawing.Size(954, 684);
+            this.calculator1.Size = new System.Drawing.Size(957, 673);
             this.calculator1.TabIndex = 0;
             // 
             // MainApplication
