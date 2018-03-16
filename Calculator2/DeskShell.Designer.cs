@@ -60,6 +60,8 @@
             this.pnlCalcPad = new System.Windows.Forms.Panel();
             this.pnlInner = new System.Windows.Forms.Panel();
             this.pnlControlsResize = new System.Windows.Forms.Panel();
+            this.lblTimeMainForm = new System.Windows.Forms.Label();
+            this.btnMainFormProfile = new System.Windows.Forms.Button();
             this.btnMinimize = new System.Windows.Forms.Button();
             this.pnlCentralHolder = new System.Windows.Forms.Panel();
             this.pnlHome = new System.Windows.Forms.Panel();
@@ -569,10 +571,11 @@
             // 
             // pnlCalcTop
             // 
+            this.pnlCalcTop.BackColor = System.Drawing.Color.White;
             this.pnlCalcTop.Controls.Add(this.txtOutput);
             this.pnlCalcTop.Location = new System.Drawing.Point(0, 0);
             this.pnlCalcTop.Name = "pnlCalcTop";
-            this.pnlCalcTop.Size = new System.Drawing.Size(1077, 129);
+            this.pnlCalcTop.Size = new System.Drawing.Size(1080, 129);
             this.pnlCalcTop.TabIndex = 19;
             // 
             // txtOutput
@@ -599,7 +602,7 @@
             this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonExit.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonExit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonExit.Location = new System.Drawing.Point(1242, 0);
+            this.buttonExit.Location = new System.Drawing.Point(1245, 0);
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Size = new System.Drawing.Size(35, 36);
             this.buttonExit.TabIndex = 13;
@@ -622,7 +625,7 @@
             // 
             // pnlInner
             // 
-            this.pnlInner.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
+            this.pnlInner.BackColor = System.Drawing.Color.White;
             this.pnlInner.Controls.Add(this.btnSubtract);
             this.pnlInner.Controls.Add(this.btnAdd);
             this.pnlInner.Controls.Add(this.btnEquals);
@@ -648,6 +651,8 @@
             // pnlControlsResize
             // 
             this.pnlControlsResize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(253)))), ((int)(((byte)(254)))));
+            this.pnlControlsResize.Controls.Add(this.lblTimeMainForm);
+            this.pnlControlsResize.Controls.Add(this.btnMainFormProfile);
             this.pnlControlsResize.Controls.Add(this.buttonExit);
             this.pnlControlsResize.Controls.Add(this.btnMinimize);
             this.pnlControlsResize.Controls.Add(this.pnlSettings);
@@ -659,6 +664,35 @@
             this.pnlControlsResize.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlControlsResize_MouseDown);
             this.pnlControlsResize.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlControlsResize_MouseMove);
             this.pnlControlsResize.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pnlControlsResize_MouseUp);
+            // 
+            // lblTimeMainForm
+            // 
+            this.lblTimeMainForm.AutoSize = true;
+            this.lblTimeMainForm.BackColor = System.Drawing.Color.Transparent;
+            this.lblTimeMainForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTimeMainForm.Location = new System.Drawing.Point(42, 9);
+            this.lblTimeMainForm.Name = "lblTimeMainForm";
+            this.lblTimeMainForm.Size = new System.Drawing.Size(51, 20);
+            this.lblTimeMainForm.TabIndex = 24;
+            this.lblTimeMainForm.Text = "Time: ";
+            // 
+            // btnMainFormProfile
+            // 
+            this.btnMainFormProfile.BackColor = System.Drawing.Color.Transparent;
+            this.btnMainFormProfile.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnMainFormProfile.FlatAppearance.BorderSize = 0;
+            this.btnMainFormProfile.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
+            this.btnMainFormProfile.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.btnMainFormProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMainFormProfile.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMainFormProfile.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnMainFormProfile.Image = ((System.Drawing.Image)(resources.GetObject("btnMainFormProfile.Image")));
+            this.btnMainFormProfile.Location = new System.Drawing.Point(0, 0);
+            this.btnMainFormProfile.Name = "btnMainFormProfile";
+            this.btnMainFormProfile.Size = new System.Drawing.Size(36, 36);
+            this.btnMainFormProfile.TabIndex = 23;
+            this.btnMainFormProfile.UseVisualStyleBackColor = false;
+            this.btnMainFormProfile.Click += new System.EventHandler(this.btnMainFormApplicationProfile_Click);
             // 
             // btnMinimize
             // 
@@ -734,26 +768,28 @@
             this.pnlFlowFeaturePicker.Size = new System.Drawing.Size(200, 684);
             this.pnlFlowFeaturePicker.TabIndex = 23;
             // 
-            // DeskShell
+            // MainApplication
             // 
             this.AcceptButton = this.btnEquals;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1280, 720);
             this.Controls.Add(this.pnlSelectionIdentifier);
             this.Controls.Add(this.pnlFlowFeaturePicker);
             this.Controls.Add(this.pnlControlsResize);
             this.Controls.Add(this.pnlCentralHolder);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "DeskShell";
+            this.Name = "MainApplication";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.MainApplication_Load);
             this.pnlSettings.ResumeLayout(false);
             this.pnlCalcTop.ResumeLayout(false);
             this.pnlCalcTop.PerformLayout();
             this.pnlCalcPad.ResumeLayout(false);
             this.pnlInner.ResumeLayout(false);
             this.pnlControlsResize.ResumeLayout(false);
+            this.pnlControlsResize.PerformLayout();
             this.pnlCentralHolder.ResumeLayout(false);
             this.pnlHome.ResumeLayout(false);
             this.pnlHome.PerformLayout();
@@ -804,6 +840,8 @@
         private System.Windows.Forms.Label lblUserGreeting;
         private System.Windows.Forms.Label lblGreeting;
         private System.Windows.Forms.FlowLayoutPanel pnlFlowFeaturePicker;
+        private System.Windows.Forms.Label lblTimeMainForm;
+        private System.Windows.Forms.Button btnMainFormProfile;
     }
 }
 

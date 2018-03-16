@@ -26,6 +26,10 @@ namespace DeskShell {
         bool TogMove;
         int MValX;
         int MValY;
+        
+
+        //To update the time on the label at the top left.
+
 
         #endregion
 
@@ -34,7 +38,7 @@ namespace DeskShell {
         /// </summary>
         public MainApplication() {
             InitializeComponent();
-            
+
             //Hides the Calculator for now.
             pnlCalcPad.Enabled = true;
             pnlCalcTop.Enabled = true;
@@ -227,5 +231,21 @@ namespace DeskShell {
         }
         #endregion
 
+        private void MainApplication_Load(object sender, EventArgs e)
+        {
+            // To update the first time.
+            lblTimeMainForm.Text = DateTime.Now.ToLongTimeString();
+            var t = new Timer { Interval = 998 };
+            t.Tick += (o, args) =>
+            {
+                lblTimeMainForm.Text = DateTime.Now.ToLongTimeString();
+            };
+            t.Start();
+        }
+
+        private void btnMainFormApplicationProfile_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
