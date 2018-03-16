@@ -1,4 +1,4 @@
-﻿namespace DeskShell
+﻿namespace AuthenticationForm
 {
     partial class FormAuthentication
     {
@@ -130,9 +130,9 @@
             // 
             // pnlLogin
             // 
+            this.pnlLogin.Controls.Add(this.pnlLoginLeftSide);
             this.pnlLogin.Controls.Add(this.pnlSignUp);
             this.pnlLogin.Controls.Add(this.picLoginGif);
-            this.pnlLogin.Controls.Add(this.pnlLoginLeftSide);
             this.pnlLogin.Location = new System.Drawing.Point(0, 35);
             this.pnlLogin.Name = "pnlLogin";
             this.pnlLogin.Size = new System.Drawing.Size(1280, 687);
@@ -192,7 +192,6 @@
             this.btnSignUpSubmit.TabIndex = 22;
             this.btnSignUpSubmit.Text = "SUBMIT";
             this.btnSignUpSubmit.UseVisualStyleBackColor = false;
-            this.btnSignUpSubmit.Click += new System.EventHandler(this.btnSubmit_Register_Click);
             // 
             // pnlConfirmPasswordUnderline
             // 
