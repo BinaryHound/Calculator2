@@ -1,4 +1,4 @@
-﻿namespace Calculator2
+﻿namespace DeskShell
 {
     partial class Calculator
     {

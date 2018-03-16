@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Calculator2
+namespace DeskShell
 {
     public partial class Calculator : UserControl
     {

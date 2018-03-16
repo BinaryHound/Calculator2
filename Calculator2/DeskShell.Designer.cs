@@ -41,15 +41,15 @@
             this.pnlFlowFeaturePicker = new System.Windows.Forms.FlowLayoutPanel();
             this.pnlFeatureContainer = new System.Windows.Forms.Panel();
             this.pnlFeatureTop = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.calculator1 = new Calculator2.Calculator();
+            this.picLogoMainApp = new System.Windows.Forms.PictureBox();
+            this.lblNameHolder = new System.Windows.Forms.Label();
+            this.calculator1 = new DeskShell.Calculator();
             this.pnlControlsResize.SuspendLayout();
             this.pnlCentralHolder.SuspendLayout();
             this.pnlFlowFeaturePicker.SuspendLayout();
             this.pnlFeatureContainer.SuspendLayout();
             this.pnlFeatureTop.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogoMainApp)).BeginInit();
             this.SuspendLayout();
             // 
             // btnNotepad
@@ -62,7 +62,7 @@
             this.btnNotepad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(189)))), ((int)(((byte)(125)))));
             this.btnNotepad.Image = ((System.Drawing.Image)(resources.GetObject("btnNotepad.Image")));
             this.btnNotepad.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnNotepad.Location = new System.Drawing.Point(3, 81);
+            this.btnNotepad.Location = new System.Drawing.Point(3, 89);
             this.btnNotepad.Name = "btnNotepad";
             this.btnNotepad.Size = new System.Drawing.Size(314, 80);
             this.btnNotepad.TabIndex = 4;
@@ -81,7 +81,7 @@
             this.btnToDo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(189)))), ((int)(((byte)(125)))));
             this.btnToDo.Image = ((System.Drawing.Image)(resources.GetObject("btnToDo.Image")));
             this.btnToDo.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnToDo.Location = new System.Drawing.Point(3, 253);
+            this.btnToDo.Location = new System.Drawing.Point(3, 261);
             this.btnToDo.Name = "btnToDo";
             this.btnToDo.Size = new System.Drawing.Size(314, 80);
             this.btnToDo.TabIndex = 3;
@@ -100,7 +100,7 @@
             this.btnCalculator.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(189)))), ((int)(((byte)(125)))));
             this.btnCalculator.Image = ((System.Drawing.Image)(resources.GetObject("btnCalculator.Image")));
             this.btnCalculator.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCalculator.Location = new System.Drawing.Point(3, 167);
+            this.btnCalculator.Location = new System.Drawing.Point(3, 175);
             this.btnCalculator.Name = "btnCalculator";
             this.btnCalculator.Size = new System.Drawing.Size(314, 80);
             this.btnCalculator.TabIndex = 2;
@@ -118,7 +118,7 @@
             this.btnCalendar.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCalendar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(189)))), ((int)(((byte)(125)))));
             this.btnCalendar.Image = ((System.Drawing.Image)(resources.GetObject("btnCalendar.Image")));
-            this.btnCalendar.Location = new System.Drawing.Point(3, 339);
+            this.btnCalendar.Location = new System.Drawing.Point(3, 347);
             this.btnCalendar.Name = "btnCalendar";
             this.btnCalendar.Size = new System.Drawing.Size(314, 80);
             this.btnCalendar.TabIndex = 1;
@@ -140,7 +140,7 @@
             this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnHome.Location = new System.Drawing.Point(3, 3);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(314, 72);
+            this.btnHome.Size = new System.Drawing.Size(314, 80);
             this.btnHome.TabIndex = 0;
             this.btnHome.Text = "Home";
             this.btnHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -180,7 +180,7 @@
             this.pnlControlsResize.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlControlsResize.Location = new System.Drawing.Point(0, 0);
             this.pnlControlsResize.Name = "pnlControlsResize";
-            this.pnlControlsResize.Size = new System.Drawing.Size(1280, 36);
+            this.pnlControlsResize.Size = new System.Drawing.Size(1280, 47);
             this.pnlControlsResize.TabIndex = 21;
             this.pnlControlsResize.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlControlsResize_MouseDown);
             this.pnlControlsResize.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlControlsResize_MouseMove);
@@ -191,14 +191,14 @@
             this.lblTimeMainForm.AutoSize = true;
             this.lblTimeMainForm.BackColor = System.Drawing.Color.Transparent;
             this.lblTimeMainForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTimeMainForm.Location = new System.Drawing.Point(42, 9);
+            this.lblTimeMainForm.Location = new System.Drawing.Point(54, 15);
             this.lblTimeMainForm.Name = "lblTimeMainForm";
             this.lblTimeMainForm.Size = new System.Drawing.Size(0, 20);
             this.lblTimeMainForm.TabIndex = 24;
             // 
             // btnMainFormProfile
             // 
-            this.btnMainFormProfile.BackColor = System.Drawing.Color.Transparent;
+            this.btnMainFormProfile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
             this.btnMainFormProfile.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnMainFormProfile.FlatAppearance.BorderSize = 0;
             this.btnMainFormProfile.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
@@ -207,9 +207,9 @@
             this.btnMainFormProfile.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMainFormProfile.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnMainFormProfile.Image = ((System.Drawing.Image)(resources.GetObject("btnMainFormProfile.Image")));
-            this.btnMainFormProfile.Location = new System.Drawing.Point(0, 0);
+            this.btnMainFormProfile.Location = new System.Drawing.Point(3, 3);
             this.btnMainFormProfile.Name = "btnMainFormProfile";
-            this.btnMainFormProfile.Size = new System.Drawing.Size(36, 36);
+            this.btnMainFormProfile.Size = new System.Drawing.Size(45, 41);
             this.btnMainFormProfile.TabIndex = 23;
             this.btnMainFormProfile.UseVisualStyleBackColor = false;
             this.btnMainFormProfile.Click += new System.EventHandler(this.btnMainFormApplicationProfile_Click);
@@ -250,9 +250,9 @@
             this.pnlFlowFeaturePicker.Controls.Add(this.btnToDo);
             this.pnlFlowFeaturePicker.Controls.Add(this.btnCalendar);
             this.pnlFlowFeaturePicker.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlFlowFeaturePicker.Location = new System.Drawing.Point(0, 212);
+            this.pnlFlowFeaturePicker.Location = new System.Drawing.Point(0, 210);
             this.pnlFlowFeaturePicker.Name = "pnlFlowFeaturePicker";
-            this.pnlFlowFeaturePicker.Size = new System.Drawing.Size(320, 472);
+            this.pnlFlowFeaturePicker.Size = new System.Drawing.Size(320, 463);
             this.pnlFlowFeaturePicker.TabIndex = 23;
             // 
             // pnlFeatureContainer
@@ -260,45 +260,46 @@
             this.pnlFeatureContainer.Controls.Add(this.pnlFeatureTop);
             this.pnlFeatureContainer.Controls.Add(this.pnlFlowFeaturePicker);
             this.pnlFeatureContainer.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlFeatureContainer.Location = new System.Drawing.Point(0, 36);
+            this.pnlFeatureContainer.Location = new System.Drawing.Point(0, 47);
             this.pnlFeatureContainer.Name = "pnlFeatureContainer";
-            this.pnlFeatureContainer.Size = new System.Drawing.Size(320, 684);
+            this.pnlFeatureContainer.Size = new System.Drawing.Size(320, 673);
             this.pnlFeatureContainer.TabIndex = 6;
             // 
             // pnlFeatureTop
             // 
             this.pnlFeatureTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(0)))), ((int)(((byte)(10)))));
-            this.pnlFeatureTop.Controls.Add(this.label1);
-            this.pnlFeatureTop.Controls.Add(this.pictureBox1);
+            this.pnlFeatureTop.Controls.Add(this.lblNameHolder);
+            this.pnlFeatureTop.Controls.Add(this.picLogoMainApp);
             this.pnlFeatureTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlFeatureTop.Location = new System.Drawing.Point(0, 0);
             this.pnlFeatureTop.Name = "pnlFeatureTop";
             this.pnlFeatureTop.Size = new System.Drawing.Size(320, 213);
             this.pnlFeatureTop.TabIndex = 24;
             // 
-            // pictureBox1
+            // picLogoMainApp
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(89, 6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(130, 119);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.picLogoMainApp.Image = ((System.Drawing.Image)(resources.GetObject("picLogoMainApp.Image")));
+            this.picLogoMainApp.Location = new System.Drawing.Point(89, 6);
+            this.picLogoMainApp.Name = "picLogoMainApp";
+            this.picLogoMainApp.Size = new System.Drawing.Size(130, 119);
+            this.picLogoMainApp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picLogoMainApp.TabIndex = 0;
+            this.picLogoMainApp.TabStop = false;
             // 
-            // label1
+            // lblNameHolder
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(70, 148);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(160, 24);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "First Last Name";
+            this.lblNameHolder.AutoSize = true;
+            this.lblNameHolder.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNameHolder.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblNameHolder.Location = new System.Drawing.Point(70, 148);
+            this.lblNameHolder.Name = "lblNameHolder";
+            this.lblNameHolder.Size = new System.Drawing.Size(160, 24);
+            this.lblNameHolder.TabIndex = 1;
+            this.lblNameHolder.Text = "First Last Name";
             // 
             // calculator1
             // 
+            this.calculator1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
             this.calculator1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.calculator1.Location = new System.Drawing.Point(0, 0);
             this.calculator1.Name = "calculator1";
@@ -325,7 +326,7 @@
             this.pnlFeatureContainer.ResumeLayout(false);
             this.pnlFeatureTop.ResumeLayout(false);
             this.pnlFeatureTop.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogoMainApp)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -344,11 +345,11 @@
         private System.Windows.Forms.FlowLayoutPanel pnlFlowFeaturePicker;
         private System.Windows.Forms.Label lblTimeMainForm;
         private System.Windows.Forms.Button btnMainFormProfile;
-        private Calculator2.Calculator calculator1;
+        private DeskShell.Calculator calculator1;
         private System.Windows.Forms.Panel pnlFeatureContainer;
         private System.Windows.Forms.Panel pnlFeatureTop;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblNameHolder;
+        private System.Windows.Forms.PictureBox picLogoMainApp;
     }
 }
 

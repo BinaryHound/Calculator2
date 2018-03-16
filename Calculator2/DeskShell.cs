@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Calculator2;
 
 
 namespace DeskShell {
@@ -92,26 +91,6 @@ namespace DeskShell {
             KillApplication();
         }
         #endregion
-
-        private void btnLoginScreen_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnBackLogin_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnSignUp_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnBackSignUp_Click(object sender, EventArgs e)
-        {
-
-        }
         
         //Helper method Region AND Dragability Region.
         #region
@@ -159,7 +138,17 @@ namespace DeskShell {
 
         private void btnMainFormApplicationProfile_Click(object sender, EventArgs e)
         {
-            
+            if(pnlFeatureContainer.Width >= 320)
+            {
+                picLogoMainApp.Location = new Point(89, 6);
+                picLogoMainApp.Size = new Size(38, 36);
+                pnlFeatureContainer.Width = 67;
+            } else
+            {
+                picLogoMainApp.Location = new Point(80, 48);
+                picLogoMainApp.Size = new Size(107, 63);
+                pnlFeatureContainer.Width = 320;
+            }
         }
 
         private void btnMinimize_Click(object sender, EventArgs e)
