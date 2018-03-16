@@ -16,14 +16,14 @@ namespace DeskShell
 
         /*
          *  //Have to set the focus on the text-box
-            Calculator2.Calculator.Focus();
+            
          * */
 
         #region
         //Import for the Hiding of the caret for the calculator.
         [System.Runtime.InteropServices.DllImport("user32.dll")]
         static extern bool HideCaret(IntPtr hWnd);
-
+        
         #endregion
 
         public Calculator()
@@ -93,5 +93,9 @@ namespace DeskShell
             }
         }
 
+        private void Calculator_Load(object sender, EventArgs e)
+        {
+            SetTxtFocused();
+        }
     }
 }

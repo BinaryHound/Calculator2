@@ -138,17 +138,37 @@ namespace DeskShell {
 
         private void btnMainFormApplicationProfile_Click(object sender, EventArgs e)
         {
-            if(pnlFeatureContainer.Width >= 320)
-            {
-                picLogoMainApp.Location = new Point(89, 6);
-                picLogoMainApp.Size = new Size(38, 36);
-                pnlFeatureContainer.Width = 67;
-            } else
-            {
-                picLogoMainApp.Location = new Point(80, 48);
-                picLogoMainApp.Size = new Size(107, 63);
-                pnlFeatureContainer.Width = 320;
-            }
+            //if (pnlfeaturecontainer.width >= 320)
+            //{
+            //    piclogomainapp.location = new point(89, 6);
+            //    piclogomainapp.size = new size(38, 36);
+            //    pnlfeaturecontainer.width = 67;
+            //} else
+            //{
+            //    piclogomainapp.location = new point(80, 48);
+            //    piclogomainapp.size = new size(107, 63);
+            //    pnlfeaturecontainer.width = 320;
+            //}
+            ContextMenu cm = new ContextMenu();
+            cm.MenuItems.Add("View Profile", new EventHandler(onContextMenuProfile_Click));
+            cm.MenuItems.Add("Add Extensions", new EventHandler(onContextMenuAddExtensions_Click));
+            cm.MenuItems.Add("More...", new EventHandler(onContextMenuMore_Click));
+            cm.Show(btnMainFormProfile, new Point(0, btnMainFormProfile.Height));
+        }
+
+        private void onContextMenuMore_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine("More button was pressed.");
+        }
+
+        private void onContextMenuProfile_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine("View profile clicked.");
+        }
+
+        private void onContextMenuAddExtensions_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine("Add extensions clicked.");
         }
 
         private void btnMinimize_Click(object sender, EventArgs e)

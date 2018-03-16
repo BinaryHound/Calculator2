@@ -355,7 +355,7 @@
             // btnBackToLogin
             // 
             this.btnBackToLogin.FlatAppearance.BorderSize = 0;
-            this.btnBackToLogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnBackToLogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.IndianRed;
             this.btnBackToLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnBackToLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBackToLogin.Image = ((System.Drawing.Image)(resources.GetObject("btnBackToLogin.Image")));
