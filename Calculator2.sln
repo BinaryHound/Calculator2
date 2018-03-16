@@ -1,9 +1,12 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2024
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeskShell", "Calculator2\DeskShell.csproj", "{3A811EB8-9A2E-4E7F-B419-1B5513F987F2}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5C74D2E1-9058-4F7C-9719-7D7B99E42162} = {5C74D2E1-9058-4F7C-9719-7D7B99E42162}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API", "API\API.csproj", "{5C74D2E1-9058-4F7C-9719-7D7B99E42162}"
 EndProject

@@ -9,7 +9,7 @@ using Newtonsoft.Json;
 using Common;
 using Common.Data;
 
-namespace Calculator2
+namespace DeskShell
 {
     public static class DeskShellAPI
     {

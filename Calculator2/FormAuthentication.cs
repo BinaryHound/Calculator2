@@ -43,7 +43,23 @@ namespace AuthenticationForm
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            LaunchMainApplication();
+            var validationMessage = ValidateLogin();
+            if (!validationMessage.Equals(string.Empty))
+            {
+                MessageBox.Show(validationMessage);
+                return;
+            }
+
+            var result = new UIController().Login(txtLogin.Text.Trim(), txtPassword.Text);
+
+            if (result.Equals(string.Empty))
+            {
+                LaunchMainApplication();
+            }
+            else
+            {
+                MessageBox.Show(result);
+            }
         }
 
         private void pnlControlsResize_MouseDown(object sender, MouseEventArgs e)
@@ -98,6 +114,58 @@ namespace AuthenticationForm
         private void btnMinimize_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
+        }
+
+        // Returns string.empty if valid
+        private string ValidateUserRegistration()
+        {
+            // TODO: VERY basic validation for now. Need to validate email, lengths (min and max), pw validation, etc
+            if (string.IsNullOrWhiteSpace(txtSignUpFirstName.Text))
+                return "Invalid First Name";
+            if (string.IsNullOrWhiteSpace(txtSignUpLastName.Text))
+                return "Invalid Last Name";
+            if (string.IsNullOrWhiteSpace(txtSignUpEmail.Text))
+                return "Invalid Email";
+            if (string.IsNullOrWhiteSpace(txtSignUpPassword.Text))
+                return "Invalid Password";
+            if (!txtSignUpPassword.Text.Equals(txtSignUpConfirmPassword.Text))
+                return "Passwords do not Match";
+
+            return string.Empty;
+        }
+
+        private string ValidateLogin()
+        {
+            // TODO: VERY basic validation for now
+            if (string.IsNullOrWhiteSpace(txtLogin.Text))
+                return "Invalid Login";
+            if (string.IsNullOrWhiteSpace(txtPassword.Text))
+                return "Invalid Password";
+
+            return string.Empty;
+        }
+
+        private void btnSignUpSubmit_Click(object sender, EventArgs e)
+        {
+            var validationMessage = ValidateUserRegistration();
+            if (!validationMessage.Equals(string.Empty))
+            {
+                MessageBox.Show(validationMessage);
+                return;
+            }
+
+            var result = new UIController().Register(txtSignUpEmail.Text.Trim(), txtSignUpPassword.Text, txtSignUpFirstName.Text.Trim(), txtSignUpLastName.Text.Trim());
+
+            if (result.Equals(string.Empty))
+            {
+                MessageBox.Show("Succesfully Created New User");
+                btnBackToLogin.PerformClick();
+            }
+            else
+            {
+                MessageBox.Show(result);
+                return;
+            }
         }
     }
 }
