@@ -130,8 +130,8 @@
             // 
             // pnlLogin
             // 
-            this.pnlLogin.Controls.Add(this.pnlSignUp);
             this.pnlLogin.Controls.Add(this.pnlLoginLeftSide);
+            this.pnlLogin.Controls.Add(this.pnlSignUp);
             this.pnlLogin.Controls.Add(this.picLoginGif);
             this.pnlLogin.Location = new System.Drawing.Point(0, 35);
             this.pnlLogin.Name = "pnlLogin";
