@@ -41,9 +41,9 @@
             this.pnlFlowFeaturePicker = new System.Windows.Forms.FlowLayoutPanel();
             this.pnlFeatureContainer = new System.Windows.Forms.Panel();
             this.pnlFeatureTop = new System.Windows.Forms.Panel();
+            this.btnMoveFeatureOver = new System.Windows.Forms.Button();
             this.lblNameHolder = new System.Windows.Forms.Label();
             this.picLogoMainApp = new System.Windows.Forms.PictureBox();
-            this.btnMoveFeatureOver = new System.Windows.Forms.Button();
             this.calculator1 = new DeskShell.Calculator();
             this.pnlControlsResize.SuspendLayout();
             this.pnlCentralHolder.SuspendLayout();
@@ -278,6 +278,24 @@
             this.pnlFeatureTop.Size = new System.Drawing.Size(320, 213);
             this.pnlFeatureTop.TabIndex = 24;
             // 
+            // btnMoveFeatureOver
+            // 
+            this.btnMoveFeatureOver.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(0)))), ((int)(((byte)(10)))));
+            this.btnMoveFeatureOver.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnMoveFeatureOver.FlatAppearance.BorderSize = 0;
+            this.btnMoveFeatureOver.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
+            this.btnMoveFeatureOver.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.btnMoveFeatureOver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMoveFeatureOver.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMoveFeatureOver.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnMoveFeatureOver.Image = ((System.Drawing.Image)(resources.GetObject("btnMoveFeatureOver.Image")));
+            this.btnMoveFeatureOver.Location = new System.Drawing.Point(3, 6);
+            this.btnMoveFeatureOver.Name = "btnMoveFeatureOver";
+            this.btnMoveFeatureOver.Size = new System.Drawing.Size(45, 41);
+            this.btnMoveFeatureOver.TabIndex = 25;
+            this.btnMoveFeatureOver.UseVisualStyleBackColor = false;
+            this.btnMoveFeatureOver.Click += new System.EventHandler(this.btnMoveFeatureOver_Click);
+            // 
             // lblNameHolder
             // 
             this.lblNameHolder.AutoSize = true;
@@ -298,24 +316,6 @@
             this.picLogoMainApp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picLogoMainApp.TabIndex = 0;
             this.picLogoMainApp.TabStop = false;
-            // 
-            // btnMoveFeatureOver
-            // 
-            this.btnMoveFeatureOver.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(0)))), ((int)(((byte)(10)))));
-            this.btnMoveFeatureOver.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnMoveFeatureOver.FlatAppearance.BorderSize = 0;
-            this.btnMoveFeatureOver.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
-            this.btnMoveFeatureOver.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
-            this.btnMoveFeatureOver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMoveFeatureOver.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMoveFeatureOver.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnMoveFeatureOver.Image = ((System.Drawing.Image)(resources.GetObject("btnMoveFeatureOver.Image")));
-            this.btnMoveFeatureOver.Location = new System.Drawing.Point(3, 6);
-            this.btnMoveFeatureOver.Name = "btnMoveFeatureOver";
-            this.btnMoveFeatureOver.Size = new System.Drawing.Size(45, 41);
-            this.btnMoveFeatureOver.TabIndex = 25;
-            this.btnMoveFeatureOver.UseVisualStyleBackColor = false;
-            this.btnMoveFeatureOver.Click += new System.EventHandler(this.btnMoveFeatureOver_Click);
             // 
             // calculator1
             // 
@@ -339,6 +339,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.MainApplication_Load);
+            this.Shown += new System.EventHandler(this.MainApplication_Shown);
             this.pnlControlsResize.ResumeLayout(false);
             this.pnlControlsResize.PerformLayout();
             this.pnlCentralHolder.ResumeLayout(false);

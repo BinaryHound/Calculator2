@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 
 namespace DeskShell {
@@ -17,8 +18,15 @@ namespace DeskShell {
         //Holds fields, imports, etc.
         #region
 
+
+        //Thread Delegate for the UI.
+        private delegate void StringArgReturningVoidDelegate(string text);
+
+        //Thread name.
+        private Thread demothread = null;
+
         //For updating the UI with time.
-        Timer timerNow = new Timer { Interval = 998 };
+        //Timer timerNow = new Timer { Interval = 998 };
         
         private const int ButtonSelectionPnlOffset = 36;
 
@@ -27,6 +35,8 @@ namespace DeskShell {
         int MValX;
         int MValY;
         #endregion
+
+        char[] welcomeMessage = { 'W', 'e', 'l', 'c', 'o', 'm', 'e', ',', ' ' };
 
         /// <summary>
         /// Constructor for the form.
@@ -128,8 +138,8 @@ namespace DeskShell {
 
             // To update the first time.
             lblTimeMainForm.Text = DateTime.Now.ToLongTimeString();
-            timerNow.Tick += timerTickHandler;
-            timerNow.Start();
+           // timerNow.Tick += timerTickHandler;
+            //timerNow.Start();
         }
 
         private void btnMainFormApplicationProfile_Click(object sender, EventArgs e)
@@ -165,5 +175,41 @@ namespace DeskShell {
         {
             Console.WriteLine("The move feature over was clicked.");
         }
+
+        private void MainApplication_Shown(object sender, EventArgs e)
+        {
+            //Every tick we want to update the label to make it look like its being typed.
+            this.demothread = new Thread(new ThreadStart(this.welcomeThread));
+            this.demothread.Start();
+        }
+
+        private void welcomeThread()
+        {
+            StringBuilder welcomeString = new StringBuilder();
+            int welcomeStringLength = 0;
+            while (welcomeStringLength < welcomeMessage.Length)
+            {
+                SetText(welcomeString.Append(welcomeMessage[welcomeStringLength]).ToString());
+                welcomeStringLength++;
+                Thread.Sleep(125);
+            }
+            
+        }
+
+        private void SetText(string text)
+        {
+            // InvokeRequired required compares the thread ID of the  
+            // calling thread to the thread ID of the creating thread.  
+            // If these threads are different, it returns true.  
+            if (this.lblNameHolder.InvokeRequired)
+            {
+                StringArgReturningVoidDelegate d = new StringArgReturningVoidDelegate(SetText);
+                this.Invoke(d, new object[] { text });
+            } else
+            {
+                this.lblNameHolder.Text = text;
+            }
+        }
+
     }
 }

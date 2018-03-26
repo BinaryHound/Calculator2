@@ -217,10 +217,13 @@ namespace AuthenticationForm
         /// <param name="e"></param>
         private void txtLogin_TextChanged(object sender, EventArgs e)
         {
-            if(isValidEmail(sender, e))
+            if (isValidEmail(sender, e))
             {
                 pnlUnderlineUser.BackColor = Color.FromArgb(colorCorrectr, colorCorrectg, colorCorrectb);
-            } else
+            } else if (((TextBox)sender).Text.Trim().Length == 0)
+            {
+                pnlUnderlineUser.BackColor = Color.White;
+            }else
             {
                 pnlUnderlineUser.BackColor = Color.Coral;
             }
