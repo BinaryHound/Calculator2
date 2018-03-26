@@ -30,7 +30,7 @@ namespace DeskShell
             }
         }
 
-        public string Login(string username, string password)
+        public object Login(string username, string password)
         {
             var result = DeskShellAPI.Login(new UserAuthentication
             {
@@ -41,7 +41,7 @@ namespace DeskShell
             if (result.Success)
             {
                 // TODO: Set application settings with user info
-                return string.Empty;
+                return (object)result.Data;
             }
             else
                 return result.Message;

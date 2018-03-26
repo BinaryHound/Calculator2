@@ -71,13 +71,14 @@ namespace AuthenticationForm
 
             var result = new UIController().Login(txtLogin.Text.Trim(), txtPassword.Text);
 
-            if (result.Equals(string.Empty))
+            if (result != null)
             {
+                UserGreeting userGreeting = new UserGreeting(result);
                 LaunchMainApplication();
             }
             else
             {
-                MessageBox.Show(result);
+                MessageBox.Show((string)result);
             }
         }
 

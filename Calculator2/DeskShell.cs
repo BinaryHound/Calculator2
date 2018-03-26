@@ -11,9 +11,9 @@ using System.Threading;
 
 
 namespace DeskShell {
-    
 
-    public partial class MainApplication: Form {
+
+    public partial class MainApplication : Form {
 
         //Holds fields, imports, etc.
         #region
@@ -27,16 +27,22 @@ namespace DeskShell {
 
         //For updating the UI with time.
         //Timer timerNow = new Timer { Interval = 998 };
-        
+
         private const int ButtonSelectionPnlOffset = 36;
 
         //To have form be drag-able.
         bool TogMove;
         int MValX;
         int MValY;
-        #endregion
 
+        //Welcome Message
         char[] welcomeMessage = { 'W', 'e', 'l', 'c', 'o', 'm', 'e', ',', ' ' };
+
+        #endregion
+        
+
+        public string setFirstName { get; set; }
+        public string setLastName { get; set; }
 
         /// <summary>
         /// Constructor for the form.
@@ -47,7 +53,6 @@ namespace DeskShell {
             //Central is the parent container
             pnlCentralHolder.Show();
             pnlCentralHolder.Enabled = true;
-            
         }
 
         private void KillApplication()

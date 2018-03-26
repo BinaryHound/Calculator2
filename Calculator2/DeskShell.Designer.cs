@@ -38,13 +38,13 @@
             this.btnMainFormProfile = new System.Windows.Forms.Button();
             this.btnMinimize = new System.Windows.Forms.Button();
             this.pnlCentralHolder = new System.Windows.Forms.Panel();
+            this.calculator1 = new DeskShell.Calculator();
             this.pnlFlowFeaturePicker = new System.Windows.Forms.FlowLayoutPanel();
             this.pnlFeatureContainer = new System.Windows.Forms.Panel();
             this.pnlFeatureTop = new System.Windows.Forms.Panel();
             this.btnMoveFeatureOver = new System.Windows.Forms.Button();
             this.lblNameHolder = new System.Windows.Forms.Label();
             this.picLogoMainApp = new System.Windows.Forms.PictureBox();
-            this.calculator1 = new DeskShell.Calculator();
             this.pnlControlsResize.SuspendLayout();
             this.pnlCentralHolder.SuspendLayout();
             this.pnlFlowFeaturePicker.SuspendLayout();
@@ -242,6 +242,15 @@
             this.pnlCentralHolder.Size = new System.Drawing.Size(957, 673);
             this.pnlCentralHolder.TabIndex = 15;
             // 
+            // calculator1
+            // 
+            this.calculator1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
+            this.calculator1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.calculator1.Location = new System.Drawing.Point(0, 0);
+            this.calculator1.Name = "calculator1";
+            this.calculator1.Size = new System.Drawing.Size(957, 673);
+            this.calculator1.TabIndex = 0;
+            // 
             // pnlFlowFeaturePicker
             // 
             this.pnlFlowFeaturePicker.AutoScroll = true;
@@ -303,9 +312,8 @@
             this.lblNameHolder.ForeColor = System.Drawing.SystemColors.Control;
             this.lblNameHolder.Location = new System.Drawing.Point(70, 148);
             this.lblNameHolder.Name = "lblNameHolder";
-            this.lblNameHolder.Size = new System.Drawing.Size(160, 24);
+            this.lblNameHolder.Size = new System.Drawing.Size(0, 24);
             this.lblNameHolder.TabIndex = 1;
-            this.lblNameHolder.Text = "First Last Name";
             // 
             // picLogoMainApp
             // 
@@ -316,15 +324,6 @@
             this.picLogoMainApp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picLogoMainApp.TabIndex = 0;
             this.picLogoMainApp.TabStop = false;
-            // 
-            // calculator1
-            // 
-            this.calculator1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
-            this.calculator1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.calculator1.Location = new System.Drawing.Point(0, 0);
-            this.calculator1.Name = "calculator1";
-            this.calculator1.Size = new System.Drawing.Size(957, 673);
-            this.calculator1.TabIndex = 0;
             // 
             // MainApplication
             // 
